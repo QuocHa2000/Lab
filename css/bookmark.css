@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.headingb{
+    margin-bottom: 16px;
+}
+.media{
+    background-color: #f8f5f2;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px 0 rgba(0,0,0,0.09);
+    transition: all 0.5s;
+    margin-bottom: 32px;
+}
+.media:hover{
+    box-shadow: 0 10px 25px 0 rgba(0,0,0,0.5);
+}
