@@ -10,23 +10,26 @@
         <!-- khối login -->
        <div class="row justify-content-center">
             <div class="col-md-3 col-sm-6 col-xs-12 row-container" >
-                 <form action="controllers/login-submit.php" method="post">
+                 <form action="controllers/login-submit.php" method="post" id="form-1">
                     <!-- thẻ div login -->
                      <div><h1>Login</h1></div>
                      <!-- khối email -->
                      <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" name="username" placeholder="Enter your username">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username">
                      </div>
                      <!-- khối password -->
                      <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password" placeholder="Enter your password">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                     </div>
+                     <div>
+                        <input type="checkbox"> <label for="remember" style="font-size:14px"> Remember password </label>
                      </div>
                      <!-- khối nút login -->
                      <div>
                          <button type="submit" name="submit" class="btn btn-primary btn-block my-3">Login</button>
-                     </div>
+                     </>
                          <h6>Or</h6>
                     <!-- khối đăng nhập bằng facebook -->
                      <div>
@@ -43,5 +46,6 @@
             </div>
        </div>
     </div>
+   
 </body>
 </html>
