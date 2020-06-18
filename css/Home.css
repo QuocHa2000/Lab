@@ -25,6 +25,11 @@ body{
 .logo-heading {
     flex: 1;
 }
+.logo-heading img{
+    width: 136px;
+    height: 130px;
+    padding-top: 13px;
+}
 .nav-heading{
     flex: 1;
     height: 100%;
@@ -585,6 +590,7 @@ body{
         flex-wrap: wrap;
         padding-left: 0;
         padding-top: 44px;
+        text-align: center;
     }
     .container-partner--item{
         width: 33.333%;
@@ -599,6 +605,10 @@ body{
     .footer-about{
         margin-left: 0;
         padding-top: 0;
+    }
+    .logo-heading img{
+        height: 100%;
+        width: 100px;
     }
  }
 
