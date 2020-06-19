@@ -17,20 +17,20 @@ include "header.php";
                         <h1>Register Account</h1>
                     </div>
                     <div class="form-group">
-                        <label class="label" for="name">Username</label>
-                        <input type="text" class="form-control" name="username" placeholder="Your username">
+                        <label class="label" for="username">Username</label>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Your username">
                     </div>
                     <div class="form-group">
                         <label class="label" for="password">Password</label>
-                        <input type="password" class="form-control" name="password" placeholder="Enter password">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
                     </div>
                     <div class="form-group">
                         <label class="label" for="repassword">Confirm Password</label>
-                        <input type="password" class="form-control" name="repassword" placeholder="Confirm your password">
+                        <input type="password" class="form-control" name="repassword" id="repassword" placeholder="Confirm your password">
                     </div>
                     <div class="form-group">
                         <label class="label" for="email">Email</label>
-                        <input type="text" class="form-control" name="email" placeholder="Enter email">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter email">
                     </div>
                     <div>
                         <button type="submit" name="submit" class="btn btn-primary btn-block my-3">Register</button>
@@ -46,6 +46,7 @@ include "header.php";
             </div>
         </div>
     </div>
+    <script src="js/validator.js"></script>
 </body>
 
 </html>
