@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="css/MySubmit.css"> -->
     <link rel="stylesheet" href="css/MySubmit.css">
     <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css" />
@@ -16,9 +15,8 @@
         #navigation {
             margin: 10px 0;
         }
-
+        
         @media (max-width: 767px) {
-
             #title,
             #description {
                 display: none;
@@ -28,49 +26,34 @@
 </head>
 
 <body class="background">
-    <div class="container" style="margin-left: 450px;" >
+    <div class="container" style="margin-left: 450px;">
 
         <h1 id="title">Upload your files </h1>
         <blockquote id="description" style="width:580px">
-            <p >
-                File Upload widget with multiple file selection, drag&amp;drop
-                support, progress bars, validation and preview images, audio and video
-                for jQuery.<br />
-                Supports cross-domain, chunked and resumable file uploads and
-                client-side image resizing.<br />
-                
+            <p>
+                File Upload widget with multiple file selection, drag&amp;drop support, progress bars, validation and preview images, audio and video for jQuery.<br /> Supports cross-domain, chunked and resumable file uploads and client-side image resizing.<br
+                />
+
             </p>
         </blockquote>
         <div class="author">
-            <form>
-                <label for="fname"><h5>Author Name</h5></label>
-                <input type="text" id="fname" name="fname">
-                <label for="lname"><h5>Email</h5></label>
-                <input type="text" id="lname" name="lname">
+            <form method="GET" action="">
+                <label for="authorname"><h5>Author Name</h5></label>
+                <input type="text" id="authorname" name="authorname">
+                <label for="email"><h5>Email</h5></label>
+                <input type="text" id="email" name="email">
+                <input type="submit">
             </form>
         </div>
 
         <div class="row fileupload-buttonbar">
             <div class="col-lg-7">
                 <!-- The fileinput-button span is used to style the file input field as button -->
-                <span class="btn btn-success fileinput-button">
-                    <i class="fas fa-plus"></i>
-                    <span>Add files... </span>
-                    <input type="file" name="files[]" multiple />
-                </span>
+                <input type="file" style="color : aliceblue;">
                 <button type="submit" class="btn btn-primary start">
                     <i class="fas fa-upload"></i>
                     <span>Start upload</span>
                 </button>
-                <button type="reset" class="btn btn-warning cancel">
-                    <i class="fas fa-ban"></i>
-                    <span>Cancel upload</span>
-                </button>
-                <button type="button" class="btn btn-danger delete">
-                    <i class="fas fa-trash-alt"></i>
-                    <span>Delete selected</span>
-                </button>
-                
             </div>
         </div>
         </form>
@@ -92,7 +75,6 @@
                         Uploaded files will be deleted automatically after
                         <strong>5 minutes or less</strong>
                     </li>
-
                 </ul>
             </div>
         </div>
