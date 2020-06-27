@@ -156,7 +156,8 @@ body {
     width: 320px;
     max-width: 100%;
     z-index: 2;
-    display: none;
+    right: -320px;
+    transition: all linear 0.3s;
 }
 
 .nav-small--list {
@@ -669,7 +670,7 @@ body {
         display: block;
     }
     #check:checked~.nav-heading--small {
-        display: block;
+        right: 0;
     }
     .container-about--main {
         flex-wrap: wrap;
