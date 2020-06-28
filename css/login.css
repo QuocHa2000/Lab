@@ -47,6 +47,12 @@ h1{
     text-shadow: 2px 2px 10px #000;
     text-align: center;
 }
+.p1{
+    font-size: 13px;
+    color: #f297a0;
+    text-shadow: 2px 2px 10px #000;
+    text-align: center;
+}
 .a {
    text-decoration: underline; 
    color: #00fff3;

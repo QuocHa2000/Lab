@@ -1,6 +1,17 @@
-<?php
-    include "header.php";
-?>
+ <?php
+    include "header-login.php";
+    session_start();
+    session_destroy();
+    $username="";
+    $password="";
+    $check=false;
+    if(isset($_COOKIE["user"]) && isset($_COOKIE["pass"]))
+    {
+        $username=$_COOKIE["user"];
+        $password=$_COOKIE["pass"];
+        $check=true;
+    }
+?> 
 <head>
     <title>KienThuc-Login</title>
     <link rel="stylesheet" href="css/login.css">
@@ -14,17 +25,25 @@
                     <!-- thẻ div login -->
                      <div><h1>Login</h1></div>
                      <!-- khối email -->
+                     <?php
+                        if (isset($_SESSION["sai"])) {
+                            echo "<div class='alert alert-danger' role='alert'>";
+                            echo $_SESSION["sai"];
+                            echo "</div>";
+                            session_unset();
+                        }
+                     ?>
                      <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username">
+                        <label for="username">Username</label>  
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username" value="<?php echo $username; ?>" required>
                      </div>
                      <!-- khối password -->
                      <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" value="<?php echo $password; ?>" required>
                      </div>
                      <div>
-                        <input type="checkbox"> <label for="remember" style="font-size:14px"> Remember password </label>
+                        <input   type="checkbox" name="remember" id="remember" value="1"> <label for="remember" style="font-size:14px"> Remember me </label>
                      </div>
                      <!-- khối nút login -->
                      <div>
