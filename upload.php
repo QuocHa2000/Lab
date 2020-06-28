@@ -3,8 +3,8 @@
 
 
     if(isset($_POST["submit"])){
-        $author = $_POST["author"];
-        $emailauthor = $_POST["emailauthor"];
+        $author = $_POST["authorname"];
+        $emailauthor = $_POST["email"];
         $pname = rand(1000,10000)."-".$_FILES["file"]["name"];
 
         $tname = $_FILES["files"]["tmp_name"];
