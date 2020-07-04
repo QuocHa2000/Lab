@@ -36,18 +36,18 @@ include "header-login.php";
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <div>
-                        <form action="#" method="POST">
+                        <form action="mailto:nhom15web@gmail.com" method="POST" enctype="text/plain">
                             <div class="floating-label">
-                                <input class="form-control" type="text" placeholder="First Name">
+                                <input class="form-control" type="text" placeholder="First Name" name="First Name">
                             </div>
                             <div class="floating-label">
-                                <input class="form-control" type="text" placeholder="Last Name">
+                                <input class="form-control" type="text" placeholder="Last Name" name="Last Name">
                             </div>
                             <div class="floating-label">
-                                <input class="form-control" type="email" placeholder="Email">
+                                <input class="form-control" type="email" placeholder="Email" name="Email">
                             </div>
                             <div class="floating-label">
-                                <input class="form-control" type="text" placeholder="Message">
+                                <input class="form-control" type="text" placeholder="Message" name="Message">
                             </div>
                             <div class="submit-btn">
                                 <button type="submit">Submit</button>
