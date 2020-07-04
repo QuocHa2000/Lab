@@ -29,7 +29,7 @@ include "header-login.php";
                                 <span class="c-icon">
                                     <i class="i fa fa-envelope"></i>
                                 </span>
-                                <span class="c-info">nhom15@gmail.com</span>
+                                <span class="c-info">nhom15web@gmail.com</span>
                             </div>
                         </div>
                     </div>

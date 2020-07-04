@@ -1,17 +1,8 @@
- <?php
-    include "header-login.php";
-    session_start();
-    session_destroy();
-    $username="";
-    $password="";
-    $check=false;
-    if(isset($_COOKIE["user"]) && isset($_COOKIE["pass"]))
-    {
-        $username=$_COOKIE["user"];
-        $password=$_COOKIE["pass"];
-        $check=true;
-    }
-?> 
+ 
+<?php
+    include ("header-login.php");
+    include "controllers/login-submit.php";
+?>
 <head>
     <title>KienThuc-Login</title>
     <link rel="stylesheet" href="css/login.css">
@@ -21,7 +12,7 @@
         <!-- khối login -->
        <div class="row justify-content-center">
             <div class="col-md-3 col-sm-6 col-xs-12 row-container" >
-                 <form action="controllers/login-submit.php" method="post" id="form-1">
+                 <form  method="post" id="form-1">
                     <!-- thẻ div login -->
                      <div><h1>Login</h1></div>
                      <!-- khối email -->
@@ -31,6 +22,7 @@
                             echo $_SESSION["sai"];
                             echo "</div>";
                             session_unset();
+                            session_destroy();
                         }
                      ?>
                      <div class="form-group">
@@ -48,12 +40,7 @@
                      <!-- khối nút login -->
                      <div>
                          <button type="submit" name="submit" class="btn btn-primary btn-block my-3">Login</button>
-                     </>
-                         <h6>Or</h6>
-                    <!-- khối đăng nhập bằng facebook -->
-                     <div>
-                        <button type="submit" class="btn btn-primary active btn-block my-3"><i class="fab fa-facebook-square"></i> Login with Facebook</button>
-                     </div>
+                    </div>
                      <!-- khối chưa có tài khoản và quên mật khẩu -->
                      <div>
                          <p class="p">Do not have an account? <a class="a" href="register.php">Register</a></p>
