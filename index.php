@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,28 +56,30 @@
                         Contact
                     </a>
                 </li>
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        Login
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        Register
-                    </a>
-                </li>
-                <li class="nav-heading--item" id="active">
-                    <i class="far fa-user" style="font-size: 2.6rem;"></i>
-                    <div class="user-info" id="user-info">
-                        <h3>Hà Vương Quốc</h3>
-                        <p>havuongquoc2000@gmail.com</p>
-                        <a href="">Đăng xuất</a>
-                    </div>
-                </li>
+                <?php if (!isset($_SESSION["login"])) : ?>
+                    <li class="nav-heading--item">
+                        <a href="login.php" class="nav-heading--item-link">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-heading--item">
+                        <a href="register.php" class="nav-heading--item-link">
+                            Register
+                        </a>
+                    </li>
+                <?php else : ?>
+                    <li class="nav-heading--item" id="active">
+                        <i class="far fa-user" style="font-size: 2.6rem;"></i>
+                        <div class="user-info" id="user-info">
+                            <h3><?php echo $_SESSION["login"]; ?></h3>
+                            <a href="controllers/logout.php">Đăng xuất</a>
+                        </div>
+                    </li>
+                <?php endif; ?>
             </ul>
             <label for="check" class="nav-heading--icon">
                 <i class="fas fa-bars"></i>
-                        </label>
+            </label>
             <input type="checkbox" hidden name="check" id="check">
             <label for="check" class="over-lay"></label for="check">
             <div class="nav-heading--small">
@@ -104,21 +109,31 @@
                             Contact
                         </a>
                     </li>
-                    <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Login
-                        </a>
-                    </li>
-                    <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Register
-                        </a>
-                    </li>
+                    <?php if (!isset($_SESSION["login"])) : ?>
+                        <li class="nav-small--item">
+                            <a href="" class="nav-small--item-link">
+                                Login
+                            </a>
+                        </li>
+                        <li class="nav-small--item">
+                            <a href="" class="nav-small--item-link">
+                                Register
+                            </a>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-small--item" id="active">
+                            <i class="far fa-user" style="font-size: 2.6rem;"></i>
+                            <div class="user-info" id="user-info">
+                                <h3><?php echo $_SESSION["login"]; ?></h3>
+                                <a href="controllers/logout.php">Đăng xuất</a>
+                            </div>
+                        </li>
+                    <?php endif; ?>
                 </ul>
                 <label for="check" class="nav-small--icon">
                     <i class="fas fa-times"></i>
                 </label>
-        </div>
+            </div>
         </div>
     </header>
     <div class="home-main" data-aos="fade-down">

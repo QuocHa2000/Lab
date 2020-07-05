@@ -1,5 +1,7 @@
 <?php
-include "header.php";
+include "header-login.php";
+session_start();
+session_destroy();
 ?>
 
 <head>
@@ -16,21 +18,28 @@ include "header.php";
                     <div>
                         <h1>Register Account</h1>
                     </div>
+                    <?php
+                        if(isset($_SESSION["thongbao"]))
+                        {
+                            echo $_SESSION["thongbao"];
+                            session_unset();
+                        }
+                    ?>
                     <div class="form-group">
                         <label class="label" for="username">Username</label>
-                        <input type="text" class="form-control" name="username" id="username" placeholder="Your username">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Your username" required>
                     </div>
                     <div class="form-group">
                         <label class="label" for="password">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter password" required>
                     </div>
                     <div class="form-group">
                         <label class="label" for="repassword">Confirm Password</label>
-                        <input type="password" class="form-control" name="repassword" id="repassword" placeholder="Confirm your password">
+                        <input type="password" class="form-control" name="repassword" id="repassword" placeholder="Confirm your password" required>
                     </div>
                     <div class="form-group">
                         <label class="label" for="email">Email</label>
-                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter email">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter email" required>
                     </div>
                     <div>
                         <button type="submit" name="submit" class="btn btn-primary btn-block my-3">Register</button>
