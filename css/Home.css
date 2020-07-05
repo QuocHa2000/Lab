@@ -212,6 +212,11 @@ body {
     transition: color linear 0.2s;
 }
 
+.document-item a {
+    text-decoration: none;
+    color: #eea412;
+}
+
 .document-item:hover {
     color: #eea412;
     cursor: pointer;

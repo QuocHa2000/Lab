@@ -8,9 +8,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Home Page</title>
-    <link href="./css/Home.css" rel="stylesheet" />
     <link rel="stylesheet" href="./font/fontawesome-free-5.13.0-web/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="./css/Home.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -35,12 +35,12 @@
                         Document
                     </a>
                     <ul class="document-list">
-                        <li class="document-item">Tiếng Anh</li>
-                        <li class="document-item">Javascripts</li>
-                        <li class="document-item">Css</li>
-                        <li class="document-item">Html</li>
-                        <li class="document-item">Nodejs</li>
-                        <li class="document-item">PHP</li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=english">Tiếng Anh</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=js">Javascripts</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=css">Css</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=html">HTML</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=nodejs">Nodejs</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=php">PHP</a></li>
                     </ul>
                 </li>
                 <li class="nav-heading--item">
@@ -278,24 +278,24 @@
         <div class="container-field--main" style="margin-bottom: 50px; ">
             <ul class="container-field--main-list">
                 <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left">
-                    <a href="" class="container-field--main-link">Tiếng Anh</a>
+                    <a href="./document?subject=english" class="container-field--main-link">Tiếng Anh</a>
                 </li>
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left"><a href="" class="container-field--main-link">
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left"><a href="./document?subject=js" class="container-field--main-link">
                         Javascripts</a>
                 </li>
                 <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left">
-                    <a href="" class="container-field--main-link">Css </a>
+                    <a href="./document?subject=CSS" class="container-field--main-link">Css </a>
                 </li>
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left"><a href="" class="container-field--main-link">Html</a></li>
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left"><a href="./document?subject=html" class="container-field--main-link">Html</a></li>
             </ul>
         </div>
         <div class="container-field--main">
             <ul class="container-field--main-list">
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="" class="container-field--main-link">Nodejs</a>
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="./document?subject=nodejs" class="container-field--main-link">Nodejs</a>
                 </li>
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="" class="container-field--main-link">PHP</a></li>
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="" class="container-field--main-link">Toán</a></li>
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="" class="container-field--main-link">Vật lí </a>
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="./document?subject=php" class="container-field--main-link">PHP</a></li>
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="./document?subject=toan" class="container-field--main-link">Toán</a></li>
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="./document?subject=vatli" class="container-field--main-link">Vật lí </a>
                 </li>
         </div>
 

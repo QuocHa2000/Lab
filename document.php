@@ -1,3 +1,15 @@
+<?php 
+    $conn = mysqli_connect("localhost","root","","web");
+    mysqli_set_charset($conn,"utf8");
+    if (isset($_GET['subject'])){
+        $monhoc = $_GET['subject'];
+        $sql = "SELECT * FROM document WHERE document.mamh= '$monhoc';";
+        $result = $conn->query($sql)->fetch_assoc();
+    
+    
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,43 +62,39 @@
                     </a>
                     <div style="display: flex;margin-top: 0;margin-left: 20px">
                         <img src="./img/homeicon.png" alt="" height="55px">
-                        <a href="#">home</a>
+                        <a href="index.php">home</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/bookicon.png" alt="" height="50px">
-                        <a href="#">English</a>
+                        <a href="document.php?subject=english">Tiếng Anh</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/Science-Math-icon.png" alt="" height="50px">
-                        <a href="#">Math</a>
+                        <a href="document.php?subject=js">Javascripts</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/pngwing.com.png" alt="" height="50px">
-                        <a href="#">Physics</a>
+                        <a href="document.php?subject=css">Css</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/chemistry.png" alt="" height="50px">
-                        <a href="#">Chemistry</a>
+                        <a href="document.php?subject=html">HTML</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/bookicon.png" alt="" height="50px">
-                        <a href="#">Javascripts</a>
+                        <a href="document.php?subject=nodejs">Nodejs</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/htmlicon.png" alt="" height="50px">
-                        <a href="#">Html</a>
+                        <a href="document.php?subject=php">PHP</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/bookicon.png" alt="" height="50px">
-                        <a href="#">English</a>
+                        <a href="document.php?subject=toan">Toán </a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/cssicon.png" alt="" height="50px">
-                        <a href="#">CSS</a>
-                    </div>
-                    <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                        <img src="./img/phpicon.png" alt="" height="50px">
-                        <a href="#">PHP</a>
+                        <a href="document.php?subject=vatli">Vật Lí</a>
                     </div>
                 </div>
             </div>
@@ -160,17 +168,18 @@
         <div class="sectionegg">
             <br>
             <div class="sectitle">
-                Grammar basic
+                <?php
+                    echo "$result[tieude]";
+                ?>
             </div>
             <div class="row1" style="margin-top: 20px">
                 <div class="rowsec">
                     <a class="rowitem" id="modal-btn2">
-                        <p class="rowitemcon">sentence structures</p>
+                        <p class="rowitemcon">Basic</p>
 
                     </a>
                     <div class="modal-bg2">
-                        <div class="modal2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas neque cupiditate repellendus doloremque fugiat ipsam mollitia totam magnam laboriosam, aspernatur pariatur iusto rem similique nihil, nostrum placeat culpa necessitatibus
-                            adipisci!
+                        <div class="modal2"> <?php echo "$result[coban]"?>
                             <div id="close2">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -181,11 +190,10 @@
                 </div>
                 <div class="rowsec">
                     <a class="rowitem" id="modal-btn3">
-                        <p class="rowitemcon">sentence structures</p>
+                        <p class="rowitemcon">Intermediate 1</p>
                     </a>
                     <div class="modal-bg3">
-                        <div class="modal3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas neque cupiditate repellendus doloremque fugiat ipsam mollitia totam magnam laboriosam, aspernatur pariatur iusto rem similique nihil, nostrum placeat culpa necessitatibus
-                            adipisci!
+                        <div class="modal3"><?php echo "$result[trungbinh1]" ?>
                             <div id="close3">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -199,11 +207,10 @@
             <div class="row1" style="margin-top: 20px">
                 <div class="rowsec">
                     <a class="rowitem" id="modal-btn4">
-                        <p class="rowitemcon">sentence structures</p>
+                        <p class="rowitemcon">Intermediate 2</p>
                     </a>
                     <div class="modal-bg4">
-                        <div class="modal4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas neque cupiditate repellendus doloremque fugiat ipsam mollitia totam magnam laboriosam, aspernatur pariatur iusto rem similique nihil, nostrum placeat culpa necessitatibus
-                            adipisci!
+                        <div class="modal4"><?php echo "$result[trungbinh2]" ?>
                             <div id="close4">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -214,11 +221,10 @@
                 </div>
                 <div class="rowsec">
                     <a class="rowitem" id="modal-btn5">
-                        <p class="rowitemcon">sentence structures</p>
+                        <p class="rowitemcon">Advance</p>
                     </a>
                     <div class="modal-bg5">
-                        <div class="modal5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas neque cupiditate repellendus doloremque fugiat ipsam mollitia totam magnam laboriosam, aspernatur pariatur iusto rem similique nihil, nostrum placeat culpa necessitatibus
-                            adipisci!
+                        <div class="modal5"><?php echo "$result[nangcao]" ?>
                             <div id="close5">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -268,3 +274,4 @@
 </body>
 
 </html>
+        <?php }?>
