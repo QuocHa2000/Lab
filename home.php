@@ -24,12 +24,12 @@
         <div class="nav-heading">
             <ul class="nav-heading--list">
                 <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
+                    <a href="home.php" class="nav-heading--item-link">
                         Home
                     </a>
                 </li>
                 <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
+                    <a href="AboutUs.php" class="nav-heading--item-link">
                         About us
                     </a>
                 </li>
@@ -52,7 +52,7 @@
                     </a>
                 </li>
                 <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
+                    <a href="gopy-lienhe.php" class="nav-heading--item-link">
                         Contact
                     </a>
                 </li>

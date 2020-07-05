@@ -4,14 +4,14 @@
 .heading {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    height: 80px;
-    font-size: 25px;
-    background-color:#f8f5f2 ;
+    align-items: center;
+    height: 4.375em;
+    background-color: #f8f5f2;
     color: #0d0d0d;
     width: 100%;
+    position: fixed;
+    z-index: 10;
 }
-
 .nav-heading{
     flex: 1;
     width: 100%;
@@ -46,9 +46,122 @@
 .nav-heading--item-link:hover {
     background-color: #eea412;
     color: white;
+    border: 2px solid black;
+    border-bottom: 1px solid black;
 }
 .nav-heading--icon{
     font-size: 2rem;
     color: #0d0d0d;
     display: none;
+}
+.logo-heading {
+    flex: 1;
+}
+
+.logo-heading img {
+    width: 136px;
+    height: 130px;
+    padding-top: 13px;
+}
+.nav-heading--item#active {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 235px;
+}
+.nav-heading--item#active::before {
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+}
+#active:hover {
+    cursor: pointer;
+    background-color: #eea412;
+    color: white;
+}
+.document-list {
+    position: absolute;
+    width: 140px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f5f2;
+    border: 1px solid #eea412;
+    display: none;
+}
+
+#document:hover .document-list {
+    display: block;
+    z-index: 2;
+}
+.document-item {
+    padding: 10px 7px;
+    transition: color linear 0.2s;
+}
+
+.document-item:hover {
+    color: #eea412;
+    cursor: pointer;
+}
+.user-info {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 235px;
+    color: #0d0d0d;
+    background-color: #eff0f3;
+    text-align: center;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid #eea412;
+    display: none;
+}
+
+.user-info a {
+    text-decoration: none;
+    width: 110px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eea412;
+    color: #0d0d0d;
+    border-radius: 3px;
+    font-size: 1.6rem;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: all ease-out 0.3s;
+}
+.nav-heading--icon {
+    font-size: 2rem;
+    color: #0d0d0d;
+    display: none;
+}
+.nav-small--list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-small--item {
+    height: 60px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 16px;
+}
+
+.nav-small--item-link {
+    text-decoration: none;
+    color: #eea412;
+}
+
+.nav-small--icon {
+    position: absolute;
+    font-size: 2rem;
+    top: 0%;
+    right: 3%;
 }

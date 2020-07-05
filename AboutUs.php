@@ -10,16 +10,18 @@
 </head>
 <body>
     <header class="heading">
-        
+        <div class="logo-heading">
+            <img src="./img/Logo.png" alt="">
+        </div>
         <div class="nav-heading">
             <ul class="nav-heading--list">
                 <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
+                    <a href="home.php" class="nav-heading--item-link">
                         Home
                     </a>
                 </li>
                 <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
+                    <a href="AboutUs.php" class="nav-heading--item-link">
                         About us
                     </a>
                 </li>
@@ -34,22 +36,22 @@
                     </a>
                 </li>
                 <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
+                    <a href="gopy-lienhe.php" class="nav-heading--item-link">
                         Contact
                     </a>
                 </li>
                 <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
+                    <a href="login.php" class="nav-heading--item-link">
                         Login
                     </a>
                 </li>
                 <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
+                    <a href="register.php" class="nav-heading--item-link">
                         Register
                     </a>
                 </li>
                 <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
+                    <a href="bookmark.php" class="nav-heading--item-link">
                         BookMark
                     </a>
                 </li>

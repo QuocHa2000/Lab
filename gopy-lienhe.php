@@ -1,15 +1,16 @@
 <?php
 include "header-login.php";
+include "header-general.php";
 ?>
 
 <head>
     <title>KienThuc-Liên hệ và góp ý</title>
-    <link rel="stylesheet" href="css/gopy.css">
+    <link rel="stylesheet" href="./css/gopy.css">
 </head>
 
-<body>
-    <section id="Contact" class="content-section">
-        <div class="container">
+
+    <div class="container py-5">
+        <section id="Contact" class="content-section">
             <div class="block-heading">
                 <h2>CONTACT US</h2>
                 <p>Nếu bạn có bất kì thắc mắc nào, xin hãy liên hệ với chúng tôi.</p>
@@ -56,8 +57,10 @@ include "header-login.php";
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        
+        </section>
+    </div>
+
 </body>
 
 </html>
