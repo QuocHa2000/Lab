@@ -226,7 +226,7 @@ body {
     height: 100vh;
     width: 100%;
     position: relative;
-    background-image: linear-gradient(0, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('https://scontent.fvca1-2.fna.fbcdn.net/v/t1.15752-9/92811013_807406449781112_4394672775638286336_n.jpg?_nc_cat=100&_nc_sid=b96e70&_nc_ohc=0DaYDyKtJyEAX9gGJGY&_nc_ht=scontent.fvca1-2.fna&oh=ad2d9650e914ab8b18776f4998d2761e&oe=5F01533D');
+    background-image: linear-gradient(0, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../img/backgroundweb.jpg');
     background-size: contain;
 }
 

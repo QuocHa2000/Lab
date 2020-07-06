@@ -1,46 +1,55 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     text-align: left;
     background-color: #fff;
 }
-.block-heading{
+
+.block-heading {
     text-align: center;
 }
+
 .contact-wrapper {
     border-right: 1px solid #cecece;
     margin-right: 40px;
     padding: 0 40px 40px 0;
 }
+
 .address-block {
     margin-bottom: 30px;
     padding-bottom: 30px;
 }
+
 .border-bottom {
     border-bottom: 1px solid #dee2e6!important;
 }
-i{
+
+i {
     color: #02ccba;
 }
+
 span {
     vertical-align: middle;
     margin-left: 9px;
     text-transform: none;
 }
+
 .form-wrap {
     width: 100%;
     display: table-cell;
 }
+
 .floating-label {
     position: relative;
     width: 100%;
     display: inline-block;
     margin-bottom: 30px;
 }
+
 .floating-input {
     width: 100%;
     border: 0;
@@ -49,6 +58,7 @@ span {
     background-color: transparent;
     padding-top: 3px;
 }
+
 .submit-btn button {
     font-size: 16px;
     color: #fff;
@@ -58,12 +68,15 @@ span {
     cursor: pointer;
     border-radius: 6px;
 }
-.submit-btn{
+
+.submit-btn {
     text-align: center;
 }
-p{
+
+p {
     padding: 10px 10px;
 }
-h2{
+
+h2 {
     margin-top: 10%;
 }
