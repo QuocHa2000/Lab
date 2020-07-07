@@ -2,6 +2,11 @@
     session_start();
 ?>
 <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./font/fontawesome-free-5.13.0-web/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -14,7 +19,7 @@
         <div class="nav-heading">
             <ul class="nav-heading--list">
                 <li class="nav-heading--item">
-                    <a href="home.php" class="nav-heading--item-link">
+                    <a href="index.php" class="nav-heading--item-link">
                         Home
                     </a>
                 </li>
@@ -28,12 +33,12 @@
                         Document
                     </a>
                     <ul class="document-list">
-                        <li class="document-item">Tiếng Anh</li>
-                        <li class="document-item">Javascripts</li>
-                        <li class="document-item">Css</li>
-                        <li class="document-item">Html</li>
-                        <li class="document-item">Nodejs</li>
-                        <li class="document-item">PHP</li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=english">Tiếng Anh</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=js">Javascripts</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=css">Css</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=html">HTML</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=nodejs">Nodejs</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=php">PHP</a></li>
                     </ul>
                 </li>
                 <li class="nav-heading--item">
@@ -72,4 +77,57 @@
             </label>
             <input type="checkbox" hidden name="check" id="check">
             <label for="check" class="over-lay"></label for="check">
+            <div class="nav-heading--small">
+                <ul class="nav-small--list">
+                    <li class="nav-small--item">
+                        <a href="" class="nav-small--item-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-small--item">
+                        <a href="" class="nav-small--item-link">
+                            About us
+                        </a>
+                    </li>
+                    <li class="nav-small--item">
+                        <a href="" class="nav-small--item-link">
+                            Document
+                        </a>
+                    </li>
+                    <li class="nav-small--item">
+                        <a href="" class="nav-small--item-link">
+                            Exercises
+                        </a>
+                    </li>
+                    <li class="nav-small--item">
+                        <a href="" class="nav-small--item-link">
+                            Contact
+                        </a>
+                    </li>
+                    <?php if (!isset($_SESSION["login"])) : ?>
+                        <li class="nav-small--item">
+                            <a href="" class="nav-small--item-link">
+                                Login
+                            </a>
+                        </li>
+                        <li class="nav-small--item">
+                            <a href="" class="nav-small--item-link">
+                                Register
+                            </a>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-small--item" id="active">
+                            <i class="far fa-user" style="font-size: 2.6rem;"></i>
+                            <div class="user-info" id="user-info">
+                                <h3><?php echo $_SESSION["login"]; ?></h3>
+                                <a href="controllers/logout.php">Đăng xuất</a>
+                            </div>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+                <label for="check" class="nav-small--icon">
+                    <i class="fas fa-times"></i>
+                </label>
+            </div>
+        </div>
     </header>

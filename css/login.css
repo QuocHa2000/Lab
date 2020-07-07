@@ -27,6 +27,7 @@ body {
     border: 1px solid #fff;
     border-radius: 30px;
     margin-top: 5vh;
+    box-sizing: border-box;
     -webkit-box-shadow: 0px 3px 22px 10px rgba(0, 0, 0, 0.8) !important;
     -moz-box-shadow: 0px 3px 22px 10px rgba(0, 0, 0, 0.8) !important;
     box-shadow: 0px 3px 22px 10px rgba(0, 0, 0, 0.8) !important;

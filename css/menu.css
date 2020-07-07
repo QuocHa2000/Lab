@@ -165,3 +165,52 @@
     top: 0%;
     right: 3%;
 }
+.over-lay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+    display: none;
+    z-index: 2;
+}
+.nav-heading--small {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: ghostwhite;
+    width: 320px;
+    max-width: 100%;
+    z-index: 2;
+    right: -320px;
+    transition: all linear 0.3s;
+}
+
+.nav-small--list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-small--item {
+    height: 60px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 16px;
+}
+
+.nav-small--item-link {
+    text-decoration: none;
+    color: #eea412;
+}
+
+.nav-small--icon {
+    position: absolute;
+    font-size: 2rem;
+    top: 0%;
+    right: 3%;
+}

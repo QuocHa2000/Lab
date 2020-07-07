@@ -4,6 +4,7 @@ include "header-general.php";
 ?>
 
 <head>
+
     <title>KienThuc-Liên hệ và góp ý</title>
     <link rel="stylesheet" href="./css/gopy.css">
 </head>
