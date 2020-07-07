@@ -16,7 +16,8 @@ body {
 .row-container {
     border: 1px solid #fff;
     border-radius: 30px;
-    margin-top: 15vh;
+    margin-top: 10vh;
+    box-sizing: border-box;
     -webkit-box-shadow: 0px 3px 22px 10px rgba(0, 0, 0, 0.8) !important;
     -moz-box-shadow: 0px 3px 22px 10px rgba(0, 0, 0, 0.8) !important;
     box-shadow: 0px 3px 22px 10px rgba(0, 0, 0, 0.8) !important;
@@ -26,6 +27,7 @@ body {
     border: 1px solid #fff;
     border-radius: 30px;
     margin-top: 5vh;
+    box-sizing: border-box;
     -webkit-box-shadow: 0px 3px 22px 10px rgba(0, 0, 0, 0.8) !important;
     -moz-box-shadow: 0px 3px 22px 10px rgba(0, 0, 0, 0.8) !important;
     box-shadow: 0px 3px 22px 10px rgba(0, 0, 0, 0.8) !important;
@@ -69,4 +71,7 @@ h1 {
 .a {
     text-decoration: underline;
     color: #00fff3;
+}
+.a1{
+    color:white;
 }

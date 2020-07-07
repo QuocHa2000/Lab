@@ -1,15 +1,11 @@
 <?php
+require('./controllers/header.php');
 include "header-login.php";
+// include "header-general.php";
 ?>
-
-<head>
-    <title>KienThuc-Liên hệ và góp ý</title>
-    <link rel="stylesheet" href="css/gopy.css">
-</head>
-
-<body>
+<link rel="stylesheet" href="./css/gopy.css">
     <section id="Contact" class="content-section">
-        <div class="container">
+        <div class="container py-5">
             <div class="block-heading">
                 <h2>CONTACT US</h2>
                 <p>Nếu bạn có bất kì thắc mắc nào, xin hãy liên hệ với chúng tôi.</p>
@@ -29,7 +25,7 @@ include "header-login.php";
                                 <span class="c-icon">
                                     <i class="i fa fa-envelope"></i>
                                 </span>
-                                <span class="c-info">nhom15@gmail.com</span>
+                                <span class="c-info">nhom15web@gmail.com</span>
                             </div>
                         </div>
                     </div>
@@ -56,8 +52,10 @@ include "header-login.php";
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        
+        </section>
+    </div>
+
 </body>
 
 </html>

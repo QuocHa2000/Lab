@@ -1,126 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Home Page</title>
-    <link href="./css/Home.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./font/fontawesome-free-5.13.0-web/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-</head>
-
-<body>
-    <header class="heading">
-        <div class="logo-heading">
-            <img src="./img/Logo.png" alt="">
-        </div>
-        <div class="nav-heading">
-            <ul class="nav-heading--list">
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        About us
-                    </a>
-                </li>
-                <li class="nav-heading--item" id="document">
-                    <a href="" class="nav-heading--item-link">
-                        Document
-                    </a>
-                    <ul class="document-list">
-                        <li class="document-item">Tiếng Anh</li>
-                        <li class="document-item">Javascripts</li>
-                        <li class="document-item">Css</li>
-                        <li class="document-item">Html</li>
-                        <li class="document-item">Nodejs</li>
-                        <li class="document-item">PHP</li>
-                    </ul>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        Exercises
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        Contact
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        Login
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        Register
-                    </a>
-                </li>
-                <li class="nav-heading--item" id="active">
-                    <i class="far fa-user" style="font-size: 2.6rem;"></i>
-                    <div class="user-info" id="user-info">
-                        <h3>Hà Vương Quốc</h3>
-                        <p>havuongquoc2000@gmail.com</p>
-                        <a href="">Đăng xuất</a>
-                    </div>
-                </li>
-            </ul>
-            <label for="check" class="nav-heading--icon">
-                <i class="fas fa-bars"></i>
-                        </label>
-            <input type="checkbox" hidden name="check" id="check">
-            <label for="check" class="over-lay"></label for="check">
-            <div class="nav-heading--small">
-                <ul class="nav-small--list">
-                    <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Home
-                        </a>
-                    </li>
-                    <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            About us
-                        </a>
-                    </li>
-                    <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Document
-                        </a>
-                    </li>
-                    <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Exercises
-                        </a>
-                    </li>
-                    <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Contact
-                        </a>
-                    </li>
-                    <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Login
-                        </a>
-                    </li>
-                    <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Register
-                        </a>
-                    </li>
-                </ul>
-                <label for="check" class="nav-small--icon">
-                    <i class="fas fa-times"></i>
-                </label>
-        </div>
-        </div>
-    </header>
+<?php require('./controllers/header.php') ?>
     <div class="home-main" data-aos="fade-down">
         <div class="home-main--text">
             <h1 class="home-main--heading"><span>KienThuc</span>
@@ -278,24 +157,24 @@
         <div class="container-field--main" style="margin-bottom: 50px; ">
             <ul class="container-field--main-list">
                 <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left">
-                    <a href="" class="container-field--main-link">Tiếng Anh</a>
+                    <a href="./document?subject=english" class="container-field--main-link">Tiếng Anh</a>
                 </li>
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left"><a href="" class="container-field--main-link">
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left"><a href="./document?subject=js" class="container-field--main-link">
                         Javascripts</a>
                 </li>
                 <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left">
-                    <a href="" class="container-field--main-link">Css </a>
+                    <a href="./document?subject=CSS" class="container-field--main-link">Css </a>
                 </li>
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left"><a href="" class="container-field--main-link">Html</a></li>
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-left"><a href="./document?subject=html" class="container-field--main-link">Html</a></li>
             </ul>
         </div>
         <div class="container-field--main">
             <ul class="container-field--main-list">
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="" class="container-field--main-link">Nodejs</a>
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="./document?subject=nodejs" class="container-field--main-link">Nodejs</a>
                 </li>
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="" class="container-field--main-link">PHP</a></li>
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="" class="container-field--main-link">Toán</a></li>
-                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="" class="container-field--main-link">Vật lí </a>
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="./document?subject=php" class="container-field--main-link">PHP</a></li>
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="./document?subject=toan" class="container-field--main-link">Toán</a></li>
+                <li class="container-field--main-item" data-aos-offset="300" data-aos-duration="500" data-aos="fade-right"><a href="./document?subject=vatli" class="container-field--main-link">Vật lí </a>
                 </li>
         </div>
 
