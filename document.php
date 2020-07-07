@@ -1,14 +1,15 @@
 <?php 
     $conn = mysqli_connect("localhost","root","","web");
     mysqli_set_charset($conn,"utf8");
-    if (isset($_GET['subject'])){
+    $monhoc = "js";
+    if(isset($_GET['subject'])){
         $monhoc = $_GET['subject'];
+    }
         $sql = "SELECT * FROM document WHERE document.mamh= '$monhoc';";
         $result = $conn->query($sql)->fetch_assoc();
     
     
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -274,4 +275,3 @@
 </body>
 
 </html>
-        <?php }?>

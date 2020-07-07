@@ -1,15 +1,16 @@
 @charset "UTF-8";
-.background{
-     background: url('../img/ranger-4df6c1b6.png');
+.background {
+    background: url('../img/ranger-4df6c1b6.png');
     background-size: cover;
-   
 }
+
 .fileinput-button {
     position: relative;
     overflow: hidden;
     display: inline-block;
-  }
-  .fileinput-button input {
+}
+
+.fileinput-button input {
     position: absolute;
     top: 0;
     right: 0;
@@ -20,13 +21,13 @@
     font-size: 200px !important;
     direction: ltr;
     cursor: pointer;
-  }
-  @media screen\9 {
-    .fileinput-button input {
-      font-size: 150% !important;
-    }
-  }
+}
 
+@media screen\9 {
+    .fileinput-button input {
+        font-size: 150% !important;
+    }
+}
 
 #title {
     padding-top: 15px;
@@ -41,31 +42,34 @@ input[type=text] {
     outline: none;
     border-radius: 10px;
     color: gray;
-  }
-  
-  input[type=text]:focus {
+}
+
+input[type=text]:focus {
     background-color: #e9d8f4;
     border: 3px solid #555;
-  }
-  
-  .author {
-      width: 600px;
-      margin-bottom: 30px;
-  }
-  
-  h5{
-      margin-bottom: 0px;
-  }
-  .fileupload-buttonbar {
-      margin-bottom: 30px;
-  }
-  .btn{
-      border-radius: 10px;
-  }
+}
 
-  .purple-border textarea {
+.author {
+    width: 600px;
+    margin-bottom: 30px;
+}
+
+h5 {
+    margin-bottom: 0px;
+}
+
+.fileupload-buttonbar {
+    margin-bottom: 30px;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.purple-border textarea {
     border: 1px solid #ba68c8;
 }
+
 .purple-border .form-control:focus {
     border: 1px solid #ba68c8;
     box-shadow: 0 0 0 0.5rem rgba(186, 104, 200, .25);
@@ -74,4 +78,14 @@ input[type=text] {
 .green-border-focus .form-control:focus {
     border: 1px solid #8bc34a;
     box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, .25);
+}
+
+.table-bordered td,
+.table-bordered th {
+    width: 14%;
+}
+
+td {
+    width: 14%;
+    word-break: break-word;
 }

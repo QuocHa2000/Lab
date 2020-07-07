@@ -1,65 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+<?php require('./controllers/header.php') ?>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/menu.css">
-</head>
-<body>
-    <header class="heading">
-        <div class="logo-heading">
-            <img src="./img/Logo.png" alt="">
-        </div>
-        <div class="nav-heading">
-            <ul class="nav-heading--list">
-                <li class="nav-heading--item">
-                    <a href="home.php" class="nav-heading--item-link">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="AboutUs.php" class="nav-heading--item-link">
-                        About us
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        Document
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        Exercises
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="gopy-lienhe.php" class="nav-heading--item-link">
-                        Contact
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="login.php" class="nav-heading--item-link">
-                        Login
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="register.php" class="nav-heading--item-link">
-                        Register
-                    </a>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="bookmark.php" class="nav-heading--item-link">
-                        BookMark
-                    </a>
-                </li>
-            </ul>
-
-        
-        </div>
-    </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
         <div class="container"><a href="#" class="navbar-brand d-flex align-items-center"> <i class="fa fa-snowflake-o fa-lg text-primary mr-2"></i><strong>Snowflake</strong></a>
           <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>

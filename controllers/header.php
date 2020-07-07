@@ -1,18 +1,24 @@
 <?php
     session_start();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="stylesheet" href="./css/menu.css">
+    <title>Home Page</title>
     <link rel="stylesheet" href="./font/fontawesome-free-5.13.0-web/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="./css/Home.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/menu.css">
 </head>
+
 <body>
-<header class="heading">
+    <header class="heading">
         <div class="logo-heading">
             <img src="./img/Logo.png" alt="">
         </div>
@@ -24,16 +30,16 @@
                     </a>
                 </li>
                 <li class="nav-heading--item">
-                    <a href="AboutUs.php" class="nav-heading--item-link">
+                    <a href="Aboutus.php" class="nav-heading--item-link">
                         About us
                     </a>
                 </li>
                 <li class="nav-heading--item" id="document">
-                    <a href="" class="nav-heading--item-link">
+                    <a href="document.php" class="nav-heading--item-link">
                         Document
                     </a>
                     <ul class="document-list">
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=english">Tiếng Anh</a></li>
+                        <li class="document-item"><a  class="document-link" href="./document.php?subject=english">Tiếng Anh</a></li>
                         <li class="document-item"><a class="document-link" href="./document.php?subject=js">Javascripts</a></li>
                         <li class="document-item"><a class="document-link" href="./document.php?subject=css">Css</a></li>
                         <li class="document-item"><a class="document-link" href="./document.php?subject=html">HTML</a></li>

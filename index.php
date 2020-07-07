@@ -1,24 +1,5 @@
-<?php
-    include "header-general.php";
 
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Home Page</title>
-    <link rel="stylesheet" href="./font/fontawesome-free-5.13.0-web/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="./css/Home.css" rel="stylesheet" />
-</head>
-
-<body>
-    
+<?php require('./controllers/header.php') ?>
     <div class="home-main" data-aos="fade-down">
         <div class="home-main--text">
             <h1 class="home-main--heading"><span>KienThuc</span>
