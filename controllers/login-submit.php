@@ -20,7 +20,7 @@
         }
         else
         {
-            $_SESSION["sai"] = "Sai tài khoản hoặc mật khẩu";
+            $_SESSION["thongbao"] = "Sai tài khoản hoặc mật khẩu";
         }
         $username="";
         $password="";

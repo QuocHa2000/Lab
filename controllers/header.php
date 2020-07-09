@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li class="nav-heading--item">
-                    <a href="Aboutus.php" class="nav-heading--item-link">
+                    <a href="AboutUs.php" class="nav-heading--item-link">
                         About us
                     </a>
                 </li>

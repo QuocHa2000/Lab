@@ -17,9 +17,9 @@
                      <div><h1>Đăng nhập</h1></div>
                      <!-- khối email -->
                      <?php
-                        if (isset($_SESSION["sai"])) {
+                        if (isset($_SESSION["thongbao"])) {
                             echo "<div class='alert alert-danger' role='alert'>";
-                            echo $_SESSION["sai"];
+                            echo $_SESSION["thongbao"];
                             echo "</div>";
                             session_unset();
                             session_destroy();

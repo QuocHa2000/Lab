@@ -19,6 +19,7 @@
         if (mysqli_num_rows($old)>0) {
             $_SESSION["thongbao"] = "Tài khoản đã tồn tại";
             header("location:../register.php");
+            die();
         }else{  
         $sql = "INSERT INTO account (username, password, email) VALUES ('$username','$password','$email')";
         mysqli_query($conn, $sql);
