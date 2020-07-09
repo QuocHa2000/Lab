@@ -15,6 +15,8 @@ session_start();
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="./css/Home.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/menu.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 </head>
 
 <body>
@@ -97,7 +99,7 @@ session_start();
                     </li>
                     <li class="nav-small--item">
                         <a href="" class="nav-small--item-link">
-                            Thông <span class="typcn typcn-infinity"></span>
+                            Thông tin <span class="typcn typcn-infinity"></span>
                         </a>
                     </li>
                     <li class="nav-small--item">
