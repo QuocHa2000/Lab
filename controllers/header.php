@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Home Page</title>
+    <title>Trang Chủ</title>
     <link rel="stylesheet" href="./font/fontawesome-free-5.13.0-web/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="./css/Home.css" rel="stylesheet" />
@@ -26,46 +26,46 @@
             <ul class="nav-heading--list">
                 <li class="nav-heading--item">
                     <a href="index.php" class="nav-heading--item-link">
-                        Home
+                        Trang Chủ   
                     </a>
                 </li>
                 <li class="nav-heading--item">
-                    <a href="AboutUs.php" class="nav-heading--item-link">
-                        About us
+                    <a href="Aboutus.php" class="nav-heading--item-link">
+                        Thông tin
                     </a>
                 </li>
                 <li class="nav-heading--item" id="document">
                     <a href="document.php" class="nav-heading--item-link">
-                        Document
+                        Tài Liệu
                     </a>
                     <ul class="document-list">
-                        <li class="document-item"><a  class="document-link" href="./document.php?subject=english">Tiếng Anh</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=js">Javascripts</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=css">Css</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=html">HTML</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=nodejs">Nodejs</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=php">PHP</a></li>
+                        <li class="document-item"><a  class="document-link" href="./document.php?subject=ENGLISH">Tiếng Anh</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=JAVASCRIPT">Javascripts</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=CSS">Css</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=HTML">HTML</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=NODEJS">Nodejs</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=PHP">PHP</a></li>
                     </ul>
                 </li>
                 <li class="nav-heading--item">
                     <a href="" class="nav-heading--item-link">
-                        Exercises
+                        Bài tập
                     </a>
                 </li>
                 <li class="nav-heading--item">
                     <a href="gopy-lienhe.php" class="nav-heading--item-link">
-                        Contact
+                        Liên hệ
                     </a>
                 </li>
                 <?php if (!isset($_SESSION["login"])) : ?>
                     <li class="nav-heading--item">
                         <a href="login.php" class="nav-heading--item-link">
-                            Login
+                            Đăng nhập
                         </a>
                     </li>
                     <li class="nav-heading--item">
                         <a href="register.php" class="nav-heading--item-link">
-                            Register
+                            Đăng ký
                         </a>
                     </li>
                 <?php else : ?>
@@ -87,38 +87,38 @@
                 <ul class="nav-small--list">
                     <li class="nav-small--item">
                         <a href="" class="nav-small--item-link">
-                            Home
+                            Trang Chủ
                         </a>
                     </li>
                     <li class="nav-small--item">
                         <a href="" class="nav-small--item-link">
-                            About us
+                            Thông <span class="typcn typcn-infinity"></span>
                         </a>
                     </li>
                     <li class="nav-small--item">
                         <a href="" class="nav-small--item-link">
-                            Document
+                            Tài Liệu
                         </a>
                     </li>
                     <li class="nav-small--item">
                         <a href="" class="nav-small--item-link">
-                            Exercises
+                            Bài Tập
                         </a>
                     </li>
                     <li class="nav-small--item">
                         <a href="" class="nav-small--item-link">
-                            Contact
+                            Liên Hệ
                         </a>
                     </li>
                     <?php if (!isset($_SESSION["login"])) : ?>
                         <li class="nav-small--item">
                             <a href="" class="nav-small--item-link">
-                                Login
+                                Đăng nhập
                             </a>
                         </li>
                         <li class="nav-small--item">
                             <a href="" class="nav-small--item-link">
-                                Register
+                                Đăng ký
                             </a>
                         </li>
                     <?php else : ?>
