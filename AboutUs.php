@@ -55,6 +55,11 @@ session_start();
                         Liên hệ
                     </a>
                 </li>
+                <li class="nav-heading--item">
+                    <a href="quanli.php" class="nav-heading--item-link">
+                        Quản lí
+                    </a>
+                </li>
                 <?php if (!isset($_SESSION["login"])) : ?>
                     <li class="nav-heading--item">
                         <a href="login.php" class="nav-heading--item-link">
@@ -108,6 +113,11 @@ session_start();
                             Liên hệ
                         </a>
                     </li>
+                    <li class="nav-heading--item">
+                    <a href="quanli.php" class="nav-heading--item-link">
+                        Quản lí
+                    </a>
+                </li>
                     <?php if (!isset($_SESSION["login"])) : ?>
                         <li class="nav-small--item">
                             <a href="" class="nav-small--item-link">

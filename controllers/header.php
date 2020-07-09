@@ -99,7 +99,7 @@ session_start();
                     </li>
                     <li class="nav-small--item">
                         <a href="" class="nav-small--item-link">
-                            Thông <span class="typcn typcn-infinity"></span>
+                            Thông tin <span class="typcn typcn-infinity"></span>
                         </a>
                     </li>
                     <li class="nav-small--item">
