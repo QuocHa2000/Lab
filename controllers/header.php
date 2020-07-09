@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +26,7 @@
             <ul class="nav-heading--list">
                 <li class="nav-heading--item">
                     <a href="index.php" class="nav-heading--item-link">
-                        Trang Chủ   
+                        Trang Chủ
                     </a>
                 </li>
                 <li class="nav-heading--item">
@@ -39,7 +39,7 @@
                         Tài Liệu
                     </a>
                     <ul class="document-list">
-                        <li class="document-item"><a  class="document-link" href="./document.php?subject=ENGLISH">Tiếng Anh</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=ENGLISH">Tiếng Anh</a></li>
                         <li class="document-item"><a class="document-link" href="./document.php?subject=JAVASCRIPT">Javascripts</a></li>
                         <li class="document-item"><a class="document-link" href="./document.php?subject=CSS">Css</a></li>
                         <li class="document-item"><a class="document-link" href="./document.php?subject=HTML">HTML</a></li>
@@ -55,6 +55,11 @@
                 <li class="nav-heading--item">
                     <a href="gopy-lienhe.php" class="nav-heading--item-link">
                         Liên hệ
+                    </a>
+                </li>
+                <li class="nav-heading--item">
+                    <a href="quanli.php" class="nav-heading--item-link">
+                        Quản lí
                     </a>
                 </li>
                 <?php if (!isset($_SESSION["login"])) : ?>
