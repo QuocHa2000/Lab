@@ -10,7 +10,6 @@
             setcookie("user", $_POST["username"]);
             setcookie("pass",$_POST["password"]);
         }
-        else{}
         $sql="SELECT * FROM account WHERE username='$username' AND password='$password'";
         $user = mysqli_query($conn, $sql);
         
@@ -20,18 +19,20 @@
         }
         else
         {
-            $_SESSION["thongbao"] = "Sai tài khoản hoặc mật khẩu";
+            $sql_admin="SELECT * FROM admin WHERE Username_ad='$username' AND Password_ad='$password'";
+            $admin = mysqli_query($conn, $sql_admin);
+        
+            if(mysqli_fetch_row($admin)>0){
+                $_SESSION["admin"] = $username;
+                header("location:index.php");
+            }
+            else
+            {
+                $_SESSION["thongbao"] = "Sai tài khoản hoặc mật khẩu";
+            }
         }
-        $username="";
-        $password="";
-        $check=false;
-    
-        if(isset($_COOKIE["user"]) && isset($_COOKIE["pass"]))
-        {
-            $username=$_COOKIE["user"];
-            $password=$_COOKIE["pass"];
-            $check=true;
-        }
+        
+       
        
     }else{
         
