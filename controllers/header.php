@@ -15,6 +15,8 @@ session_start();
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="./css/Home.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/menu.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 </head>
 
 <body>

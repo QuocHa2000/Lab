@@ -46,3 +46,24 @@ $('.update').click(function() {
         })
     }
 })
+$('#submit').click(async function() {
+    console.log(1);
+    let form = $(this).closest("form").children();
+    console.log(form);
+    await $.ajax({
+        type: "POST",
+        url: "",
+        data: {
+            mamh: form[0].innerText,
+            phan1: form[1].innerText,
+            phan2: form[2].innerText,
+            phan3: form[3].innerText,
+            phan4: form[4].innerText,
+            malv: form[5].innerText,
+        },
+        dataType: "text",
+        success: function() {
+            alert("Insert document success");
+        }
+    })
+})
