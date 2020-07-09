@@ -1,6 +1,7 @@
 <?php
 require('./controllers/header.php');
 include "header-login.php";
+// include "header-general.php";
 ?>
 <link rel="stylesheet" href="./css/gopy.css">
     <section id="Contact" class="content-section">
@@ -51,8 +52,10 @@ include "header-login.php";
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        
+        </section>
+    </div>
+
 </body>
 
 </html>

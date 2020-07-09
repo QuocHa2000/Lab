@@ -1,13 +1,11 @@
-<?php
-    session_start();
-?>
+
 <?php require('./controllers/header.php') ?>
     <div class="home-main" data-aos="fade-down">
         <div class="home-main--text">
             <h1 class="home-main--heading"><span>KienThuc</span>
                 <div>WebEdu</div>
             </h1>
-            <h4 class="home-main--content">Chúng ta cùng nhau chia sẽ kiến thức để có thể giúp nhau cùng tiến bộ và sẽ tạo thành một cộng đồng vững mạnh </h4>
+            <h4 class="home-main--content">Chúng ta cùng nhau chia sẽ kiến thức để có thể giúp nhau cùng tiến bộ và sẽ tạo thành một cộng đồng vững mạnh </h4> 
             <ul class="home-main--list">
                 <li class="home-main--item">
                     <a href="#" class="home-main--link">CONTACT US </a>

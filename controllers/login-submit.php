@@ -16,11 +16,11 @@
         
         if(mysqli_fetch_row($user)>0){
             $_SESSION["login"] = $username;
-            header("location:home.php");
+            header("location:index.php");
         }
         else
         {
-            $_SESSION["sai"] = "Username or password is wrong";
+            $_SESSION["sai"] = "Sai tài khoản hoặc mật khẩu";
         }
         $username="";
         $password="";
