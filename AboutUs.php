@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,8 +9,10 @@
     <title>Giới thiệu</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./font/fontawesome-free-5.13.0-web/css/all.min.css">
     <link rel="stylesheet" href="./css/menu.css">
     <link href="./css/AboutUs.css" rel="stylesheet" />
+    
 </head>
 
 <body> 
@@ -63,7 +68,7 @@
                     </li>
                 <?php else : ?>
                     <li class="nav-heading--item" id="active">
-                        <i class="far fa-user" style="font-size: 2.6rem;"></i>
+                        <i class="far fa-user" style="font-size: 1.6rem;"></i>
                         <div class="user-info" id="user-info">
                             <h3><?php echo $_SESSION["login"]; ?></h3>
                             <a href="controllers/logout.php">Đăng xuất</a>
@@ -116,10 +121,10 @@
                         </li>
                     <?php else : ?>
                         <li class="nav-small--item" id="active">
-                            <i class="far fa-user" style="font-size: 2.6rem;"></i>
+                            <i class="far fa-user"></i>
                             <div class="user-info" id="user-info">
-                                <h3><?php echo $_SESSION["login"]; ?></h3>
-                                <a href="controllers/logout.php">Đăng xuất</a>
+                            <h3 style="font-size:1rem!important;"> <?php echo $_SESSION["login"]; ?></h3>
+                                <a  style="font-size: 1rem;" href="controllers/logout.php">Đăng xuất</a>
                             </div>
                         </li>
                     <?php endif; ?>
@@ -242,4 +247,5 @@
         </div>
       </footer>    
 </body>
+<script src="./js/home.js"></script>
 </html>

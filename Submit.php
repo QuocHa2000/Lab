@@ -23,7 +23,6 @@
             <thead>
                 <tr>
                     <th scope="col">Mã Môn Học</th>
-                    <th scope="col">Tiêu Đề</th>
                     <th scope="col">Cơ Bản</th>
                     <th scope="col">Trung Bình 1</th>
                     <th scope="col">Trung Bình 2</th>
@@ -42,11 +41,10 @@
                 ?>
                         <tr>
                             <td><?php echo $row["mamh"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["tieude"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["coban"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["trungbinh1"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["trungbinh2"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["nangcao"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["phan1"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["phan2"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["phan3"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["phan4"]; ?></td>
                             <td><button class="update btn btn-primary" style="margin : 2px" class="btn btn-primary">Sửa</button>
                                 <button class="delete btn btn-primary" style="margin : 2px" class="btn btn-primary">Xóa</button>
                             </td>
