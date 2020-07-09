@@ -36,12 +36,12 @@
                         Document
                     </a>
                     <ul class="document-list">
-                        <li class="document-item"><a  class="document-link" href="./document.php?subject=english">Tiếng Anh</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=js">Javascripts</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=css">Css</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=html">HTML</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=nodejs">Nodejs</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=php">PHP</a></li>
+                        <li class="document-item"><a  class="document-link" href="./document.php?subject=ENGLISH">Tiếng Anh</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=JAVASCRIPT">Javascripts</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=CSS">Css</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=HTML">HTML</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=NODEJS">Nodejs</a></li>
+                        <li class="document-item"><a class="document-link" href="./document.php?subject=PHP">PHP</a></li>
                     </ul>
                 </li>
                 <li class="nav-heading--item">

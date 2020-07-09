@@ -1,14 +1,22 @@
-<?php 
-    $conn = mysqli_connect("localhost","root","","web");
-    mysqli_set_charset($conn,"utf8");
-    $monhoc = "js";
-    if(isset($_GET['subject'])){
-        $monhoc = $_GET['subject'];
-    }
-        $sql = "SELECT * FROM document WHERE document.mamh= '$monhoc';";
-        $result = $conn->query($sql)->fetch_assoc();
-    
-    
+<?php
+$conn = mysqli_connect("localhost:3308", "root", "", "web");
+mysqli_set_charset($conn, "utf8");
+$monhoc = "js";
+if (isset($_GET['subject'])) {
+    $monhoc = $_GET['subject'];
+}
+$sql = "SELECT * FROM document WHERE document.mamh = '$monhoc' and document.malevel='cb';";
+$result = $conn->query($sql)->fetch_assoc();
+
+$sql = "SELECT * FROM document WHERE document.mamh = '$monhoc' and document.malevel='tb1';";
+$result2 = $conn->query($sql)->fetch_assoc();
+
+$sql = "SELECT * FROM document WHERE document.mamh = '$monhoc' and document.malevel='tb2';";
+$result3 = $conn->query($sql)->fetch_assoc();
+
+$sql = "SELECT * FROM document WHERE document.mamh = '$monhoc' and document.malevel='nc';";
+$result4 = $conn->query($sql)->fetch_assoc();
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +26,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="" href="./css/anhvan.css">
+    <link rel="stylesheet" type="" href="./css/document.css">
     <title>Document</title>
     <style>
         .sticky {
@@ -49,8 +57,7 @@
             <div id="content">
                 <span class="slide">
                     <a href="#" onclick="openSlideMenu()">
-                        <img src="./img/navigation icon@2x.png" alt="" height="40px"
-                            style="margin-top:6px ;margin-left: 4px">
+                        <img src="./img/navigation icon@2x.png" alt="" height="40px" style="margin-top:6px ;margin-left: 4px">
                     </a>
                 </span>
                 <div id="menu" class="nav">
@@ -67,35 +74,35 @@
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/bookicon.png" alt="" height="50px">
-                        <a href="document.php?subject=english">Tiếng Anh</a>
+                        <a href="document.php?subject=ENGLISH">Tiếng Anh</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/Science-Math-icon.png" alt="" height="50px">
-                        <a href="document.php?subject=js">Javascripts</a>
+                        <a href="document.php?subject=JAVASCRIPT">Javascripts</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/pngwing.com.png" alt="" height="50px">
-                        <a href="document.php?subject=css">Css</a>
+                        <a href="document.php?subject=CSS">Css</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/chemistry.png" alt="" height="50px">
-                        <a href="document.php?subject=html">HTML</a>
+                        <a href="document.php?subject=HTML">HTML</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/bookicon.png" alt="" height="50px">
-                        <a href="document.php?subject=nodejs">Nodejs</a>
+                        <a href="document.php?subject=NODEJS">Nodejs</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/htmlicon.png" alt="" height="50px">
-                        <a href="document.php?subject=php">PHP</a>
+                        <a href="document.php?subject=PHP">PHP</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/bookicon.png" alt="" height="50px">
-                        <a href="document.php?subject=toan">Toán </a>
+                        <a href="document.php?subject=TOAN">Toán </a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/cssicon.png" alt="" height="50px">
-                        <a href="document.php?subject=vatli">Vật Lí</a>
+                        <a href="document.php?subject=VAT LY">Vật Lí</a>
                     </div>
                 </div>
             </div>
@@ -104,7 +111,7 @@
         </div>
         <div class="item2">
             <p class="logo">
-                <B>ENGLISH</B>
+                <B><?php echo $monhoc ?></B>
             </p>
 
         </div>
@@ -132,122 +139,127 @@
     <div class="map">
         <div class="innermap">
             <img src="./img/pngfuel.com.png" alt="mappp" height="1000">
-            <div class="egg egg1">
-                <a href="#"><img src="./img/egg.png" alt="" height="100"></a>
+            <button onclick="egg1()" style="background-color:transparent;border:none;" class="egg egg1">
+                <p><img src="./img/egg.png" alt="" height="100"></p>
                 <p style="margin:0">
-                    <B>Grammar basic</B>
+                    <B><?php echo $monhoc ?> Cơ Bản</B>
                 </p>
-            </div>
-            <div class="egg egg2">
-                <a href="#"><img src="./img/egg3.png" alt="" height="100"></a>
+            </button>
+            <button onclick="egg2()" style="background-color:transparent;border:none;" class="egg egg2">
+                <p><img src="./img/egg3.png" alt="" height="100"></p>
                 <p style="margin:0">
-                    <B>Grammar basic 2</B>
+                    <B><?php echo $monhoc ?> Trung bình 1</B>
                 </p>
-            </div>
-            <div class="egg egg3">
-                <a href="#"><img src="./img/egg4.png" alt="" height="103"></a>
+            </button>
+            <button onclick="egg3()" style="background-color:transparent;border:none;" class="egg egg3">
+                <p><img src="./img/egg4.png" alt="" height="103"></p>
                 <p style="margin-top:40px">
-                    <B>Grammar basic 2</B>
+                    <B><?php echo $monhoc ?> Trung Bình 2</B>
                 </p>
-            </div>
-            <div class="egg egg4">
-                <a href="#"><img src="./img/egg5.png" alt="" height="104"></a>
+            </button>
+            <button onclick="egg4()" style="background-color:transparent;border:none;display:flex;" class="egg egg4">
+                <p><img src="./img/egg5.png" alt="" height="104"></p>
                 <p style="margin:0">
-                    <B>Grammar basic</B>
+                    <B style="float:left;margin-top:50px;"><?php echo $monhoc ?> Nâng Cao</B>
                 </p>
-            </div>
+            </button>
             <div class="egg dinoegg">
                 <a href="#"><img src="./img/dinoegg.png" alt="" height="104"></a>
                 <p style="margin-left: 20px;margin-top: 0">
-                    <B>finish line</B>
+                    <B>Hoàn Thành </B>
                 </p>
             </div>
-            <p class="egg title"><b>ENGLISH ADVENTURE</b></p>
+            <p class="egg title" id="top"><b> <?php echo $monhoc ?> ADVENTURE</b></p>
         </div>
     </div>
-    <div class="">
+    <br id="move1">
+    <div>
         <div class="sectionegg">
             <br>
             <div class="sectitle">
                 <?php
-                    echo "$result[tieude]";
+                echo $monhoc . ' Cơ Bản';
+                $level= 'cb';
                 ?>
             </div>
             <div class="row1" style="margin-top: 20px">
                 <div class="rowsec">
-                    <a class="rowitem" id="modal-btn2">
-                        <p class="rowitemcon">Basic</p>
+                    <button  class="rowitem" id="modal-btn2" style="color: black;" value="phan1">
+                        <p class="rowitemcon">Phần 1</p>
 
-                    </a>
+                    </button>
                     <div class="modal-bg2">
-                        <div class="modal2"> <?php echo "$result[coban]"?>
+                        <div class="modal2" id="1cbphan">
+                        <?php echo "$result[phan1]" ?>
                             <div id="close2">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
 
                     </div>
                     <br>
-                    <button style="margin: auto;">baitap</button>
+                   
                 </div>
                 <div class="rowsec">
-                    <a class="rowitem" id="modal-btn3">
-                        <p class="rowitemcon">Intermediate 1</p>
-                    </a>
+                    <button class="rowitem" id="modal-btn3" style="color: black;">
+                        <p class="rowitemcon">Phần 2 </p>
+                    </button>
                     <div class="modal-bg3">
-                        <div class="modal3"><?php echo "$result[trungbinh1]" ?>
+                        <div class="modal3"><?php echo "$result[phan2]" ?>
                             <div id="close3">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
 
                     </div>
                     <br>
-                    <button style="margin: auto;">baitap</button>
+                    
                 </div>
             </div>
 
             <div class="row1" style="margin-top: 20px">
                 <div class="rowsec">
-                    <a class="rowitem" id="modal-btn4">
-                        <p class="rowitemcon">Intermediate 2</p>
-                    </a>
+                    <button class="rowitem" id="modal-btn4" style="color: black;"> 
+                        <p class="rowitemcon">Phần 3 </p>
+                    </button>
                     <div class="modal-bg4">
-                        <div class="modal4"><?php echo "$result[trungbinh2]" ?>
+                        <div class="modal4"><?php echo "$result[phan3]" ?>
                             <div id="close4">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
 
                     </div>
                     <br>
-                    <button style="margin: auto;">baitap</button>
+                    
                 </div>
                 <div class="rowsec">
-                    <a class="rowitem" id="modal-btn5">
-                        <p class="rowitemcon">Advance</p>
-                    </a>
+                    <button class="rowitem" id="modal-btn5" style="color: black;">
+                        <p class="rowitemcon">Phần 4 </p>
+                    </button>
                     <div class="modal-bg5">
-                        <div class="modal5"><?php echo "$result[nangcao]" ?>
+                        <div class="modal5"><?php echo "$result[phan4]" ?>
                             <div id="close5">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
 
                     </div>
                     <br>
-                    <button style="margin: auto;">baitap</button>
+                    
                 </div>
             </div>
             <a href="#" style="text-decoration: none;" class="backbutton">
-                <p style="margin-top: 15px">Back to the top</p>
+            <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
             </a>
+
+
+            <div class="test">
+                <P style="margin-right: 60px;z-index:0">Confident ? Let's have a little test shall we! </P>
+                <button id="modal-btn" class="button" style="z-index: 0;">
+                    TEST
+                </button>
+            </div>
         </div>
 
     </div>
 
-    <div class="test">
-        <P style="margin-right: 60px">Confident ? Let's have a little test shall we! </P>
-        <button id="modal-btn" class="button">
-            TEST
-        </button>
-    </div>
 
 
     <div class="modal-bg">
@@ -263,10 +275,331 @@
         </div>
 
     </div>
+
+
+
+
+    <br id="move2">
+
+
+    <div style="z-index: 0;">
+        <div class="sectionegg">
+            <br>
+            <div class="sectitle">
+                <?php
+                echo $monhoc . ' Trung Bình 1 ';
+                ?>
+            </div>
+            <div class="row1" style="margin-top: 20px">
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn6" style="color: black;">
+                        <p class="rowitemcon">Phần 1</p>
+
+                    </button>
+                    <div class="modal-bg6">
+                        <div class="modal6"> <?php echo "$result2[phan1]" ?>
+                            <div id="close6">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+                   
+                </div>
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn7" style="color: black;">
+                        <p class="rowitemcon">Phần 2 </p>
+                    </button>
+                    <div class="modal-bg7">
+                        <div class="modal7"><?php echo "$result2[phan2]" ?>
+                            <div id="close7">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+                    
+                </div>
+            </div>
+
+            <div class="row1" style="margin-top: 20px">
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn8" style="color: black;">
+                        <p class="rowitemcon">Phần 3 </p>
+                    </button>
+                    <div class="modal-bg8">
+                        <div class="modal8"><?php echo "$result2[phan3]" ?>
+                            <div id="close8">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+               
+                </div>
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn9" style="color: black;">
+                        <p class="rowitemcon">Phần 4 </p>
+                    </button>
+                    <div class="modal-bg9">
+                        <div class="modal9"><?php echo "$result2[phan4]" ?>
+                            <div id="close9">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+                  
+                </div>
+            </div>
+            <a href="#" style="text-decoration: none;" class="backbutton">
+            <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
+            </a>
+            <div class="test">
+                <P style="margin-right: 60px;z-index:0">Confident ? Let's have a little test shall we! </P>
+                <button id="modal-btn10" class="button" style="z-index: 0;">
+                    TEST
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="modal-bg10">
+        <div class="modal10">
+            <h2>test</h2>
+            <p>
+                Tuy nhiên, mới đây, theo tiết lộ từ nhật báo Tây Ban Nha Mundo Deportivo (thân Barca ở xứ Catalunya), trước khi để mắt đến Lautaro Martinez, Barca đã rất quyết tâm muốn chiêu mộ Harry Kane (Tottenham Hotspur) trong kỳ chuyển nhượng mùa Hè 2019. Lúc ấy,
+                trung phong nổi tiếng của ĐT Anh cũng đang được MU và Real Madrid rất quan tâm. Chủ tịch Barca - ông Josep Maria Bartomeu thậm chí đã liên hệ với người đồng cấp bên phía Tottenham - ông Daniel Levy để thương thảo về phi vụ này. Tuy nhiên,
+                Levy đã từ chối bán Kane do xác định ngôi sao này là "quân bài quan trọng số 1" giúp Spurs cạnh tranh vị trí cao ở giải Ngoại hạng Anh với những đối thủ lớn trong nhóm "Big 6".
+            </p>
+            <div id="close10"><a>+</a></div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <br id="move3">
+
+
+    <div style="z-index: 0;">
+        <div class="sectionegg">
+            <br>
+            <div class="sectitle">
+                <?php
+                echo $monhoc . ' Trung Bình 2 ';
+                ?>
+            </div>
+            <div class="row1" style="margin-top: 20px">
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn11" style="color: black;">
+                        <p class="rowitemcon">Phần 1</p>
+
+                    </button>
+                    <div class="modal-bg11">
+                        <div class="modal11"> <?php echo "$result3[phan1]" ?>
+                            <div id="close11">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+                   
+                </div>
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn12" style="color: black;">
+                        <p class="rowitemcon">Phần 2 </p>
+                    </button>
+                    <div class="modal-bg12">
+                        <div class="modal12"><?php echo "$result3[phan2]" ?>
+                            <div id="close12">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+                 
+                </div>
+            </div>
+
+            <div class="row1" style="margin-top: 20px">
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn13" style="color: black;">
+                        <p class="rowitemcon">Phần 3 </p>
+                    </button>
+                    <div class="modal-bg13">
+                        <div class="modal13"><?php echo "$result3[phan3]" ?>
+                            <div id="close13">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+                  
+                </div>
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn14" style="color: black;">
+                        <p class="rowitemcon">Phần 4 </p>
+                    </button>
+                    <div class="modal-bg14">
+                        <div class="modal14"><?php echo "$result3[phan4]" ?>
+                            <div id="close14">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+               
+                </div>
+            </div>
+            <a href="#" style="text-decoration: none;" class="backbutton">
+            <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
+            </a>
+            <div class="test">
+                <P style="margin-right: 60px;z-index:0">Confident ? Let's have a little test shall we! </P>
+                <button id="modal-btn15" class="button" style="z-index: 0;">
+                    TEST
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="modal-bg15">
+        <div class="modal15">
+            <h2>test</h2>
+            <p>
+                Tuy nhiên, mới đây, theo tiết lộ từ nhật báo Tây Ban Nha Mundo Deportivo (thân Barca ở xứ Catalunya), trước khi để mắt đến Lautaro Martinez, Barca đã rất quyết tâm muốn chiêu mộ Harry Kane (Tottenham Hotspur) trong kỳ chuyển nhượng mùa Hè 2019. Lúc ấy,
+                trung phong nổi tiếng của ĐT Anh cũng đang được MU và Real Madrid rất quan tâm. Chủ tịch Barca - ông Josep Maria Bartomeu thậm chí đã liên hệ với người đồng cấp bên phía Tottenham - ông Daniel Levy để thương thảo về phi vụ này. Tuy nhiên,
+                Levy đã từ chối bán Kane do xác định ngôi sao này là "quân bài quan trọng số 1" giúp Spurs cạnh tranh vị trí cao ở giải Ngoại hạng Anh với những đối thủ lớn trong nhóm "Big 6".
+            </p>
+            <div id="close15"><a>+</a></div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <br id="move4">
+
+
+    <div style="z-index: 0;">
+        <div class="sectionegg">
+            <br>
+            <div class="sectitle">
+                <?php
+                echo $monhoc . ' Nâng Cao ';
+                ?>
+            </div>
+            <div class="row1" style="margin-top: 20px">
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn16" style="color: black;">
+                        <p class="rowitemcon">Phần 1</p>
+
+                    </button>
+                    <div class="modal-bg16">
+                        <div class="modal16"> <?php echo "$result4[phan1]" ?>
+                            <div id="close16">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+                    
+                </div>
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn17" style="color: black;">
+                        <p class="rowitemcon">Phần 2 </p>
+                    </button>
+                    <div class="modal-bg17">
+                        <div class="modal17"><?php echo "$result4[phan2]" ?>
+                            <div id="close17">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+                    
+                </div>
+            </div>
+
+            <div class="row1" style="margin-top: 20px">
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn18" style="color: black;">
+                        <p class="rowitemcon">Phần 3 </p>
+                    </button>
+                    <div class="modal-bg18">
+                        <div class="modal18"><?php echo "$result4[phan3]" ?>
+                            <div id="close18">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+                   
+                </div>
+                <div class="rowsec">
+                    <button class="rowitem" id="modal-btn19" style="color: black;">
+                        <p class="rowitemcon">Phần 4 </p>
+                    </button>
+                    <div class="modal-bg19">
+                        <div class="modal19"><?php echo "$result4[phan4]" ?>
+                            <div id="close19">
+                                <a style="text-decoration: none;"></a>+</div>
+                        </div>
+
+                    </div>
+                    <br>
+                
+                </div>
+            </div>
+            <a href="#" style="text-decoration: none;" class="backbutton">
+                <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
+            </a>
+            <div class="test">
+                <P style="margin-right: 60px;z-index:0">Confident ? Let's have a little test shall we! </P>
+                <button id="modal-btn20" class="button" style="z-index: 0;">
+                    TEST
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="modal-bg20">
+        <div class="modal20">
+            <h2>test</h2>
+            <p>
+                Tuy nhiên, mới đây, theo tiết lộ từ nhật báo Tây Ban Nha Mundo Deportivo (thân Barca ở xứ Catalunya), trước khi để mắt đến Lautaro Martinez, Barca đã rất quyết tâm muốn chiêu mộ Harry Kane (Tottenham Hotspur) trong kỳ chuyển nhượng mùa Hè 2019. Lúc ấy,
+                trung phong nổi tiếng của ĐT Anh cũng đang được MU và Real Madrid rất quan tâm. Chủ tịch Barca - ông Josep Maria Bartomeu thậm chí đã liên hệ với người đồng cấp bên phía Tottenham - ông Daniel Levy để thương thảo về phi vụ này. Tuy nhiên,
+                Levy đã từ chối bán Kane do xác định ngôi sao này là "quân bài quan trọng số 1" giúp Spurs cạnh tranh vị trí cao ở giải Ngoại hạng Anh với những đối thủ lớn trong nhóm "Big 6".
+            </p>
+            <div id="close20"><a>+</a></div>
+
+        </div>
+
+
+    </div>
     <script src="../Lab/js/modal.js"></script>
-
-
-
 
 
 
@@ -275,3 +608,45 @@
 </body>
 
 </html>
+
+<script>
+    function egg1() {
+        var egg = document.getElementById("move1");
+        egg.scrollIntoView();
+    }
+
+    function egg2() {
+        var egg = document.getElementById("move2");
+        egg.scrollIntoView();
+    }
+    function egg3() {
+        var egg = document.getElementById("move3");
+        egg.scrollIntoView();
+    }
+    function egg4() {
+        var egg = document.getElementById("move4");
+        egg.scrollIntoView();
+    }
+    function top() {
+        var tothetop = document.getElementById("top");
+        tothetop.scrollIntoView();
+    }
+    function levelmonhoc(monhoc,level){
+        $.ajax(
+          {
+              url : "/Lab/subject.php",
+              type : "post",
+              dataType : "text",
+              data : {
+                  code :  monhoc,
+                  level: level,
+                  part : $('button').val()
+              },
+              success : function (data) {
+                  $('#1cbphan').html(data);
+              }
+              
+          }
+      )
+    }
+</script>
