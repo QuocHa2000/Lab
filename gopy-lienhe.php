@@ -56,5 +56,5 @@ include "header-login.php";
     </div>
 
 </body>
-
+<script src="./js/home.js"></script>
 </html>

@@ -111,7 +111,6 @@
     background-color: #eea412;
     color: #0d0d0d;
     border-radius: 3px;
-    font-size: 1.6rem;
     margin: 0 auto;
     margin-bottom: 20px;
     transition: all ease-out 0.3s;
@@ -208,7 +207,6 @@
     color: #eea412;
     cursor: pointer;
 }
-
 
 .footer {
     height: 410px;
