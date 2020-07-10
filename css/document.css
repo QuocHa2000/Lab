@@ -3,7 +3,8 @@ html {
   }
 body
 {
-    background-color:#00EBC7;
+    background-image: url('../img/docback.jpg ');
+    background-size: 100% 100% ;
     margin: 0;
     overflow-x: hidden;
 }
@@ -46,7 +47,7 @@ body
     border-top:0;
     border-left: 0;
     border-right: 0;
-    background-color: #8DFFED;
+    background-color: #202651;
     margin: 0px;
     padding: 0px;
     position: relative;
@@ -56,6 +57,7 @@ body
 .logo{
     font-weight:bolder;
     font: Balsamig Sans;
+    color: #fbb833;
 }
 .item1{
         flex: 1;
@@ -118,14 +120,15 @@ body
    
     height: 600px;
     width: 900px;
-    background-color: bisque;
+    background-color: #093759;
     margin: auto;
     margin-top: 50px;
     border-top: 12px black;
     position: relative;
+    border: #093759;
 }
 .sectitle{
-    background-color: aqua;
+    background-color: #af603a;
     height: 40px;
     width: 230px;
     border-radius: 20px;
@@ -151,7 +154,7 @@ body
   
 }
 .rowitem{
-    background-color:#00EBC7;
+    background-color:#eea412;
     height: 150px;
     width: 250px;
     border-radius: 47px;
@@ -197,7 +200,7 @@ body
 .test{
     height: 50px;
     width: 400px;
-    background-color: white;
+    background-color: burlywood;
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -217,7 +220,7 @@ body
    right: 12px;
    margin-top: 5px;
    border-radius: 50px;
-   background-color: #00EBC7;
+   background-color: #45a688;
 }
 .frame{
     position: relative;
