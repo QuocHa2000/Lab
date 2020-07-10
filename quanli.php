@@ -97,11 +97,11 @@ require('./controllers/postquanli.php');
                     while ($row = mysqli_fetch_assoc($result)) {
                 ?>
                         <tr>
-                            <td><?php echo $row["mamh"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["phan1"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["phan2"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["phan3"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["phan4"]; ?></td>
+                            <td><?php echo $row["TenMH"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["Phan1"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["Phan2"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["Phan3"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["Phan4"]; ?></td>
                             <td><button class="update btn btn-primary" style="margin : 2px" class="btn btn-primary">Sửa</button>
                                 <button class="delete btn btn-primary" style="margin : 2px" class="btn btn-primary">Xóa</button>
                             </td>
