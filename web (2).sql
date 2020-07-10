@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th7 09, 2020 lúc 03:35 PM
+-- Thời gian đã tạo: Th7 10, 2020 lúc 03:55 AM
 -- Phiên bản máy phục vụ: 10.4.10-MariaDB
 -- Phiên bản PHP: 7.3.12
 
@@ -32,21 +32,18 @@ DROP TABLE IF EXISTS `account`;
 CREATE TABLE IF NOT EXISTS `account` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Username` varchar(200) NOT NULL,
-  `Password` varchar(255) NOT NULL,
-  `Email` varchar(255) NOT NULL,
-  PRIMARY KEY (`Username`,`Id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `Password` varchar(200) NOT NULL,
+  `Email` varchar(200) NOT NULL,
+  PRIMARY KEY (`Id`,`Username`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `account`
 --
 
 INSERT INTO `account` (`Id`, `Username`, `Password`, `Email`) VALUES
-(1, 'thuanpro2025', '8e6249fe3ca12fe53e4de5a0eb92de7a', 'thuanpro2025@gmail.com'),
-(1, 'daothuanf3', '8e6249fe3ca12fe53e4de5a0eb92de7a', 'daothuanf3@gmail.com'),
-(1, 'daothuanf9', '8e6249fe3ca12fe53e4de5a0eb92de7a', 'daothuanf3@gmail.com'),
-(1, 'tuklaaizay', '8e6249fe3ca12fe53e4de5a0eb92de7a', 'thuanpro2025@gmail.com'),
-(1, 'daothuanf0', '8e6249fe3ca12fe53e4de5a0eb92de7a', 'thuanpro2025@gmail.com');
+(1, 'daothuanf9', '8e6249fe3ca12fe53e4de5a0eb92de7a', 'thuanpro2025@gmail.com'),
+(2, 'daothuanf3', '8e6249fe3ca12fe53e4de5a0eb92de7a', 'thuanpro2025@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -61,7 +58,17 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `Password_ad` varchar(200) NOT NULL,
   `Email_ad` varchar(200) NOT NULL,
   PRIMARY KEY (`Id`,`Username_ad`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `admin`
+--
+
+INSERT INTO `admin` (`Id`, `Username_ad`, `Password_ad`, `Email_ad`) VALUES
+(1, 'phuhoaibao', 'bc856a26d13a868517494d9acd2118aa', 'phuhoaibao1@gmail.com'),
+(2, 'havuongquoc', 'bc856a26d13a868517494d9acd2118aa', 'havuongquoc2000@gmail.com'),
+(3, 'phamhoanhquan', 'bc856a26d13a868517494d9acd2118aa', 'phamhoanhquan2000@gmail.com'),
+(4, 'thuanpro2025', 'bc856a26d13a868517494d9acd2118aa', 'thuanpro2025@gmail.com');
 
 -- --------------------------------------------------------
 

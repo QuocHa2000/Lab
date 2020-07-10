@@ -20,11 +20,22 @@
             $_SESSION["thongbao"] = "Tài khoản đã tồn tại";
             header("location:../register.php");
             die();
-        }else{  
-        $sql = "INSERT INTO account (username, password, email) VALUES ('$username','$password','$email')";
-        mysqli_query($conn, $sql);
-        $_SESSION["thongbao"] = "Đắng ký thành công";
-        header("location:../login.php");
+        }else{
+            $sql_admin="SELECT * FROM admin WHERE Username_ad='$username'";
+            $result=mysqli_query($conn, $sql_admin);
+            if(mysqli_fetch_row($result)>0)
+            {
+                $_SESSION["thongbao"] = "Tài khoản đã tồn tại";
+                header("location:../register.php");
+                die();
+            }
+            else
+            {
+                $sql = "INSERT INTO account (username, password, email) VALUES ('$username','$password','$email')";
+                mysqli_query($conn, $sql);
+                $_SESSION["thongbao"] = "Đắng ký thành công";
+                header("location:../login.php");
+            }
         }
     }
     
