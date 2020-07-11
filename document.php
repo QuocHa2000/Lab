@@ -1,7 +1,7 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "web");
 mysqli_set_charset($conn, "utf8");
-$monhoc = "js";
+$monhoc = "JAVASCRIPT";
 if (isset($_GET['subject'])) {
     $monhoc = $_GET['subject'];
 }
@@ -16,7 +16,7 @@ $result3 = $conn->query($sql)->fetch_assoc();
 
 $sql = "SELECT * FROM document WHERE document.TenMH = '$monhoc' and document.malevel='nc';";
 $result4 = $conn->query($sql)->fetch_assoc();
-
+require('./controllers/header.php')
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,6 @@ $result4 = $conn->query($sql)->fetch_assoc();
     <title>Document</title>
     <style>
         .sticky {
-            position: fixed;
             top: 0;
             width: 100%;
         }
@@ -70,7 +69,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                     </a>
                     <div style="display: flex;margin-top: 0;margin-left: 20px">
                         <img src="./img/homeicon.png" alt="" height="55px">
-                        <a href="index.php">home</a>
+                        <a href="index.php">Home</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/bookicon.png" alt="" height="50px">
@@ -608,7 +607,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 </body>
 
 </html>
-
+<script src="./js/home.js"></script>
 <script>
     function egg1() {
         var egg = document.getElementById("move1");

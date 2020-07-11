@@ -26,7 +26,7 @@ require('./controllers/postquanli.php');
         <blockquote id="description" style="width:600px">
         </blockquote>
         <button type="button" class="btn btn-primary mb-5" data-toggle="modal" data-target="#exampleModal">
-            Add New Document
+            Thêm Tài Liệu Mới
         </button>
 
         <!-- Modal -->
@@ -42,35 +42,35 @@ require('./controllers/postquanli.php');
                     <form method="POST">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Mã Môn Học</label>
-                            <input  name="mamh" class="form-control" id="exampleFormControlInput1">
+                            <input  name="ma"  class="form-control" id="exampleFormControlInput1">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Tên Môn Học</label>
-                            <input name="tenmh" class="form-control" id="exampleFormControlInput1">
+                            <input  name="ten" class="form-control additem" id="exampleFormControlInput1">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Phần 1</label>
-                            <textarea class="form-control" name="phan1" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control additem" name="phan1" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Phần 2</label>
-                            <textarea class="form-control" name="phan2" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control additem" name="phan2" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Phần 3</label>
-                            <textarea class="form-control" name="phan3" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control additem" name="phan3" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Phần 4</label>
-                            <textarea class="form-control" name="phan4" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control additem" name="phan4" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Mã Level</label>
-                            <input  name="malv" class="form-control" id="exampleFormControlInput1">
+                            <input  name="malv" class="form-control additem" id="exampleFormControlInput1">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" id="submit" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            <button type="submit" id="submit" class="btn btn-primary">Thêm</button>
                         </div>
                     </form>
                 </div>
@@ -81,10 +81,10 @@ require('./controllers/postquanli.php');
                 <tr>
                     <th scope="col">Mã Môn Học</th>
                     <th scope="col">Tên Môn Học</th>
-                    <th scope="col">Cơ Bản</th>
-                    <th scope="col">Trung Bình 1</th>
-                    <th scope="col">Trung Bình 2</th>
-                    <th scope="col">Nâng Cao</th>
+                    <th scope="col">Phần 1</th>
+                    <th scope="col">Phần 2</th>
+                    <th scope="col">Phần 3</th>
+                    <th scope="col">Phần 4</th>
                     <th scope="col">Thao Tác</th>
                 </tr>
             </thead>

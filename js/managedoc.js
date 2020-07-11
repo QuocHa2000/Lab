@@ -24,6 +24,7 @@ $('.update').click(function() {
         $(this).text('Lưu Thay Đổi');
     } else {
         let tds = $(this).closest('tr').children();
+        console.log(tds);
         $(this).text("Sửa");
         for (let i = 1; i < tds.length - 1; i++) {
             tds[i].contentEditable = false;
@@ -33,11 +34,11 @@ $('.update').click(function() {
             url: "",
             data: {
                 mamh: tds[0].innerText,
-                title: tds[1].innerText,
-                basic: tds[2].innerText,
-                intermediate1: tds[3].innerText,
-                intermediate2: tds[4].innerText,
-                advance: tds[5].innerText
+                tenmh: tds[1].innerText,
+                phan1: tds[2].innerText,
+                phan2: tds[3].innerText,
+                phan3: tds[4].innerText,
+                phan4: tds[5].innerText
             },
             dataType: "text",
             success: function() {
@@ -45,26 +46,4 @@ $('.update').click(function() {
             }
         })
     }
-})
-$('#submit').click(async function() {
-    console.log(1);
-    let form = $(this).closest("form").children();
-    console.log(form);
-    await $.ajax({
-        type: "POST",
-        url: "",
-        data: {
-            mamh: form[0].innerText,
-            tenmh: form[1].innerText,
-            phan1: form[2].innerText,
-            phan2: form[3].innerText,
-            phan3: form[4].innerText,
-            phan4: form[5].innerText,
-            malv: form[6].innerText,
-        },
-        dataType: "text",
-        success: function() {
-            alert("Insert document success");
-        }
-    })
 })

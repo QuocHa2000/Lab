@@ -8,10 +8,10 @@
             <h4 class="home-main--content">Chúng ta cùng nhau chia sẽ kiến thức để có thể giúp nhau cùng tiến bộ và sẽ tạo thành một cộng đồng vững mạnh </h4> 
             <ul class="home-main--list">
                 <li class="home-main--item">
-                    <a href="#" class="home-main--link">CONTACT US </a>
+                    <a href="./gopy-lienhe.php" class="home-main--link">Liên Hệ</a>
                 </li>
                 <li class="home-main--item">
-                    <a href="#" class="home-main--link">READ MORE</a>
+                    <a href="./AboutUs" class="home-main--link">Thông Tin</a>
                 </li>
             </ul>
         </div>
@@ -20,7 +20,7 @@
         <div class="container-about">
             <div class="container-about--heading">
                 <h1 class="container-about--heading1">
-                    About
+                    Chúng Tôi
                 </h1>
                 <p class="container-about--heading-content">
                     Chúng tôi xây dựng một nền tảng chia sẽ nhiều kiến thức ở nhiều lĩnh vực khác nhau nhằm tạo nên một cộng đồng <br> giúp nhau cùng phát triển và cùng nhau thành công .
@@ -30,30 +30,30 @@
         <div class="container-about--main">
             <div class="container-about--main-left" data-aos="slide-right" data-aos-offset="400">
                 <h1 class="container-about--main-heading">
-                    Chào mừng đến với KienThuc Web education
+                    Chào mừng đến với KienThucEdu.
                 </h1>
                 <p class="container-about--main-content">
-                    Chúng tôi mang lại cho bạn những kiến thức bổ ích ở nhiều lĩnh vực khác nhau
+                    Chúng tôi mang lại cho bạn những kiến thức bổ ích ở nhiều lĩnh vực khác nhau.
                 </p>
                 <p class="container-about--main-content">
-                    Xây dựng 1 hệ thống kiến thức nền tảng từ cơ bản đến nâng cao. Kèm theo đó là lượng bài tập rộng lớn giúp bạn luyện tập sau khi học Lí Thuyết
+                    Xây dựng 1 hệ thống kiến thức nền tảng từ cơ bản đến nâng cao. Kèm theo đó là lượng bài tập rộng lớn giúp bạn luyện tập sau khi học Lí Thuyết.
                 </p>
-                <center><a href="#" class="container-about--main-link">Read More</a></center>
+                <center><a href="./document.php" class="container-about--main-link">Xem</a></center>
                 <img src="https://www.greatschools.org/gk/wp-content/uploads/2014/03/The-school-visit-what-to-look-for-what-to-ask-1.jpg" alt="" class="container-about--main-img">
             </div>
             <div class="container-about--main-right" data-aos="slide-left" data-aos-offset="400">
-                <img src="https://www.greatschools.org/gk/wp-content/uploads/2014/03/The-school-visit-what-to-look-for-what-to-ask-1.jpg" alt="" class="container-about--main-img" style="margin-bottom: 50px;">
+                <img src="./img/community.jpg" alt="" class="container-about--main-img" style="margin-bottom: 50px;">
                 <div class="container-about--main-content">
                     <h1 class="container-about--main-heading">
-                        Chào mừng đến với KienThuc Web education
+                        Cùng tham gia vào cộng đồng học tập và trao đổi kiến thức - KienThucEdu.
                     </h1>
                     <p class="container-about--main-content">
-                        Chúng tôi mang lại cho bạn những kiến thức bổ ích ở nhiều lĩnh vực khác nhau
+                        Các thành viên trong cộng đồng cùng nhau trao đổi kiến thức và giúp đỡ nhau cùng phát triển.
                     </p>
                     <p class="container-about--main-content">
-                        Xây dựng 1 hệ thống kiến thức nền tảng từ cơ bản đến nâng cao. Kèm theo đó là lượng bài tập rộng lớn giúp bạn luyện tập sau khi học Lí Thuyết
+                        Chúng tôi sẽ phát triển kênh giao tiếp cho các thành viên của cộng đồng trong thời gian tới, khi mà số lượng thành viên đã đạt chỉ tiêu. 
                     </p>
-                    <center><a href="#" class="container-about--main-link">Read More</a></center>
+                    <center><a href="#" class="container-about--main-link">Đăng Kí Ngay</a></center>
                 </div>
 
             </div>
@@ -62,7 +62,7 @@
     <div class="container-history">
         <div class="container-history--header">
             <h1 class="container-history--header1">
-                Our History
+                Lịch Sử Hình Thành
             </h1>
             <p class="container-history--header-text">
                 Quá trình hình thành và phát triển để tạo dựng nên 1 cộng đồng chia sẽ kiến thức rộng lớn với những kiến thức chất lượng <br> cùng với đó là các thành viên trong cộng đồng nhiệt huyết và sẵn sàng hổ trọ lẫn nhau
@@ -72,30 +72,30 @@
             <div class="container-history--main-s">
                 <div class="container-history--main-si" data-aos="fade-up" data-aos-offset="250" data-aos-duration="1000">
                     <div class="container-history--main-text">
-                        <h1> 2018 </h1>
-                        <p>Bắt đầu thành lập cộng đồng và chia sẽ các kiến thức thông qua website đến tất cả các thành viên đầu tiên của cộng đồng </p>
+                        <h1> Tháng 03/2020 </h1>
+                        <p>Lên ý tưởng và bắt đầu thực hiện những bước đầu tiên thành lập nên website và cộng đồng.</p>
                     </div>
                 </div>
                 <i class="fas fa-arrows-alt-v"></i>
                 <div class="container-history--main-si" data-aos="fade-up" data-aos-offset="250" data-aos-duration="1000">
                     <div class="container-history--main-text">
-                        <h1> 2018 </h1>
-                        <p>Bắt đầu thành lập cộng đồng và chia sẽ các kiến thức thông qua website đến tất cả các thành viên đầu tiên của cộng đồng </p>
+                        <h1> Tháng 05/2020 </h1>
+                        <p>Phần hình ảnh và giao diện cơ bản đã hoàn thành xong.</p>
                     </div>
                 </div>
             </div>
             <div class="container-history--main-s">
                 <div class="container-history--main-si" data-aos="fade-up" data-aos-offset="250" data-aos-duration="1000">
                     <div class="container-history--main-text">
-                        <h1> 2018 </h1>
-                        <p>Bắt đầu thành lập cộng đồng và chia sẽ các kiến thức thông qua website đến tất cả các thành viên đầu tiên của cộng đồng </p>
+                        <h1> Tháng 06/2020 </h1>
+                        <p>Thực hiện hóa các chức năng về phần server bao gồm tài liệu và người dùng.</p>
                     </div>
                 </div>
                 <i class="fas fa-arrows-alt-v"></i>
                 <div class="container-history--main-si" data-aos="fade-up" data-aos-offset="250" data-aos-duration="1000">
                     <div class="container-history--main-text">
-                        <h1> 2018 </h1>
-                        <p>Bắt đầu thành lập cộng đồng và chia sẽ các kiến thức thông qua website đến tất cả các thành viên đầu tiên của cộng đồng </p>
+                        <h1> Tháng 07/2020  </h1>
+                        <p>Hoàn thành dự án và bắt đầu đưa vào thực hiện và chia sẽ cho người dùng.</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                 </div>
                 <div class="container-count--main-text">
                     <h1 class="container-count--main-heading">
-                        5000
+                        1000
                     </h1>
                     <p class="container-count--main-text1">
                         Participants
@@ -122,10 +122,10 @@
                 </div>
                 <div class="container-count--main-text">
                     <h1 class="container-count--main-heading">
-                        50
+                        10
                     </h1>
                     <p class="container-count--main-text1">
-                        Field
+                        Fields
                     </p>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                 </div>
                 <div class="container-count--main-text">
                     <h1 class="container-count--main-heading">
-                        3
+                        1
                     </h1>
                     <p class="container-count--main-text1">
                         Years
@@ -148,7 +148,7 @@
     <div class="container-field">
         <div class="container-field--heading">
             <h1 class="container-field--header">
-                Main Subjects
+                Các môn học chính
             </h1>
             <p class="container-field--text">
                 Một vài lĩnh vực và môn học nổi bật được các thành viên truy cập nhiều nhất
@@ -182,7 +182,7 @@
     <div class="container-founder">
         <div class="container-founder--heading">
             <h1 class="container-founder--header">
-                Founders
+                Quản Trị Viên
             </h1>
             <p class="container-founder--text">
                 Nhóm thành lập nên cộng đồng chia sẻ KienThuc
@@ -197,7 +197,7 @@
                         <div class="container-founder--main-content-heading">
                             <i class="fas fa-quote-left"></i>
                             <h1 class="container-founder--main-content-header">
-                                Advice
+                                Lời Khuyên
                             </h1>
                         </div>
                         <div class="container-founder--main-content-text">
@@ -212,7 +212,7 @@
                         <div class="container-founder--main-content-heading">
                             <i class="fas fa-quote-left"></i>
                             <h1 class="container-founder--main-content-header">
-                                Advice
+                                Lời Khuyên
                             </h1>
                         </div>
                         <div class="container-founder--main-content-text">
@@ -229,7 +229,7 @@
                         <div class="container-founder--main-content-heading">
                             <i class="fas fa-quote-left"></i>
                             <h1 class="container-founder--main-content-header">
-                                Advice
+                                Lời Khuyên
                             </h1>
                         </div>
                         <div class="container-founder--main-content-text">
@@ -244,7 +244,7 @@
                         <div class="container-founder--main-content-heading">
                             <i class="fas fa-quote-left"></i>
                             <h1 class="container-founder--main-content-header">
-                                Advice
+                                Lời Khuyên
                             </h1>
                         </div>
                         <div class="container-founder--main-content-text">
@@ -298,17 +298,17 @@
                         <a href="" class="footer-about--link">Home</a>
                     </li>
                     <li class="footer-about--item">
-                        <a href="" class="footer-about--link">About</a>
+                        <a href="./AboutUs.php" class="footer-about--link">About</a>
                     </li>
-                    <li class="footer-about--item"><a href="" class="footer-about--link">Contact</a>
+                    <li class="footer-about--item"><a href="./gopy-lienhe" class="footer-about--link">Contact</a>
                     </li>
                 </ul>
             </div>
             <div class="footer-about">
                 <h1 class="footer-about--header">Contact Details</h1>
                 <ul class="footer-about--list">
-                    <li class="footer-about--item">kienthuc@gmail.com</li>
-                    <li class="footer-about--item">kienthuc.edu.vn</li>
+                    <li class="footer-about--item">nhom15web@gmail.com</li>
+                    <li class="footer-about--item">kienthucedu.com</li>
                     <li class="footer-about--item">UIT ,Ho Chi Minh city</li>
                     <li class="footer-about--item">Kien Thuc fanpage</li>
                 </ul>
