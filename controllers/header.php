@@ -22,7 +22,7 @@ session_start();
 <body>
     <header class="heading">
         <div class="logo-heading">
-            <img src="./img/Logo.png" alt="">
+            <img src="./img/Logo.png" alt=""> </img>
         </div>
         <div class="nav-heading">
             <ul class="nav-heading--list">
@@ -48,11 +48,6 @@ session_start();
                         <li class="document-item"><a class="document-link" href="./document.php?subject=NODEJS">Nodejs</a></li>
                         <li class="document-item"><a class="document-link" href="./document.php?subject=PHP">PHP</a></li>
                     </ul>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        Bài tập
-                    </a>
                 </li>
                 <li class="nav-heading--item">
                     <a href="gopy-lienhe.php" class="nav-heading--item-link">
@@ -81,7 +76,7 @@ session_start();
                 <?php else : ?>
                     <li class="nav-heading--item" id="active">
                         <i class="far fa-user" style="font-size: 2.6rem;"></i>
-                        <div class="user-info" id="user-info">
+                        <div class="user-info" id="user-info" style="z-index: 100;">
                             <?php
                                 if(isset($_SESSION["login"]))
                                 {
