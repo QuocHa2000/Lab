@@ -55,11 +55,12 @@ $('#submit').click(async function() {
         url: "",
         data: {
             mamh: form[0].innerText,
-            phan1: form[1].innerText,
-            phan2: form[2].innerText,
-            phan3: form[3].innerText,
-            phan4: form[4].innerText,
-            malv: form[5].innerText,
+            tenmh: form[1].innerText,
+            phan1: form[2].innerText,
+            phan2: form[3].innerText,
+            phan3: form[4].innerText,
+            phan4: form[5].innerText,
+            malv: form[6].innerText,
         },
         dataType: "text",
         success: function() {

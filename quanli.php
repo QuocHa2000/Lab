@@ -44,10 +44,10 @@ require('./controllers/postquanli.php');
                             <label for="exampleFormControlInput1">Mã Môn Học</label>
                             <input  name="mamh" class="form-control" id="exampleFormControlInput1">
                         </div>
-                        <!-- <div class="form-group">
+                        <div class="form-group">
                             <label for="exampleFormControlInput1">Tên Môn Học</label>
-                            <input type="email" name="tenmh" class="form-control" id="exampleFormControlInput1">
-                        </div> -->
+                            <input name="tenmh" class="form-control" id="exampleFormControlInput1">
+                        </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Phần 1</label>
                             <textarea class="form-control" name="phan1" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -80,6 +80,7 @@ require('./controllers/postquanli.php');
             <thead>
                 <tr>
                     <th scope="col">Mã Môn Học</th>
+                    <th scope="col">Tên Môn Học</th>
                     <th scope="col">Cơ Bản</th>
                     <th scope="col">Trung Bình 1</th>
                     <th scope="col">Trung Bình 2</th>
@@ -97,11 +98,12 @@ require('./controllers/postquanli.php');
                     while ($row = mysqli_fetch_assoc($result)) {
                 ?>
                         <tr>
-                            <td><?php echo $row["mamh"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["phan1"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["phan2"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["phan3"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["phan4"]; ?></td>
+                            <td><?php echo $row["MaMH"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["TenMH"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["Phan1"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["Phan2"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["Phan3"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["Phan4"]; ?></td>
                             <td><button class="update btn btn-primary" style="margin : 2px" class="btn btn-primary">Sửa</button>
                                 <button class="delete btn btn-primary" style="margin : 2px" class="btn btn-primary">Xóa</button>
                             </td>
@@ -117,7 +119,7 @@ require('./controllers/postquanli.php');
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- <script src="./js/managedoc.js"></script> -->
+<script src="./js/managedoc.js"></script>
 <script>
 </script>
 
