@@ -53,7 +53,7 @@
                     <p class="container-about--main-content">
                         Chúng tôi sẽ phát triển kênh giao tiếp cho các thành viên của cộng đồng trong thời gian tới, khi mà số lượng thành viên đã đạt chỉ tiêu. 
                     </p>
-                    <center><a href="#" class="container-about--main-link">Đăng Kí Ngay</a></center>
+                    <center><a href="register.php" class="container-about--main-link">Đăng Kí Ngay</a></center>
                 </div>
 
             </div>

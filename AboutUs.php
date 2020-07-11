@@ -259,7 +259,7 @@ session_start();
       
       <footer class="bg-light pb-5">
         <div class="container text-center">
-          <p class="font-italic text-muted mb-0">&copy; Copyrights KienThuc.com All rights reserved.</p>
+          <p class="font-italic text-muted mb-0">&copy; Copyrights kienthucedu.com All rights reserved.</p>
         </div>
       </footer>    
 </body>
