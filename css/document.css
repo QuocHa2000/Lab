@@ -252,7 +252,7 @@ body
 .modal{
     position: fixed;
      background-color: wheat;
-     height: 50%;
+     height: 100%;
      width: 50%;
      padding: 20px 20px;
      z-index: 10;
