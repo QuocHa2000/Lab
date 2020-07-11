@@ -55,12 +55,14 @@ session_start();
                         Liên hệ
                     </a>
                 </li>
+                <?php if (isset($_SESSION["admin"])) : ?>
                 <li class="nav-heading--item">
                     <a href="quanli.php" class="nav-heading--item-link">
                         Quản lí
                     </a>
                 </li>
-                <?php if (!isset($_SESSION["login"])) : ?>
+                <?php endif; ?>
+                <?php if (!isset($_SESSION["login"]) && !isset($_SESSION["admin"])) : ?>
                     <li class="nav-heading--item">
                         <a href="login.php" class="nav-heading--item-link">
                             Đăng nhập
@@ -75,7 +77,16 @@ session_start();
                     <li class="nav-heading--item" id="active">
                         <i class="far fa-user" style="font-size: 1.6rem;"></i>
                         <div class="user-info" id="user-info">
-                            <h3><?php echo $_SESSION["login"]; ?></h3>
+                          <?php
+                                if(isset($_SESSION["login"]))
+                                {
+                                    echo "<h3>".$_SESSION["login"]."</h3>";
+                                }
+                                if(isset($_SESSION["admin"]))
+                                {
+                                    echo "<h3>".$_SESSION["admin"]."</h3>";
+                                }
+                          ?>
                             <a href="controllers/logout.php">Đăng xuất</a>
                         </div>
                     </li>
