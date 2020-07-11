@@ -55,7 +55,7 @@ require('./controllers/header.php')
         <div class="item1">
             <div id="content">
                 <span class="slide">
-                    <a href="#" onclick="openSlideMenu()">
+                    <a href="#" id="slide" onclick="openSlideMenu()">
                         <img src="./img/navcon.png" alt="" height="40px" style="margin-top:6px ;margin-left: 4px">
                     </a>
                 </span>
