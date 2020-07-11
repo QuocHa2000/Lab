@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost:3308", "root", "", "web");
+$conn = mysqli_connect("localhost", "root", "", "web");
 mysqli_set_charset($conn, "utf8");
 $monhoc = "js";
 if (isset($_GET['subject'])) {
