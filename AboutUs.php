@@ -116,11 +116,6 @@ session_start();
                     </li>
                     <li class="nav-small--item">
                         <a href="" class="nav-small--item-link">
-                            Bài tập
-                        </a>
-                    </li>
-                    <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
                             Liên hệ
                         </a>
                     </li>
@@ -163,7 +158,7 @@ session_start();
               <h1 class="display-4">Giới thiệu </h1>
               <p class="lead text-muted mb-0">Website được tạo ra vào nửa đầu năm 2020 bởi một nhóm sinh viên đầy tài năng trường ĐH Công Nghệ Thông Tin.</p>
               <p class="lead text-muted"> <a href="#" class="text-muted"> 
-                          <u>KienThuc.com</u></a>
+                          <u>kienthucedu.com</u></a>
               </p>
             </div>
             <div class="col-lg-6 d-none d-lg-block"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/illus_kftyh4.png" alt="" class="img-fluid"></div>
@@ -176,7 +171,7 @@ session_start();
           <div class="row align-items-center mb-5">
             <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
               <h2 class="font-weight-light">Chất lượng đào tạo </h2>
-              <p class="font-italic text-muted mb-4">Với đội ngũ giảng viên tốt nghiệp từ các trường hàng đầu thế giới. KienThuc WebEdu tự tin cung cấp những tài liệu và bài giảng tốt nhất đến cho mọi người.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Xem thêm</a>
+              <p class="font-italic text-muted mb-4">Với nguồn tài liệu thu thập và tìm kiếm đạt chuẩn những kiến thức theo đúng xu hướng và thời đại. KienThuc WebEdu tự tin cung cấp những tài liệu và bài giảng tốt nhất đến cho mọi người.</p><a href="./document.php" class="btn btn-light px-5 rounded-pill shadow-sm">Xem thêm</a>
             </div>
             <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834139/img-1_e25nvh.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
           </div>
@@ -184,7 +179,7 @@ session_start();
             <div class="col-lg-5 px-5 mx-auto"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/img-2_vdgqgn.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
             <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
               <h2 class="font-weight-light">Hệ thống bài tập</h2>
-              <p class="font-italic text-muted mb-4">Ở KienThuc.com người học có thể dễ dàng luyện tập các challenge, các quiz mà đội ngũ quản trị viên cũng như các giảng viên biên soạn. </p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Xem thêm</a>
+              <p class="font-italic text-muted mb-4">Ở KienThuc.com người học có thể dễ dàng luyện tập các challenge, các quiz mà đội ngũ quản trị viên cũng như các giảng viên biên soạn. </p><a href="./document.php" class="btn btn-light px-5 rounded-pill shadow-sm">Xem thêm</a>
             </div>
           </div>
         </div>
@@ -264,7 +259,7 @@ session_start();
       
       <footer class="bg-light pb-5">
         <div class="container text-center">
-          <p class="font-italic text-muted mb-0">&copy; Copyrights KienThuc.com All rights reserved.</p>
+          <p class="font-italic text-muted mb-0">&copy; Copyrights kienthucedu.com All rights reserved.</p>
         </div>
       </footer>    
 </body>

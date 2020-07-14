@@ -1,22 +1,23 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "web");
 mysqli_set_charset($conn, "utf8");
-$monhoc = "js";
+$monhoc = "JAVASCRIPT";
 if (isset($_GET['subject'])) {
     $monhoc = $_GET['subject'];
 }
-$sql = "SELECT * FROM document WHERE document.mamh = '$monhoc' and document.malevel='cb';";
+$sql = "SELECT * FROM document WHERE document.TenMH = '$monhoc' and document.Malevel='cb';";
 $result = $conn->query($sql)->fetch_assoc();
 
-$sql = "SELECT * FROM document WHERE document.mamh = '$monhoc' and document.malevel='tb1';";
+$sql = "SELECT * FROM document WHERE document.TenMH = '$monhoc' and document.Malevel='tb1';";
 $result2 = $conn->query($sql)->fetch_assoc();
 
-$sql = "SELECT * FROM document WHERE document.mamh = '$monhoc' and document.malevel='tb2';";
+$sql = "SELECT * FROM document WHERE document.TenMH = '$monhoc' and document.Malevel='tb2';";
 $result3 = $conn->query($sql)->fetch_assoc();
 
-$sql = "SELECT * FROM document WHERE document.mamh = '$monhoc' and document.malevel='nc';";
+$sql = "SELECT * FROM document WHERE document.TenMH = '$monhoc' and document.malevel='nc';";
 $result4 = $conn->query($sql)->fetch_assoc();
-
+require('./controllers/header.php');
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -26,12 +27,15 @@ $result4 = $conn->query($sql)->fetch_assoc();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" type="" href="./css/document.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+=======
+    <link rel="stylesheet" type="" href="css/document.css">
+>>>>>>> 0c5292cf87f6e57c532c4adf0826f24cdda3087f
     <title>Document</title>
     <style>
         .sticky {
-            position: fixed;
             top: 0;
             width: 100%;
         }
@@ -57,8 +61,8 @@ $result4 = $conn->query($sql)->fetch_assoc();
         <div class="item1">
             <div id="content">
                 <span class="slide">
-                    <a href="#" onclick="openSlideMenu()">
-                        <img src="./img/navigation icon@2x.png" alt="" height="40px" style="margin-top:6px ;margin-left: 4px">
+                    <a href="#" id="slide" onclick="openSlideMenu()">
+                        <img src="./img/navcon.png" alt="" height="40px" style="margin-top:6px ;margin-left: 4px">
                     </a>
                 </span>
                 <div id="menu" class="nav">
@@ -71,7 +75,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                     </a>
                     <div style="display: flex;margin-top: 0;margin-left: 20px">
                         <img src="./img/homeicon.png" alt="" height="55px">
-                        <a href="index.php">home</a>
+                        <a href="index.php">Home</a>
                     </div>
                     <div style="display: flex;margin-top: 15px;margin-left: 20px">
                         <img src="./img/bookicon.png" alt="" height="50px">
@@ -111,7 +115,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             <img src="./img/testlogo1@2x.png" alt="logo" height="60" class="navicon">
         </div>
         <div class="item2">
-            <p class="logo">
+            <p class="logo" >
                 <B><?php echo $monhoc ?></B>
             </p>
 
@@ -239,18 +243,32 @@ $result4 = $conn->query($sql)->fetch_assoc();
             <div class="sectitle">
                 <?php
                 echo $monhoc . ' Cơ Bản';
+<<<<<<< HEAD
                 $level = 'cb';
+=======
+                $level= 'cb';
+                echo $_SESSION['admin'];
+>>>>>>> 0c5292cf87f6e57c532c4adf0826f24cdda3087f
                 ?>
             </div>
             <div class="row1" style="margin-top: 20px">
                 <div class="rowsec">
+<<<<<<< HEAD
                     <button class="rowitem" id="modal-btn2" style="color: black;" value="phan1">
+=======
+                    <button  class="rowitem" id="modal-btn2" style="color: black;" value="Phan1">
+>>>>>>> 0c5292cf87f6e57c532c4adf0826f24cdda3087f
                         <p class="rowitemcon">Phần 1</p>
 
                     </button>
                     <div class="modal-bg2">
+<<<<<<< HEAD
                         <div class="modal2" id="1cbphan">
                             <?php echo "$result[phan1]" ?>
+=======
+                        <div class="modal2" id="1cbPhan">
+                        <?php echo "$result[Phan1]" ?>
+>>>>>>> 0c5292cf87f6e57c532c4adf0826f24cdda3087f
                             <div id="close2">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -264,7 +282,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 2 </p>
                     </button>
                     <div class="modal-bg3">
-                        <div class="modal3"><?php echo "$result[phan2]" ?>
+                        <div class="modal3"><?php echo "$result[Phan2]" ?>
                             <div id="close3">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -281,7 +299,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 3 </p>
                     </button>
                     <div class="modal-bg4">
-                        <div class="modal4"><?php echo "$result[phan3]" ?>
+                        <div class="modal4"><?php echo "$result[Phan3]" ?>
                             <div id="close4">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -295,7 +313,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 4 </p>
                     </button>
                     <div class="modal-bg5">
-                        <div class="modal5"><?php echo "$result[phan4]" ?>
+                        <div class="modal5"><?php echo "$result[Phan4]" ?>
                             <div id="close5">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -357,7 +375,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </button>
                     <div class="modal-bg6">
-                        <div class="modal6"> <?php echo "$result2[phan1]" ?>
+                        <div class="modal6"> <?php echo "$result2[Phan1]" ?>
                             <div id="close6">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -371,7 +389,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 2 </p>
                     </button>
                     <div class="modal-bg7">
-                        <div class="modal7"><?php echo "$result2[phan2]" ?>
+                        <div class="modal7"><?php echo "$result2[Phan2]" ?>
                             <div id="close7">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -388,7 +406,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 3 </p>
                     </button>
                     <div class="modal-bg8">
-                        <div class="modal8"><?php echo "$result2[phan3]" ?>
+                        <div class="modal8"><?php echo "$result2[Phan3]" ?>
                             <div id="close8">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -402,7 +420,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 4 </p>
                     </button>
                     <div class="modal-bg9">
-                        <div class="modal9"><?php echo "$result2[phan4]" ?>
+                        <div class="modal9"><?php echo "$result2[Phan4]" ?>
                             <div id="close9">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -465,7 +483,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </button>
                     <div class="modal-bg11">
-                        <div class="modal11"> <?php echo "$result3[phan1]" ?>
+                        <div class="modal11"> <?php echo "$result3[Phan1]" ?>
                             <div id="close11">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -479,7 +497,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 2 </p>
                     </button>
                     <div class="modal-bg12">
-                        <div class="modal12"><?php echo "$result3[phan2]" ?>
+                        <div class="modal12"><?php echo "$result3[Phan2]" ?>
                             <div id="close12">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -496,7 +514,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 3 </p>
                     </button>
                     <div class="modal-bg13">
-                        <div class="modal13"><?php echo "$result3[phan3]" ?>
+                        <div class="modal13"><?php echo "$result3[Phan3]" ?>
                             <div id="close13">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -510,7 +528,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 4 </p>
                     </button>
                     <div class="modal-bg14">
-                        <div class="modal14"><?php echo "$result3[phan4]" ?>
+                        <div class="modal14"><?php echo "$result3[Phan4]" ?>
                             <div id="close14">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -574,7 +592,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </button>
                     <div class="modal-bg16">
-                        <div class="modal16"> <?php echo "$result4[phan1]" ?>
+                        <div class="modal16"> <?php echo "$result4[Phan1]" ?>
                             <div id="close16">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -588,7 +606,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 2 </p>
                     </button>
                     <div class="modal-bg17">
-                        <div class="modal17"><?php echo "$result4[phan2]" ?>
+                        <div class="modal17"><?php echo "$result4[Phan2]" ?>
                             <div id="close17">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -605,7 +623,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 3 </p>
                     </button>
                     <div class="modal-bg18">
-                        <div class="modal18"><?php echo "$result4[phan3]" ?>
+                        <div class="modal18"><?php echo "$result4[Phan3]" ?>
                             <div id="close18">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -619,7 +637,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
                         <p class="rowitemcon">Phần 4 </p>
                     </button>
                     <div class="modal-bg19">
-                        <div class="modal19"><?php echo "$result4[phan4]" ?>
+                        <div class="modal19"><?php echo "$result4[Phan4]" ?>
                             <div id="close19">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
@@ -668,7 +686,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 </body>
 
 </html>
-
+<script src="./js/home.js"></script>
 <script>
     function egg1() {
         var egg = document.getElementById("move1");
@@ -694,6 +712,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
         var tothetop = document.getElementById("top");
         tothetop.scrollIntoView();
     }
+<<<<<<< HEAD
 
     function levelmonhoc(monhoc, level) {
         $.ajax({
@@ -710,5 +729,24 @@ $result4 = $conn->query($sql)->fetch_assoc();
             }
 
         })
+=======
+    function levelmonhoc(monhoc,level){
+        $.ajax(
+          {
+              url : "/Lab/subject.php",
+              type : "post",
+              dataType : "text",
+              data : {
+                  code :  monhoc,
+                  level: level,
+                  part : $('button').val()
+              },
+              success : function (data) {
+                  $('#1cbPhan').html(data);
+              }
+              
+          }
+      )
+>>>>>>> 0c5292cf87f6e57c532c4adf0826f24cdda3087f
     }
 </script>

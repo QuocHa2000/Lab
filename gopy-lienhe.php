@@ -5,8 +5,8 @@ include "header-login.php";
 <link rel="stylesheet" href="./css/gopy.css">
     <section id="Contact" class="content-section">
         <div class="container py-5">
-            <div class="block-heading">
-                <h2>CONTACT US</h2>
+            <div class="block-heading" style="padding-top:100px">
+                <h1 style="font-size: 2,5rem;">CONTACT US</h1>
                 <p>Nếu bạn có bất kì thắc mắc nào, xin hãy liên hệ với chúng tôi.</p>
             </div>
             <div class="row">
