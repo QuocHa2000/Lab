@@ -26,8 +26,8 @@
     <span class="icon"><a href=""><i class="fas fa-arrow-circle-left" style="font-size: 3rem;"></i></a></span>
     <div class="header" style="margin-bottom: 50px;">
         <center>
-            <h1 class="h1" style="margin-bottom: 30px;"><?php echo $row['TieuDePost'] ?></h1>
-            <h5 style="font-size: 2rem;"> <?php echo $row['NoiDungPost'] ?> </h5>
+            <h1 class="h1" style="margin-bottom: 30px;"><?php echo $row['TieuDe'] ?></h1>
+            <h5 style="font-size: 2rem;"> <?php echo $row['NoiDung'] ?> </h5>
         </center>
     </div>
     <div class="container">
