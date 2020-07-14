@@ -110,7 +110,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             <img src="./img/Logo.png" alt="">
         </div>
         <div class="item2">
-            <p class="logo" >
+            <p class="logo">
                 <b><?php echo $monhoc ?></b>
             </p>
 
@@ -350,7 +350,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             <button onclick="egg1()" style="background-color:transparent;border:none;" class="egg egg1">
                 <p><img src="./img/egg.png" alt="" height="100"></p>
                 <p style="margin:0">
-                    <B><?php echo $monhoc ?> Cơ Bản</B>
+                    <b><?php echo $monhoc ?> Cơ Bản</b>
                 </p>
             </button>
             <button onclick="egg2()" style="background-color:transparent;border:none;" class="egg egg2">
@@ -381,6 +381,17 @@ $result4 = $conn->query($sql)->fetch_assoc();
         </div>
     </div>
     <!-- Start Code by HoaiBao -->
+    <div class="container" >
+        <ul class="pagination "style="margin-left: 90px; margin-top:20px;">
+            <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item "><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+        </ul>
+    </div>
     <div class="card mb-3 border-primary" style="max-width: 1080px;margin:12px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
@@ -388,8 +399,9 @@ $result4 = $conn->query($sql)->fetch_assoc();
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $monhoc . ' Cơ Bản'; ?></h5>
-                    <p class="card-text"></p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5 class="card-title"><?php echo 'KHÓA HỌC '. $monhoc . ' CƠ BẢN DÀNH CHO NGƯỜI MỚI BẮT ĐẦU'; ?></h5>
+                    <p class="card-text"></p>Khóa học được thiết kế dành cho những bản đi từ con số 0 tự tin có thể học được. </p>
+                    <p class="card-text"></p>Đăng ký khóa học ngay <a href="https://www.youtube.com/watch?v=fntSBgoCsOE&list=RDfntSBgoCsOE&start_radio=1" target="_blank">tại đây</a></p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
@@ -398,13 +410,14 @@ $result4 = $conn->query($sql)->fetch_assoc();
     <div class="card mb-3 border-primary" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
-                <img src="https://st.quantrimang.com/photos/image/2018/06/15/lap-trinh-blockchain-phan-2-ngon-ngu-lap-trinh-javascript-200.jpg" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
+                <img src="https://blog.vandersonguidi.com.br/wp-content/uploads/2016/11/js3.png" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $monhoc . ' Trung Bình 1'; ?></h5>
+                    <h5 class="card-title"><?php echo 'KHÓA HỌC '.$monhoc . ' LEVEL TRUNG BÌNH 1'; ?></h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <p class="card-text"></p>Đăng ký khóa học ngay <a href="https://www.youtube.com/watch?v=fntSBgoCsOE&list=RDfntSBgoCsOE&start_radio=1">tại đây</a></p>
+                    <p class="card-text"><small class="text-muted">Last updated 47 mins ago</small></p>
                 </div>
             </div>
         </div>
@@ -412,13 +425,14 @@ $result4 = $conn->query($sql)->fetch_assoc();
     <div class="card mb-3 border-primary" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
-                <img src="https://st.quantrimang.com/photos/image/2018/06/15/lap-trinh-blockchain-phan-2-ngon-ngu-lap-trinh-javascript-200.jpg" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSLEvaRLgLBBHet9MVOEOXHyiE31UGc_DCgSg&usqp=CAU" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
             </div>
             <div class="col-md-8" style="max-width: 800px">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $monhoc . ' Trung Bình 2'; ?></h5>
+                    <h5 class="card-title"><?php echo 'KHÓA HỌC '.$monhoc . ' LEVEL TRUNG BÌNH 2'; ?></h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <p class="card-text"></p>Đăng ký khóa học ngay <a href="https://www.youtube.com/watch?v=fntSBgoCsOE&list=RDfntSBgoCsOE&start_radio=1">tại đây</a></p>
+                    <p class="card-text"><small class="text-muted">Last updated 2 years ago</small></p>
                 </div>
             </div>
         </div>
@@ -426,20 +440,31 @@ $result4 = $conn->query($sql)->fetch_assoc();
     <div class="card mb-3 border-primary" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
-                <img src="https://st.quantrimang.com/photos/image/2018/06/15/lap-trinh-blockchain-phan-2-ngon-ngu-lap-trinh-javascript-200.jpg" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsiT6IVZqxwjYFgAdhl8PeiYtcAo7mTAOEqg&usqp=CAU" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $monhoc . ' Nâng Cao'; ?></h5>
+                    <h5 class="card-title"><?php echo 'KHÓA HỌC '.$monhoc . ' LEVEL NÂNG CAO'; ?></h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <p class="card-text"></p>Đăng ký khóa học ngay <a href="https://www.youtube.com/watch?v=fntSBgoCsOE&list=RDfntSBgoCsOE&start_radio=1">tại đây</a></p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 years ago</small></p>
                 </div>
             </div>
         </div>
     </div>
-
+    <div class="container" >
+        <ul class="pagination justify-content-end">
+            <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+        </ul>
+    </div>
     <!-- EndCode by HoaiBao -->
-    <br id="move1">
+    <!-- <br id="move1">
     <div>
         <div class="sectionegg">
             <br>
@@ -865,7 +890,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
         </div>
 
 
-    </div>
+    </div> -->
     <script src="../Lab/js/modal.js"></script>
 
 
