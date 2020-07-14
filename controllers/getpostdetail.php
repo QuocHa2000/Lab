@@ -4,14 +4,14 @@
     $mabaipost=''; 
     if(isset($_GET['mabaipost'])){
         $mabaipost = $_GET['mabaipost'];
-        $getsql = "SELECT * FROM post WHERE post.Id= '$mabaipost' ; ";
+        $getsql = "SELECT * FROM post WHERE post.PostId= '$mabaipost' ; ";
 
         $result = $conn->query($getsql);
         if($result->num_rows>0){
             $GLOBALS['row'] = $result->fetch_assoc();
         }
 
-        $postsql = "SELECT * FROM postdetail WHERE postdetail.MaBaiPost='$mabaipost';";
+        $postsql = "SELECT * FROM postdetail WHERE postdetail.PostId='$mabaipost';";
         $GLOBALS['result1'] = $conn->query($postsql);
     }
 

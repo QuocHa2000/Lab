@@ -18,27 +18,19 @@
             <h1 class="h1">Danh sách các bài viết</h1>
         </div>
         <?php
-            $sql="SELECT * FROM post LIMIT 100";
-            $query=mysqli_query($conn, $sql);
-            $pro_per_page = 12;
-            $num_of_product = mysqli_num_rows($query);
-            $num_page = ceil($num_of_product/ $pro_per_page);
-            if(!isset($_GET['page'])){
-                $page=1;
-            }else{
-                $page=$_GET['page'];
-            };
-            $start_from = ($page-1)*$pro_per_page;
-            if ($page==$num_page){
-                $pro_per_page=(100%$pro_per_page);
-            };
-            $strSQL = "SELECT * FROM products LIMIT $start_from,$pro_per_page;";
-            $result=$conn->query($strSQL);
-        
-            if($query->num_rows>0)
+            $post_per_page=6;
+            $current_page=$_GET["page"];
+            $offset=($current_page-1) * $post_per_page;
+            $sql_page="SELECT * FROM post ORDER BY 'PostId' ASC LIMIT $post_per_page OFFSET $offset";
+            $query_page=mysqli_query($conn, $sql_page);
+            $total="SELECT * FROM post";
+            $totalpost=mysqli_query($conn, $total);
+            $totalpost=$totalpost->num_rows;
+            $totalpage=ceil($totalpost/$post_per_page);
+            if($query_page->num_rows>0)
             {
                 $count=0;
-                while($row=mysqli_fetch_assoc($query))
+                while($row=mysqli_fetch_assoc($query_page))
                 {
                     $count ++;
 
@@ -49,16 +41,18 @@
             </div>
             <div class="card-body">
                 <p><?php echo $row["NoiDung"]; ?></p>
-                <button type="button" class="btn btn-primary">Phản hồi bài viết</button>
+                <a type="button" href="postdetail.php?mabaipost=<?php echo $row["PostId"]; ?>" name="phanhoi" class="btn btn-primary">Phản hồi bài viết</a>
             </div> 
         </div>
         <?php
                 }
             }
-            for($page=1;$page<=$num_page;$page++){
-                echo "<a class='btn btn-primary' href='dspost.php?page=$page'>$page</a>";
+            for($num=1; $num<=$totalpage; $num++)
+            {
+                echo "<a class='btn btn-primary' href='dspost.php?page=$num'>$num</a>";
             }
         ?>
+
     </div>
 </body>
 
