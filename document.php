@@ -27,6 +27,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="" href="./css/document.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
     <style>
         .sticky {
@@ -172,6 +173,65 @@ $result4 = $conn->query($sql)->fetch_assoc();
             <p class="egg title" id="top"><b> <?php echo $monhoc ?> ADVENTURE</b></p>
         </div>
     </div>
+    <!-- Start Code by HoaiBao -->
+    <div class="card mb-3 border-primary" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+        <div class="row no-gutters">
+            <div class="col-md-4" style="max-width: 180px">
+                <img src="https://st.quantrimang.com/photos/image/2018/06/15/lap-trinh-blockchain-phan-2-ngon-ngu-lap-trinh-javascript-200.jpg" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body" >
+                    <h5 class="card-title"><?php echo $monhoc . ' Cơ Bản'; ?></h5>
+                    <p class="card-text" ></p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 border-primary" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+        <div class="row no-gutters">
+            <div class="col-md-4" style="max-width: 180px">
+                <img src="https://st.quantrimang.com/photos/image/2018/06/15/lap-trinh-blockchain-phan-2-ngon-ngu-lap-trinh-javascript-200.jpg" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $monhoc . ' Trung Bình 1'; ?></h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 border-primary" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+        <div class="row no-gutters">
+            <div class="col-md-4" style="max-width: 180px">
+                <img src="https://st.quantrimang.com/photos/image/2018/06/15/lap-trinh-blockchain-phan-2-ngon-ngu-lap-trinh-javascript-200.jpg" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
+            </div>
+            <div class="col-md-8" style="max-width: 800px">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $monhoc . ' Trung Bình 2'; ?></h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 border-primary" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+        <div class="row no-gutters">
+            <div class="col-md-4" style="max-width: 180px">
+                <img src="https://st.quantrimang.com/photos/image/2018/06/15/lap-trinh-blockchain-phan-2-ngon-ngu-lap-trinh-javascript-200.jpg" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $monhoc . ' Nâng Cao'; ?></h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- EndCode by HoaiBao -->
     <br id="move1">
     <div>
         <div class="sectionegg">
@@ -179,25 +239,25 @@ $result4 = $conn->query($sql)->fetch_assoc();
             <div class="sectitle">
                 <?php
                 echo $monhoc . ' Cơ Bản';
-                $level= 'cb';
+                $level = 'cb';
                 ?>
             </div>
             <div class="row1" style="margin-top: 20px">
                 <div class="rowsec">
-                    <button  class="rowitem" id="modal-btn2" style="color: black;" value="phan1">
+                    <button class="rowitem" id="modal-btn2" style="color: black;" value="phan1">
                         <p class="rowitemcon">Phần 1</p>
 
                     </button>
                     <div class="modal-bg2">
                         <div class="modal2" id="1cbphan">
-                        <?php echo "$result[phan1]" ?>
+                            <?php echo "$result[phan1]" ?>
                             <div id="close2">
                                 <a style="text-decoration: none;"></a>+</div>
                         </div>
 
                     </div>
                     <br>
-                   
+
                 </div>
                 <div class="rowsec">
                     <button class="rowitem" id="modal-btn3" style="color: black;">
@@ -211,13 +271,13 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                    
+
                 </div>
             </div>
 
             <div class="row1" style="margin-top: 20px">
                 <div class="rowsec">
-                    <button class="rowitem" id="modal-btn4" style="color: black;"> 
+                    <button class="rowitem" id="modal-btn4" style="color: black;">
                         <p class="rowitemcon">Phần 3 </p>
                     </button>
                     <div class="modal-bg4">
@@ -228,7 +288,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                    
+
                 </div>
                 <div class="rowsec">
                     <button class="rowitem" id="modal-btn5" style="color: black;">
@@ -242,11 +302,11 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                    
+
                 </div>
             </div>
             <a href="#" style="text-decoration: none;" class="backbutton">
-            <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
+                <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
             </a>
 
 
@@ -304,7 +364,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                   
+
                 </div>
                 <div class="rowsec">
                     <button class="rowitem" id="modal-btn7" style="color: black;">
@@ -318,7 +378,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                    
+
                 </div>
             </div>
 
@@ -335,7 +395,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-               
+
                 </div>
                 <div class="rowsec">
                     <button class="rowitem" id="modal-btn9" style="color: black;">
@@ -349,11 +409,11 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                  
+
                 </div>
             </div>
             <a href="#" style="text-decoration: none;" class="backbutton">
-            <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
+                <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
             </a>
             <div class="test">
                 <P style="margin-right: 60px;z-index:0">Confident ? Let's have a little test shall we! </P>
@@ -412,7 +472,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                   
+
                 </div>
                 <div class="rowsec">
                     <button class="rowitem" id="modal-btn12" style="color: black;">
@@ -426,7 +486,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                 
+
                 </div>
             </div>
 
@@ -443,7 +503,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                  
+
                 </div>
                 <div class="rowsec">
                     <button class="rowitem" id="modal-btn14" style="color: black;">
@@ -457,11 +517,11 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-               
+
                 </div>
             </div>
             <a href="#" style="text-decoration: none;" class="backbutton">
-            <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
+                <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
             </a>
             <div class="test">
                 <P style="margin-right: 60px;z-index:0">Confident ? Let's have a little test shall we! </P>
@@ -521,7 +581,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                    
+
                 </div>
                 <div class="rowsec">
                     <button class="rowitem" id="modal-btn17" style="color: black;">
@@ -535,7 +595,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                    
+
                 </div>
             </div>
 
@@ -552,7 +612,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                   
+
                 </div>
                 <div class="rowsec">
                     <button class="rowitem" id="modal-btn19" style="color: black;">
@@ -566,7 +626,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 
                     </div>
                     <br>
-                
+
                 </div>
             </div>
             <a href="#" style="text-decoration: none;" class="backbutton">
@@ -619,34 +679,36 @@ $result4 = $conn->query($sql)->fetch_assoc();
         var egg = document.getElementById("move2");
         egg.scrollIntoView();
     }
+
     function egg3() {
         var egg = document.getElementById("move3");
         egg.scrollIntoView();
     }
+
     function egg4() {
         var egg = document.getElementById("move4");
         egg.scrollIntoView();
     }
+
     function top() {
         var tothetop = document.getElementById("top");
         tothetop.scrollIntoView();
     }
-    function levelmonhoc(monhoc,level){
-        $.ajax(
-          {
-              url : "/Lab/subject.php",
-              type : "post",
-              dataType : "text",
-              data : {
-                  code :  monhoc,
-                  level: level,
-                  part : $('button').val()
-              },
-              success : function (data) {
-                  $('#1cbphan').html(data);
-              }
-              
-          }
-      )
+
+    function levelmonhoc(monhoc, level) {
+        $.ajax({
+            url: "/Lab/subject.php",
+            type: "post",
+            dataType: "text",
+            data: {
+                code: monhoc,
+                level: level,
+                part: $('button').val()
+            },
+            success: function(data) {
+                $('#1cbphan').html(data);
+            }
+
+        })
     }
 </script>

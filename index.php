@@ -295,12 +295,12 @@
                 <h1 class="footer-about--header">Information Link</h1>
                 <ul class="footer-about--list" style="font-size: 1.6rem;">
                     <li class="footer-about--item">
-                        <a href="" class="footer-about--link">Home</a>
+                        <a href="" class="footer-about--link">Về trang chủ</a>
                     </li>
                     <li class="footer-about--item">
-                        <a href="" class="footer-about--link">About</a>
+                        <a href="" class="footer-about--link">Thông tin</a>
                     </li>
-                    <li class="footer-about--item"><a href="" class="footer-about--link">Contact</a>
+                    <li class="footer-about--item"><a href="" class="footer-about--link">Liên hệ</a>
                     </li>
                 </ul>
             </div>
