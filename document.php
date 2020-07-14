@@ -52,7 +52,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
     <link href="./css/AboutUs.css" rel="stylesheet" />
 </head>
 
-<body>
+<body style="background-color: #169DB2;">
     <header class="heading">
         <div id="content">
             <span class="slide">
@@ -392,7 +392,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             <li class="page-item"><a class="page-link" href="#">Sau</a></li>
         </ul>
     </div>
-    <div class="card mb-3 border-primary" style="max-width: 1080px;margin:12px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+    <div class="card mb-3 border-secondary bg-light" style="max-width: 1080px;margin:12px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
                 <img src="https://st.quantrimang.com/photos/image/2018/06/15/lap-trinh-blockchain-phan-2-ngon-ngu-lap-trinh-javascript-200.jpg" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
@@ -407,7 +407,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             </div>
         </div>
     </div>
-    <div class="card mb-3 border-primary" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+    <div class="card mb-3 border-secondary bg-light" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
                 <img src="https://blog.vandersonguidi.com.br/wp-content/uploads/2016/11/js3.png" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
@@ -422,7 +422,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             </div>
         </div>
     </div>
-    <div class="card mb-3 border-primary" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+    <div class="card mb-3 border-secondary bg-light" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSLEvaRLgLBBHet9MVOEOXHyiE31UGc_DCgSg&usqp=CAU" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
@@ -437,7 +437,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             </div>
         </div>
     </div>
-    <div class="card mb-3 border-primary" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+    <div class="card mb-3 border-secondary bg-light" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsiT6IVZqxwjYFgAdhl8PeiYtcAo7mTAOEqg&usqp=CAU" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
