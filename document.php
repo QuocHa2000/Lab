@@ -57,14 +57,14 @@ $result4 = $conn->query($sql)->fetch_assoc();
         <div id="content">
             <span class="slide">
                 <a href="#" id="slide" onclick="openSlideMenu()">
-                    <img src="./img/navcon.png" alt="" height="40px" style="margin-top:6px ;margin-left: 4px">
+                    <img src="./img/navcon.png" alt="" height="40px" style="margin-left:10px">
                 </a>
             </span>
             <div id="menu" class="nav">
-                <div style="display: flex">
+                <!-- <div style="display: flex">
                     <img src="./img/testlogo1@2x.png" alt="">
                     <h2 style="margin-top: 60px">KIENTHUC.com</h2>
-                </div>
+                </div> -->
                 <a href="#" class="close" onclick="closeSlideMenu()">
                     <img src="./img/close.png" alt="" height="30px">
                 </a>
@@ -107,10 +107,10 @@ $result4 = $conn->query($sql)->fetch_assoc();
             </div>
         </div>
         <div class="logo-heading" style="max-width: 130px;">
-            <img src="./img/Logo.png" alt="">
+            <img src="./img/Logo.png" alt="" style="margin-left: -15px;">
         </div>
         <div class="item2">
-            <p class="logo">
+            <p class="logo" style="margin-top:15px;margin-left: -15px;">
                 <b><?php echo $monhoc ?></b>
             </p>
 
