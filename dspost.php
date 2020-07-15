@@ -49,7 +49,7 @@
             }
             for($num=1; $num<=$totalpage; $num++)
             {
-                echo "<a class='btn btn-primary' href='dspost.php?page=$num'>$num</a>";
+                echo "<a class='btn btn-primary' style='margin-right:5px' href='dspost.php?page=$num'>$num</a>";
             }
         ?>
 
