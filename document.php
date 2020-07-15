@@ -16,8 +16,7 @@ $result3 = $conn->query($sql)->fetch_assoc();
 
 $sql = "SELECT * FROM document WHERE document.TenMH = '$monhoc' and document.malevel='nc';";
 $result4 = $conn->query($sql)->fetch_assoc();
-// require('./controllers/header.php');
-// session_start();
+
 ?>
 
 <!DOCTYPE html>
