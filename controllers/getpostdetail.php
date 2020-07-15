@@ -17,6 +17,9 @@
 
 
     if(isset($_POST['name']) && isset($_POST['content'])){
+        if(!isset($_SESSION)){
+            header("location:./login");
+        }
         $rep = $_POST['name'];
         $content = $_POST['content'];
         $sql = "INSERT INTO postdetail (PostId,TenNguoiRep,NoiDungCmt) VALUES ('$mabaipost','$rep','$content');";
