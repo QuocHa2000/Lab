@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "web");
+$conn = mysqli_connect("localhost:3308", "root", "", "web");
 mysqli_set_charset($conn, "utf8");
 $monhoc = "JAVASCRIPT";
 if (isset($_GET['subject'])) {
@@ -53,7 +53,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
 </head>
 
 <body style="background-color: #169DB2;">
-    <header class="heading">
+    <header class="heading" style="top: 0px;">
         <div id="content">
             <span class="slide">
                 <a href="#" id="slide" onclick="openSlideMenu()">
@@ -344,42 +344,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             <img src="./img/accounticon.png" alt="" class="headericon " style="height: 20px">
         </div>
     </div> -->
-    <div class="map">
-        <div class="innermap" style="margin-top:100px;">
-            <img src="./img/pngfuel.com.png" alt="mappp" height="1000">
-            <button onclick="egg1()" style="background-color:transparent;border:none;" class="egg egg1">
-                <p><img src="./img/egg.png" alt="" height="100"></p>
-                <p style="margin:0">
-                    <b><?php echo $monhoc ?> Cơ Bản</b>
-                </p>
-            </button>
-            <button onclick="egg2()" style="background-color:transparent;border:none;" class="egg egg2">
-                <p><img src="./img/egg3.png" alt="" height="100"></p>
-                <p style="margin:0">
-                    <B><?php echo $monhoc ?> Trung bình 1</B>
-                </p>
-            </button>
-            <button onclick="egg3()" style="background-color:transparent;border:none;" class="egg egg3">
-                <p><img src="./img/egg4.png" alt="" height="103"></p>
-                <p style="margin-top:40px">
-                    <B><?php echo $monhoc ?> Trung Bình 2</B>
-                </p>
-            </button>
-            <button onclick="egg4()" style="background-color:transparent;border:none;display:flex;" class="egg egg4">
-                <p><img src="./img/egg5.png" alt="" height="104"></p>
-                <p style="margin:0">
-                    <B style="float:left;margin-top:50px;"><?php echo $monhoc ?> Nâng Cao</B>
-                </p>
-            </button>
-            <div class="egg dinoegg">
-                <a href="#"><img src="./img/dinoegg.png" alt="" height="104"></a>
-                <p style="margin-left: 20px;margin-top: 0">
-                    <B>Hoàn Thành </B>
-                </p>
-            </div>
-            <p class="egg title" id="top"><b> <?php echo $monhoc ?> ADVENTURE</b></p>
-        </div>
-    </div>
+    
     <!-- Start Code by HoaiBao -->
     <div class="container" >
         <ul class="pagination "style="margin-left: 90px; margin-top:20px;">
@@ -392,7 +357,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             <li class="page-item"><a class="page-link" href="#">Sau</a></li>
         </ul>
     </div>
-    <div class="card mb-3 border-secondary bg-light" style="max-width: 1080px;margin:12px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+    <div class="card mb-3 border-secondary bg-light" >
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
                 <img src="https://st.quantrimang.com/photos/image/2018/06/15/lap-trinh-blockchain-phan-2-ngon-ngu-lap-trinh-javascript-200.jpg" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
@@ -407,7 +372,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             </div>
         </div>
     </div>
-    <div class="card mb-3 border-secondary bg-light" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+    <div class="card mb-3 border-secondary bg-light" >
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
                 <img src="https://blog.vandersonguidi.com.br/wp-content/uploads/2016/11/js3.png" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
@@ -422,7 +387,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             </div>
         </div>
     </div>
-    <div class="card mb-3 border-secondary bg-light" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+    <div class="card mb-3 border-secondary bg-light" >
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSLEvaRLgLBBHet9MVOEOXHyiE31UGc_DCgSg&usqp=CAU" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
@@ -437,7 +402,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             </div>
         </div>
     </div>
-    <div class="card mb-3 border-secondary bg-light" style="max-width: 1080px;margin:0px 0px 12px 305px; border: 3px solid green; padding: 3px; border-radius: 25px;">
+    <div class="card mb-3 border-secondary bg-light" >
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsiT6IVZqxwjYFgAdhl8PeiYtcAo7mTAOEqg&usqp=CAU" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">

@@ -280,19 +280,11 @@ body {
 
 .modal {
     position: fixed;
-<<<<<<< HEAD
      background-color: wheat;
      height: 100%;
      width: 50%;
      padding: 20px 20px;
      z-index: 10;
-=======
-    background-color: wheat;
-    height: 50%;
-    width: 50%;
-    padding: 20px 20px;
-    z-index: 10;
->>>>>>> 8e4eff73af937c9e21ba5a5f95fd257b005b9d2c
 }
 
 #close {
@@ -948,4 +940,20 @@ body {
     font-weight: 800;
     transform: rotate(45deg);
     font-size: 30px;
+}
+.card
+{
+    border: 3px solid green; 
+    padding: 3px; 
+    border-radius: 100px;
+    height: 80%;
+    width: 80%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    display: flex;
+    justify-content: center;
+
+
 }
