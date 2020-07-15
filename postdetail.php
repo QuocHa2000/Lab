@@ -23,7 +23,7 @@
 </style>
 
 <body>
-    <span class="icon"><a href=""><i class="fas fa-arrow-circle-left" style="font-size: 3rem;"></i></a></span>
+    <span class="icon"><a href="./dspost.php"><i class="fas fa-arrow-circle-left" style="font-size: 5rem; color :#eea412;"></i></a></span>
     <div class="header" style="margin-bottom: 50px;">
         <center>
             <h1 class="h1" style="margin-bottom: 30px;"><?php echo $row['TieuDe'] ?></h1>
@@ -53,7 +53,7 @@
             <form method="POST">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Tên</label>
-                    <input name="name" class="form-control" id="exampleFormControlInput1" value="<?php
+                    <input readonly name="name" class="form-control" id="exampleFormControlInput1" value="<?php
                             if (isset($_SESSION['admin'])) {
                                 echo $_SESSION['admin'];
                             } else if (isset($_SESSION['login'])) {

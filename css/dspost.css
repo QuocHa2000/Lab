@@ -6,9 +6,10 @@ body {
     font-size: 18px;
 }
 
-.h1{
+.h1 {
     text-align: center;
 }
-.card{
-    margin-bottom: 10px !important;
+
+.card {
+    margin-bottom: 30px;
 }

@@ -19,7 +19,7 @@
         </div>
         <?php
             $post_per_page=6;
-            $current_page=$_GET["page"];
+            $current_page=!empty($_GET["page"])?$_GET["page"]:1;
             $offset=($current_page-1) * $post_per_page;
             $sql_page="SELECT * FROM post ORDER BY 'PostId' ASC LIMIT $post_per_page OFFSET $offset";
             $query_page=mysqli_query($conn, $sql_page);
@@ -49,7 +49,7 @@
             }
             for($num=1; $num<=$totalpage; $num++)
             {
-                echo "<a class='btn btn-primary' href='dspost.php?page=$num'>$num</a>";
+                echo "<a class='btn btn-primary' style='margin-right:5px' href='dspost.php?page=$num'>$num</a>";
             }
         ?>
 
