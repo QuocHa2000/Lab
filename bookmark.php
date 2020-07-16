@@ -17,7 +17,7 @@
         <div class="logo-heading">
             <img style="width: 136px;
             height: 130px;
-            padding-top: 13px;
+            padding-top: 14px;
         " src="https://scontent.fdad3-3.fna.fbcdn.net/v/t1.15752-9/95467956_694658877994518_3589225571365683200_n.png?_nc_cat=111&_nc_sid=b96e70&_nc_ohc=ShY7CTGf_i4AX94yjTc&_nc_ht=scontent.fdad3-3.fna&oh=f0e422a7e9a2fc9c2da44e788d0a7bec&oe=5ED3934E"
                 alt="">
         </div>

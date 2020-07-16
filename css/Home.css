@@ -21,7 +21,7 @@ body {
     align-items: center;
     height: 4.375em;
     font-size: 1.6rem;
-    background-color: #f8f5f2;
+    background-color: #eea412;
     color: #0d0d0d;
     width: 100%;
     position: fixed;
@@ -73,8 +73,8 @@ body {
 }
 
 .nav-heading--item-link:hover {
-    background-color: #eea412;
-    color: white;
+    background-color: white;
+    color:#eea412 ;
     border: 2px solid black;
     border-bottom: 1px solid black;
 }
