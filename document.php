@@ -89,17 +89,8 @@ $result = mysqli_query($conn, $sql);
                     <a href="document.php?subject=ENGLISH">Tiếng Anh</a>
                 </div>
                 <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                    <img src="./img/Science-Math-icon.png" alt="" height="50px">
-                    <a href="document.php?subject=JAVASCRIPT&page=1">Javascripts</a>
-                </div>
-                <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                    <img src="./img/pngwing.com.png" alt="" height="50px">
-                    <a href="document.php?subject=CSS">Css</a>
-                </div>
-                <br>
-                <div style="display: flex;margin-top: 15px;margin-left: 20px">
                     <img src="./img/chemistry.png" alt="" height="50px">
-                    <a href="document.php?subject=HTML">HTML</a>
+                    <a href="document.php?subject=FRONT-END">FRONT-ENT</a>
                 </div>
                 <div style="display: flex;margin-top: 15px;margin-left: 20px">
                     <img src="./img/bookicon.png" alt="" height="50px">
