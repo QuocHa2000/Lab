@@ -181,31 +181,27 @@ session_start();
                     <form method="POST">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Mã Môn Học</label>
-                            <input  name="ma"  class="form-control" id="exampleFormControlInput1">
+                            <input  name="ma"  class="form-control" id="exampleFormControlInput1" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Tên Môn Học</label>
-                            <input  name="ten" class="form-control additem" id="exampleFormControlInput1">
+                            <input  name="ten" class="form-control additem" id="exampleFormControlInput1" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Phần 1</label>
-                            <textarea class="form-control additem" name="phan1" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="exampleFormControlTextarea1">Tiêu Đề</label>
+                            <textarea class="form-control additem" name="tieude" id="exampleFormControlTextarea1" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Phần 2</label>
-                            <textarea class="form-control additem" name="phan2" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="exampleFormControlTextarea1">Nội Dung</label>
+                            <textarea class="form-control additem" name="noidung" id="exampleFormControlTextarea1" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Phần 3</label>
-                            <textarea class="form-control additem" name="phan3" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="exampleFormControlTextarea1">Link Ảnh</label>
+                            <textarea class="form-control additem" name="anh" id="exampleFormControlTextarea1" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Phần 4</label>
-                            <textarea class="form-control additem" name="phan4" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Mã Level</label>
-                            <input  name="malv" class="form-control additem" id="exampleFormControlInput1">
+                            <label for="exampleFormControlTextarea1">Link REF</label>
+                            <textarea class="form-control additem" name="ref" id="exampleFormControlTextarea1" rows="3" required></textarea>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
@@ -229,7 +225,7 @@ session_start();
             </thead>
             <tbody>
                 <?php
-                $conn = mysqli_connect("localhost", "root", "", "web");
+                $conn = mysqli_connect("localhost", "root", "", "web1");
                 $sql = "SELECT * FROM document;";
                 mysqli_set_charset($conn, "utf8");
                 $result = $conn->query($sql);
