@@ -16,13 +16,13 @@ include "header-login.php";
                             <h3 class="add-title">Thông tin liên hệ</h3>
                             <div class="c-detail">
                                 <span class="c-icon">
-                                    <i class="i fa fa-map-marker"></i>
+                                    <i class="i1 fa fa-map-marker"></i>
                                 </span>
                                 <span class="c-info">Khu phố 6, phường Linh Trung, quận Thủ Đức, TP. HCM</span>
                             </div>
                             <div class="c-detail">
                                 <span class="c-icon">
-                                    <i class="i fa fa-envelope"></i>
+                                    <i class="i1 fa fa-envelope"></i>
                                 </span>
                                 <span class="c-info">nhom15web@gmail.com</span>
                             </div>

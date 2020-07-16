@@ -15,7 +15,7 @@ require "controllers/post-submit.php";
     }
 </style>
 <body>
-    <span class="icon"><a href=""><i class="fas fa-arrow-circle-left" style="font-size: 3rem; color : #eea412;"></i></a></span>
+    <span class="icon"><a href="dspost.php"><i class="fas fa-arrow-circle-left" style="font-size: 3rem; color : #eea412;"></i></a></span>
     <div class="container">
         <div class="row justify-content-center">
             <div class="container" style="margin-top: 30px;">

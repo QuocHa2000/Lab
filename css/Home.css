@@ -13,6 +13,7 @@ html {
 body {
     padding: 0;
     margin: 0;
+    font-size: 1.6rem;
 }
 
 .heading {
@@ -20,7 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 4.375em;
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
     background-color: #eea412;
     color: #0d0d0d;
     width: 100%;

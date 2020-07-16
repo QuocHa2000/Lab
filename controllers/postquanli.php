@@ -1,5 +1,5 @@
 <?php 
-    $conn = mysqli_connect("localhost","root","","web1");
+    $conn = mysqli_connect("localhost","root","","web");
     mysqli_set_charset($conn,"utf8");
     if(isset($_POST['ma'])&& isset($_POST['ten'])){
         $mamh = $_POST['ma'];

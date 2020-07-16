@@ -24,7 +24,7 @@ session_start();
             <ul class="nav-heading--list">
                 <li class="nav-heading--item">
                     <a href="index.php" class="nav-heading--item-link">
-                        Trang chủ
+                        Trang Chủ
                     </a>
                 </li>
                 <li class="nav-heading--item">
@@ -34,20 +34,7 @@ session_start();
                 </li>
                 <li class="nav-heading--item" id="document">
                     <a href="document.php" class="nav-heading--item-link">
-                        Tài liệu
-                    </a>
-                    <ul class="document-list">
-                        <li class="document-item"><a  class="document-link" href="./document.php?subject=english">Tiếng Anh</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=js">Javascripts</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=css">Css</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=html">HTML</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=nodejs">Nodejs</a></li>
-                        <li class="document-item"><a class="document-link" href="./document.php?subject=php">PHP</a></li>
-                    </ul>
-                </li>
-                <li class="nav-heading--item">
-                    <a href="" class="nav-heading--item-link">
-                        Bài tập
+                        Tài Liệu
                     </a>
                 </li>
                 <li class="nav-heading--item">
@@ -55,7 +42,13 @@ session_start();
                         Liên hệ
                     </a>
                 </li>
+                <li class="nav-heading--item">
+                    <a href="dspost.php" class="nav-heading--item-link">
+                        Forum
+                    </a>
+                </li>
                 <?php if (isset($_SESSION["admin"])) : ?>
+                
                 <li class="nav-heading--item">
                     <a href="quanli.php" class="nav-heading--item-link">
                         Quản lí
@@ -76,17 +69,17 @@ session_start();
                 <?php else : ?>
                     <li class="nav-heading--item" id="active">
                         <i class="far fa-user" style="font-size: 1.6rem;"></i>
-                        <div class="user-info" id="user-info">
-                          <?php
+                        <div class="user-info" id="user-info" style="z-index: 100;">
+                            <?php
                                 if(isset($_SESSION["login"]))
                                 {
-                                    echo "<h3>".$_SESSION["login"]."</h3>";
+                                    echo "<h4>".$_SESSION["login"]."</h4>";
                                 }
                                 if(isset($_SESSION["admin"]))
                                 {
-                                    echo "<h3>".$_SESSION["admin"]."</h3>";
+                                    echo "<h4>".$_SESSION["admin"]."</h4>";
                                 }
-                          ?>
+                            ?>
                             <a href="controllers/logout.php">Đăng xuất</a>
                         </div>
                     </li>
@@ -100,48 +93,53 @@ session_start();
             <div class="nav-heading--small">
                 <ul class="nav-small--list">
                     <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Trang chủ
+                        <a href="index.php" class="nav-small--item-link">
+                            Trang Chủ
                         </a>
                     </li>
                     <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Thông tin
+                        <a href="AboutUs.php" class="nav-small--item-link">
+                            Thông tin <span class="typcn typcn-infinity"></span>
                         </a>
                     </li>
                     <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Tài liệu
+                        <a href="document.php" class="nav-small--item-link">
+                            Tài Liệu
                         </a>
                     </li>
                     <li class="nav-small--item">
-                        <a href="" class="nav-small--item-link">
-                            Liên hệ
+                        <a href="gopy-lienhe.php" class="nav-small--item-link">
+                            Liên Hệ
                         </a>
                     </li>
-                    <li class="nav-heading--item">
-                    <a href="quanli.php" class="nav-heading--item-link">
-                        Quản lí
-                    </a>
-                </li>
-                    <?php if (!isset($_SESSION["login"])) : ?>
-                        <li class="nav-small--item">
-                            <a href="" class="nav-small--item-link">
-                                Đăng nhập
-                            </a>
-                        </li>
-                        <li class="nav-small--item">
-                            <a href="" class="nav-small--item-link">
-                                Đăng ký
-                            </a>
-                        </li>
+                    <li class="nav-small--item">
+                        <a href="dspost.php" class="nav-small--item-link">
+                            Forum
+                        </a>
+                    </li>
+                    <?php if (isset($_SESSION["admin"])) : ?>
+                    <li class="nav-small--item">
+                        <a href="quanli.php" class="nav-small--item-link">
+                            Quản lí
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                    <?php if (!isset($_SESSION["login"]) && !isset($_SESSION["admin"])) : ?>
+                    <li class="nav-small--item">
+                        <a href="login.php" class="nav-small--item-link">
+                            Đăng nhập
+                        </a>
+                    </li>
+                    <li class="nav-small--item">
+                       <a href="register.php" class="nav-small--item-link">
+                            Đăng ký
+                        </a>
+                    </li>
                     <?php else : ?>
-                        <li class="nav-small--item" id="active">
-                            <i class="far fa-user"></i>
-                            <div class="user-info" id="user-info">
-                            <h3 style="font-size:1rem!important;"> <?php echo $_SESSION["login"]; ?></h3>
-                                <a  style="font-size: 1rem;" href="controllers/logout.php">Đăng xuất</a>
-                            </div>
+                    <li class="nav-small--item">
+                        <!-- <i class="far fa-user" style="font-size: 2.6rem;"></i> -->
+                            
+                    <a class="nav-small--item-link" href="controllers/logout.php">Đăng xuất</a>
                         </li>
                     <?php endif; ?>
                 </ul>
