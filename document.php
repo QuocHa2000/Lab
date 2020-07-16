@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "web");
+$conn = mysqli_connect("localhost", "root", "", "web1");
 mysqli_set_charset($conn, "utf8");
 
 $results_per_page = 3;

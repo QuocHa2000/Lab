@@ -298,15 +298,9 @@
                         <a href="" class="footer-about--link">Trang Chủ</a>
                     </li>
                     <li class="footer-about--item">
-<<<<<<< HEAD
                         <a href="" class="footer-about--link">Thông tin</a>
                     </li>
                     <li class="footer-about--item"><a href="" class="footer-about--link">Liên hệ</a>
-=======
-                        <a href="./AboutUs.php" class="footer-about--link">Thông Tin</a>
-                    </li>
-                    <li class="footer-about--item"><a href="./gopy-lienhe" class="footer-about--link">Liên Hệ</a>
->>>>>>> b97df376669a2038676172352bb6800934f7b463
                     </li>
                 </ul>
             </div>
