@@ -226,11 +226,18 @@ session_start();
             <tbody>
                 <?php
                 $conn = mysqli_connect("localhost", "root", "", "web1");
-                $sql = "SELECT * FROM document;";
                 mysqli_set_charset($conn, "utf8");
-                $result = $conn->query($sql);
-                if ($result->num_rows > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) {
+                $post_per_page=6;
+                $current_page=!empty($_GET["page"])?$_GET["page"]:1;
+                $offset=($current_page-1) * $post_per_page;
+                $sql_document="SELECT * FROM document ORDER BY 'MaMH' ASC LIMIT $post_per_page OFFSET $offset";
+                $query=mysqli_query($conn, $sql_document);
+                $total = "SELECT * FROM document;";
+                $totalpost=mysqli_query($conn, $total);
+                $totalpost=$totalpost->num_rows;
+                $totalpage=ceil($totalpost/$post_per_page);
+                if ($query->num_rows > 0) {
+                    while ($row = mysqli_fetch_assoc($query)) {
                 ?>
                         <tr>
                             <td><?php echo $row["MaMH"]; ?></td>
@@ -246,10 +253,16 @@ session_start();
                 <?php
                     }
                 }
-                ?>
+                 ?>
 
             </tbody>
         </table>
+        <?php
+            for($num=1; $num<=$totalpage; $num++)
+            {
+                echo "<a class='btn btn-primary' style='margin-right:5px; margin-top:10px; margin-bottom:10px' href='quanli.php?page=$num'>$num</a>";
+            }
+        ?>
     </div>
 
 </body>

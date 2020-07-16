@@ -9,6 +9,7 @@ $(".delete").click(async function() {
         },
         dataType: "text",
         success: function() {
+            tr.hide("slow");
             alert("Xóa nội dung thành công")
         },
     })
