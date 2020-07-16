@@ -181,31 +181,27 @@ session_start();
                     <form method="POST">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Mã Môn Học</label>
-                            <input  name="ma"  class="form-control" id="exampleFormControlInput1">
+                            <input  name="ma"  class="form-control" id="exampleFormControlInput1" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Tên Môn Học</label>
-                            <input  name="ten" class="form-control additem" id="exampleFormControlInput1">
+                            <input  name="ten" class="form-control additem" id="exampleFormControlInput1" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Phần 1</label>
-                            <textarea class="form-control additem" name="phan1" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="exampleFormControlTextarea1">Tiêu Đề</label>
+                            <textarea class="form-control additem" name="tieude" id="exampleFormControlTextarea1" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Phần 2</label>
-                            <textarea class="form-control additem" name="phan2" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="exampleFormControlTextarea1">Nội Dung</label>
+                            <textarea class="form-control additem" name="noidung" id="exampleFormControlTextarea1" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Phần 3</label>
-                            <textarea class="form-control additem" name="phan3" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="exampleFormControlTextarea1">Link Ảnh</label>
+                            <textarea class="form-control additem" name="anh" id="exampleFormControlTextarea1" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Phần 4</label>
-                            <textarea class="form-control additem" name="phan4" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Mã Level</label>
-                            <input  name="malv" class="form-control additem" id="exampleFormControlInput1">
+                            <label for="exampleFormControlTextarea1">Link REF</label>
+                            <textarea class="form-control additem" name="ref" id="exampleFormControlTextarea1" rows="3" required></textarea>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
@@ -229,12 +225,19 @@ session_start();
             </thead>
             <tbody>
                 <?php
-                $conn = mysqli_connect("localhost", "root", "", "web");
-                $sql = "SELECT * FROM document;";
+                $conn = mysqli_connect("localhost", "root", "", "web1");
                 mysqli_set_charset($conn, "utf8");
-                $result = $conn->query($sql);
-                if ($result->num_rows > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) {
+                $post_per_page=6;
+                $current_page=!empty($_GET["page"])?$_GET["page"]:1;
+                $offset=($current_page-1) * $post_per_page;
+                $sql_document="SELECT * FROM document ORDER BY 'MaMH' ASC LIMIT $post_per_page OFFSET $offset";
+                $query=mysqli_query($conn, $sql_document);
+                $total = "SELECT * FROM document;";
+                $totalpost=mysqli_query($conn, $total);
+                $totalpost=$totalpost->num_rows;
+                $totalpage=ceil($totalpost/$post_per_page);
+                if ($query->num_rows > 0) {
+                    while ($row = mysqli_fetch_assoc($query)) {
                 ?>
                         <tr>
                             <td><?php echo $row["MaMH"]; ?></td>
@@ -250,10 +253,16 @@ session_start();
                 <?php
                     }
                 }
-                ?>
+                 ?>
 
             </tbody>
         </table>
+        <?php
+            for($num=1; $num<=$totalpage; $num++)
+            {
+                echo "<a class='btn btn-primary' style='margin-right:5px; margin-top:10px; margin-bottom:10px' href='quanli.php?page=$num'>$num</a>";
+            }
+        ?>
     </div>
 
 </body>

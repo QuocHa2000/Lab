@@ -10,6 +10,7 @@ $(".delete").click(async function() {
         dataType: "text",
         success: function() {
             tr.hide("slow");
+            alert("Xóa nội dung thành công")
         },
     })
 
@@ -24,10 +25,12 @@ $('.update').click(function() {
         $(this).text('Lưu Thay Đổi');
     } else {
         let tds = $(this).closest('tr').children();
-        console.log(tds);
         $(this).text("Sửa");
         for (let i = 1; i < tds.length - 1; i++) {
             tds[i].contentEditable = false;
+        }
+        for (var i = 0; i < tds.length; i++) {
+            console.log(tds[i].innerText);
         }
         $.ajax({
             type: "POST",
@@ -35,10 +38,10 @@ $('.update').click(function() {
             data: {
                 mamh: tds[0].innerText,
                 tenmh: tds[1].innerText,
-                phan1: tds[2].innerText,
-                phan2: tds[3].innerText,
-                phan3: tds[4].innerText,
-                phan4: tds[5].innerText
+                tieude: tds[2].innerText,
+                noidung: tds[3].innerText,
+                anh: tds[4].innerText,
+                ref: tds[5].innerText
             },
             dataType: "text",
             success: function() {

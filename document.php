@@ -82,7 +82,7 @@ $result = mysqli_query($conn, $sql);
                 </div>
                 <div style="display: flex;margin-top: 15px;margin-left: 20px">
                     <img src="./img/chemistry.png" alt="" height="50px">
-                    <a href="document.php?subject=FRONT-END">FRONT-ENT</a>
+                    <a href="document.php?subject=FRONT-END">FRONT-END</a>
                 </div>
                 <div style="display: flex;margin-top: 15px;margin-left: 20px">
                     <img src="./img/bookicon.png" alt="" height="50px">
@@ -268,7 +268,11 @@ $result = mysqli_query($conn, $sql);
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $row['TieuDe'] ?></h5>
+<<<<<<< HEAD
                         <p class="card-text"></p><?php echo substr($row['NoiDung'],0,500).'...' ?></p>
+=======
+                        <p class="card-text"></p><?php echo $row['NoiDung'] ?></p>
+>>>>>>> 4c444648bfd374bbd072fe6a0e2b14b06c57b944
                         <p class="card-text"></p>Đăng ký khóa học ngay <a href="<?php echo $row['LinkREF'] ?>" target="_blank">tại đây</a></p>
                         <p class="card-text"><small class="text-muted">Last updated <?php echo rand(1,59) ?> mins ago</small></p>
                     </div>
