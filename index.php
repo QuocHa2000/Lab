@@ -2,7 +2,7 @@
 <?php require('./controllers/header.php') ?>
     <div class="home-main" data-aos="fade-down">
         <div class="home-main--text">
-            <h1 class="home-main--heading"><span>KienThuc</span>    
+            <h1 class="home-main--heading"><span>KienThuc</span>
                 <div>WebEdu</div>
             </h1>
             <h4 class="home-main--content">Chúng ta cùng nhau chia sẽ kiến thức để có thể giúp nhau cùng tiến bộ và sẽ tạo thành một cộng đồng vững mạnh </h4> 
@@ -298,9 +298,9 @@
                         <a href="" class="footer-about--link">Về trang chủ</a>
                     </li>
                     <li class="footer-about--item">
-                        <a href="./AboutUs.php" class="footer-about--link">About</a>
+                        <a href="" class="footer-about--link">Thông tin</a>
                     </li>
-                    <li class="footer-about--item"><a href="./gopy-lienhe" class="footer-about--link">Contact</a>
+                    <li class="footer-about--item"><a href="" class="footer-about--link">Liên hệ</a>
                     </li>
                 </ul>
             </div>
