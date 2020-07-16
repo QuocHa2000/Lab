@@ -2,7 +2,7 @@
 $conn = mysqli_connect("localhost", "root", "", "web");
 mysqli_set_charset($conn, "utf8");
 
-$results_per_page = 3;
+$results_per_page = 4;
 
 $monhoc = "FRONT-END";
 if (isset($_GET['subject'])) {
@@ -262,19 +262,18 @@ $result = mysqli_query($conn, $sql);
         
             <div class="row no-gutters">
 
-                <div class="col-md-4" style="max-width: 180px">
+                <div class="col-md-4" style="max-width: 350px; margin-left:5px;">
                     <img src="<?php echo $row['LinkAnh'] ?>" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $row['TieuDe'] ?></h5>
-<<<<<<< HEAD
-                        <p class="card-text"></p><?php echo substr($row['NoiDung'],0,500).'...' ?></p>
-=======
-                        <p class="card-text"></p><?php echo $row['NoiDung'] ?></p>
->>>>>>> 4c444648bfd374bbd072fe6a0e2b14b06c57b944
-                        <p class="card-text"></p>Đăng ký khóa học ngay <a href="<?php echo $row['LinkREF'] ?>" target="_blank">tại đây</a></p>
-                        <p class="card-text"><small class="text-muted">Last updated <?php echo rand(1,59) ?> mins ago</small></p>
+                        <h5 class="card-title" style="margin-top:-15px"><?php echo $row['TieuDe'] ?></h5>
+                        <h6 class="card-text" style="margin-bottom:-15px;">  Giới thiệu khóa học </h6>  
+                        <p class="card-text"></p>
+                        <?php echo substr($row['NoiDung'],0,500).'...' ?>
+                        </p>
+                        <p class="card-text" style="margin-bottom:-15px;"></p>Đăng ký khóa học ngay <a href="<?php echo $row['LinkREF'] ?>" target="_blank">tại đây</a></p>
+                        <p class="card-text" style="margin-top:-20px;margin-bottom:-15px;"><small class="text-muted">Last updated <?php echo rand(1,59) ?> mins ago</small></p>
                     </div>
                 </div>
             </div>
