@@ -384,11 +384,11 @@ $result = mysqli_query($conn, $sql);
                 </div>
             </div>
     </div>
+        <?php } ?>
 
     <div class="container">
         <ul class="pagination justify-content-end">
         <?php
-        }
         for ($page = 1; $page <= $number_of_pages; $page++) {
             echo '<li class="page-item"><a class="page-link" href="../Lab/document.php?subject=' . $monhoc . '&page=' . $page . '">' . $page . '</a> ';
         }
