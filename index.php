@@ -298,9 +298,9 @@
                         <a href="" class="footer-about--link">Về trang chủ</a>
                     </li>
                     <li class="footer-about--item">
-                        <a href="" class="footer-about--link">Thông tin</a>
+                        <a href="./AboutUs.php" class="footer-about--link">About</a>
                     </li>
-                    <li class="footer-about--item"><a href="./gopy-lienhe" class="footer-about--link">Liên hệ</a>
+                    <li class="footer-about--item"><a href="./gopy-lienhe" class="footer-about--link">Contact</a>
                     </li>
                 </ul>
             </div>
