@@ -90,12 +90,13 @@ $result = mysqli_query($conn, $sql);
                 </div>
                 <div style="display: flex;margin-top: 15px;margin-left: 20px">
                     <img src="./img/Science-Math-icon.png" alt="" height="50px">
-                    <a href="document.php?subject=JAVASCRIPT">Javascripts</a>
+                    <a href="document.php?subject=JAVASCRIPT&page=1">Javascripts</a>
                 </div>
                 <div style="display: flex;margin-top: 15px;margin-left: 20px">
                     <img src="./img/pngwing.com.png" alt="" height="50px">
                     <a href="document.php?subject=CSS">Css</a>
                 </div>
+                <br>
                 <div style="display: flex;margin-top: 15px;margin-left: 20px">
                     <img src="./img/chemistry.png" alt="" height="50px">
                     <a href="document.php?subject=HTML">HTML</a>
@@ -108,14 +109,7 @@ $result = mysqli_query($conn, $sql);
                     <img src="./img/htmlicon.png" alt="" height="50px">
                     <a href="document.php?subject=PHP">PHP</a>
                 </div>
-                <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                    <img src="./img/bookicon.png" alt="" height="50px">
-                    <a href="document.php?subject=TOAN">Toán </a>
-                </div>
-                <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                    <img src="./img/cssicon.png" alt="" height="50px">
-                    <a href="document.php?subject=VAT LY">Vật Lí</a>
-                </div>
+                
             </div>
         </div>
         <div class="logo-heading" style="max-width: 130px;">
@@ -384,11 +378,11 @@ $result = mysqli_query($conn, $sql);
                 </div>
             </div>
     </div>
-        <?php }?>
+        <?php } ?>
+
     <div class="container">
         <ul class="pagination justify-content-end">
         <?php
-        
         for ($page = 1; $page <= $number_of_pages; $page++) {
             echo '<li class="page-item"><a class="page-link" href="../Lab/document.php?subject=' . $monhoc . '&page=' . $page . '">' . $page . '</a> ';
         }
