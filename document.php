@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "web");
+$conn = mysqli_connect("localhost", "root", "", "web1");
 mysqli_set_charset($conn, "utf8");
 
 $results_per_page = 4;
@@ -76,23 +76,23 @@ $result = mysqli_query($conn, $sql);
                     <img src="./img/homeicon.png" alt="" height="55px">
                     <a href="index.php">Home</a>
                 </div>
+                <?php
+                $sql_monhoc="SELECT DISTINCT TenMH FROM document";
+                $query=mysqli_query($conn, $sql_monhoc);
+                if($query->num_rows>0)
+                {
+                    while ($row=mysqli_fetch_assoc($query)) {
+                        
+                    
+                ?>
                 <div style="display: flex;margin-top: 15px;margin-left: 20px">
                     <img src="./img/bookicon.png" alt="" height="50px">
-                    <a href="document.php?subject=ENGLISH">Tiếng Anh</a>
+                    <a href="document.php?subject=<?php echo $row["TenMH"]; ?>"><?php echo $row["TenMH"]; ?></a>
                 </div>
-                <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                    <img src="./img/chemistry.png" alt="" height="50px">
-                    <a href="document.php?subject=FRONT-END">FRONT-END</a>
-                </div>
-                <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                    <img src="./img/bookicon.png" alt="" height="50px">
-                    <a href="document.php?subject=NODEJS">Nodejs</a>
-                </div>
-                <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                    <img src="./img/htmlicon.png" alt="" height="50px">
-                    <a href="document.php?subject=PHP">PHP</a>
-                </div>
-                
+                <?php
+                    }
+                }
+                ?>
             </div>
         </div>
         <div class="logo-heading" style="max-width: 130px;">
