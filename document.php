@@ -60,7 +60,7 @@ $result = mysqli_query($conn, $sql);
     <link href="./css/AboutUs.css" rel="stylesheet" />
 </head>
 
-<body style="background-color: #169DB2;">
+<body>
     <header class="heading" style="top: 0px;">
         <div id="content">
             <span class="slide">
