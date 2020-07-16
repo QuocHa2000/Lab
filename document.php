@@ -1,10 +1,10 @@
 <?php
-$conn = mysqli_connect("localhost:3308", "root", "", "web");
+$conn = mysqli_connect("localhost", "root", "", "web");
 mysqli_set_charset($conn, "utf8");
 
 $results_per_page = 3;
 
-$monhoc = "JAVASCRIPT";
+$monhoc = "FRONT-END";
 if (isset($_GET['subject'])) {
     $monhoc = $_GET['subject'];
 }
@@ -26,9 +26,6 @@ $this_page_first_result = ($page - 1) * $results_per_page;
 // retrieve selected results from database and display them on page
 $sql = "SELECT * FROM document WHERE TenMH='$monhoc' LIMIT " . $this_page_first_result . ',' .  $results_per_page;
 $result = mysqli_query($conn, $sql);
-
-
-
 
 ?>
 
@@ -53,7 +50,6 @@ $result = mysqli_query($conn, $sql);
             document.getElementById('menu').style.width = '350px';
             document.getElementById('content').style.marginLeft = '350px';
         }
-
         function closeSlideMenu() {
             document.getElementById('menu').style.width = '0';
             document.getElementById('content').style.marginLeft = '0';
@@ -73,10 +69,6 @@ $result = mysqli_query($conn, $sql);
                 </a>
             </span>
             <div id="menu" class="nav">
-                <!-- <div style="display: flex">
-                    <img src="./img/testlogo1@2x.png" alt="">
-                    <h2 style="margin-top: 60px">KIENTHUC.com</h2>
-                </div> -->
                 <a href="#" class="close" onclick="closeSlideMenu()">
                     <img src="./img/close.png" alt="" height="30px">
                 </a>
@@ -256,93 +248,7 @@ $result = mysqli_query($conn, $sql);
                 </label>
             </div>
         </div>
-    </header>
-    <!-- <div class="header" id="header" style="padding-top:80px ;">
-        <div class="item1">
-            <div id="content">
-                <span class="slide">
-                    <a href="#" id="slide" onclick="openSlideMenu()">
-                        <img src="./img/navcon.png" alt="" height="40px" style="margin-top:6px ;margin-left: 4px">
-                    </a>
-                </span>
-                <div id="menu" class="nav">
-                    <div style="display: flex">
-                        <img src="./img/testlogo1@2x.png" alt="">
-                        <h2 style="margin-top: 60px">KIENTHUC.com</h2>
-                    </div>
-                    <a href="#" class="close" onclick="closeSlideMenu()">
-                        <img src="./img/close.png" alt="" height="30px">
-                    </a>
-                    <div style="display: flex;margin-top: 0;margin-left: 20px">
-                        <img src="./img/homeicon.png" alt="" height="55px">
-                        <a href="index.php">Home</a>
-                    </div>
-                    <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                        <img src="./img/bookicon.png" alt="" height="50px">
-                        <a href="document.php?subject=ENGLISH">Tiếng Anh</a>
-                    </div>
-                    <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                        <img src="./img/Science-Math-icon.png" alt="" height="50px">
-                        <a href="document.php?subject=JAVASCRIPT">Javascripts</a>
-                    </div>
-                    <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                        <img src="./img/pngwing.com.png" alt="" height="50px">
-                        <a href="document.php?subject=CSS">Css</a>
-                    </div>
-                    <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                        <img src="./img/chemistry.png" alt="" height="50px">
-                        <a href="document.php?subject=HTML">HTML</a>
-                    </div>
-                    <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                        <img src="./img/bookicon.png" alt="" height="50px">
-                        <a href="document.php?subject=NODEJS">Nodejs</a>
-                    </div>
-                    <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                        <img src="./img/htmlicon.png" alt="" height="50px">
-                        <a href="document.php?subject=PHP">PHP</a>
-                    </div>
-                    <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                        <img src="./img/bookicon.png" alt="" height="50px">
-                        <a href="document.php?subject=TOAN">Toán </a>
-                    </div>
-                    <div style="display: flex;margin-top: 15px;margin-left: 20px">
-                        <img src="./img/cssicon.png" alt="" height="50px">
-                        <a href="document.php?subject=VAT LY">Vật Lí</a>
-                    </div>
-                </div>
-            </div>
-
-            <img src="./img/testlogo1@2x.png" alt="logo" height="60" class="navicon">
-        </div>
-        <div class="item2">
-            <p class="logo">
-                <B></B>
-            </p>
-
-        </div>
-        <script>
-            window.onscroll = function() {
-                myFunction()
-            };
-
-            var header = document.getElementById("header");
-            var sticky = header.offsetTop;
-
-            function myFunction() {
-                if (window.pageYOffset > sticky) {
-                    header.classList.add("sticky");
-                } else {
-                    header.classList.remove("sticky");
-                }
-            }
-        </script>
-        <div class="notifi">
-            <img src="./img/notifications-button.png" alt="" class="headericon" style="height: 20px;margin-right: 5px">
-            <img src="./img/accounticon.png" alt="" class="headericon " style="height: 20px">
-        </div>
-    </div> -->
-
-    <!-- Start Code by HoaiBao -->
+    </header>    
     <br>
     <br>
     <br>
@@ -361,10 +267,10 @@ $result = mysqli_query($conn, $sql);
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $row['Intro'] ?></h5>
-                        <p class="card-text"></p><?php echo $row['description'] ?></p>
+                        <h5 class="card-title"><?php echo $row['TieuDe'] ?></h5>
+                        <p class="card-text"></p><?php echo substr($row['NoiDung'],0,500).'...' ?></p>
                         <p class="card-text"></p>Đăng ký khóa học ngay <a href="<?php echo $row['LinkREF'] ?>" target="_blank">tại đây</a></p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <p class="card-text"><small class="text-muted">Last updated <?php echo rand(1,59) ?> mins ago</small></p>
                     </div>
                 </div>
             </div>
@@ -380,54 +286,5 @@ $result = mysqli_query($conn, $sql);
         ?>
         </ul>
     </div>
-
-
-
 </body>
-
 </html>
-<!--  <div class="card mb-3 border-secondary bg-light" >
-        <div class="row no-gutters">
-            <div class="col-md-4" style="max-width: 180px">
-                <img src="https://blog.vandersonguidi.com.br/wp-content/uploads/2016/11/js3.png" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo 'KHÓA HỌC ' . $monhoc . ' LEVEL TRUNG BÌNH 1'; ?></h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"></p>Đăng ký khóa học ngay <a href="https://www.youtube.com/watch?v=fntSBgoCsOE&list=RDfntSBgoCsOE&start_radio=1">tại đây</a></p>
-                    <p class="card-text"><small class="text-muted">Last updated 47 mins ago</small></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card mb-3 border-secondary bg-light" >
-        <div class="row no-gutters">
-            <div class="col-md-4" style="max-width: 180px">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSLEvaRLgLBBHet9MVOEOXHyiE31UGc_DCgSg&usqp=CAU" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
-            </div>
-            <div class="col-md-8" style="max-width: 800px">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo 'KHÓA HỌC ' . $monhoc . ' LEVEL TRUNG BÌNH 2'; ?></h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"></p>Đăng ký khóa học ngay <a href="https://www.youtube.com/watch?v=fntSBgoCsOE&list=RDfntSBgoCsOE&start_radio=1">tại đây</a></p>
-                    <p class="card-text"><small class="text-muted">Last updated 2 years ago</small></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card mb-3 border-secondary bg-light" >
-        <div class="row no-gutters">
-            <div class="col-md-4" style="max-width: 180px">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsiT6IVZqxwjYFgAdhl8PeiYtcAo7mTAOEqg&usqp=CAU" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo 'KHÓA HỌC ' . $monhoc . ' LEVEL NÂNG CAO'; ?></h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"></p>Đăng ký khóa học ngay <a href="https://www.youtube.com/watch?v=fntSBgoCsOE&list=RDfntSBgoCsOE&start_radio=1">tại đây</a></p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 years ago</small></p>
-                </div>
-            </div>
-        </div>
-    </div>-->
