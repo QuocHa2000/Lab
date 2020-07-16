@@ -220,12 +220,10 @@ session_start();
                 <tr>
                     <th scope="col">Mã Môn Học</th>
                     <th scope="col">Tên Môn Học</th>
-                    <th scope="col">Phần 1</th>
-                    <th scope="col">Phần 2</th>
-                    <th scope="col">Phần 3</th>
-                    <th scope="col">Phần 4</th>
-                    <th scope="col">Link ảnh</th>
-                    <th scope="col">Link Ref</th>
+                    <th scope="col">Tiêu Đề</th>
+                    <th scope="col">Nội Dung</th>
+                    <th scope="col">Link Ảnh</th>
+                    <th scope="col">Link REF</th>
                     <th scope="col">Thao Tác</th>
                 </tr>
             </thead>
