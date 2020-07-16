@@ -1,21 +1,34 @@
 <?php
 $conn = mysqli_connect("localhost:3308", "root", "", "web");
 mysqli_set_charset($conn, "utf8");
+
+$results_per_page = 3;
+
 $monhoc = "JAVASCRIPT";
 if (isset($_GET['subject'])) {
     $monhoc = $_GET['subject'];
 }
-$sql = "SELECT * FROM document WHERE document.TenMH = '$monhoc' and document.Malevel='cb';";
-$result = $conn->query($sql)->fetch_assoc();
+$sql = "SELECT * FROM document WHERE TenMH='$monhoc'";
+$result = mysqli_query($conn, $sql);
+$number_of_results = mysqli_num_rows($result);
 
-$sql = "SELECT * FROM document WHERE document.TenMH = '$monhoc' and document.Malevel='tb1';";
-$result2 = $conn->query($sql)->fetch_assoc();
+$number_of_pages = ceil($number_of_results / $results_per_page);
 
-$sql = "SELECT * FROM document WHERE document.TenMH = '$monhoc' and document.Malevel='tb2';";
-$result3 = $conn->query($sql)->fetch_assoc();
+if (!isset($_GET['page'])) {
+    $page = 1;
+} else {
+    $page = $_GET['page'];
+}
 
-$sql = "SELECT * FROM document WHERE document.TenMH = '$monhoc' and document.malevel='nc';";
-$result4 = $conn->query($sql)->fetch_assoc();
+// determine the sql LIMIT starting number for the results on the displaying page
+$this_page_first_result = ($page - 1) * $results_per_page;
+
+// retrieve selected results from database and display them on page
+$sql = "SELECT * FROM document WHERE TenMH='$monhoc' LIMIT " . $this_page_first_result . ',' .  $results_per_page;
+$result = mysqli_query($conn, $sql);
+
+
+
 
 ?>
 
@@ -343,42 +356,59 @@ $result4 = $conn->query($sql)->fetch_assoc();
             <img src="./img/accounticon.png" alt="" class="headericon " style="height: 20px">
         </div>
     </div> -->
-    
+
     <!-- Start Code by HoaiBao -->
-    <div class="container" >
-        <ul class="pagination "style="margin-left: 90px; margin-top:20px;">
-            <li class="page-item"><a class="page-link" href="#">Trước</a></li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item "><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">5</a></li>
-            <li class="page-item"><a class="page-link" href="#">Sau</a></li>
-        </ul>
-    </div>
-    <div class="card mb-3 border-secondary bg-light" >
-        <div class="row no-gutters">
-            <div class="col-md-4" style="max-width: 180px">
-                <img src="https://st.quantrimang.com/photos/image/2018/06/15/lap-trinh-blockchain-phan-2-ngon-ngu-lap-trinh-javascript-200.jpg" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo 'KHÓA HỌC '. $monhoc . ' CƠ BẢN DÀNH CHO NGƯỜI MỚI BẮT ĐẦU'; ?></h5>
-                    <p class="card-text"></p>Khóa học được thiết kế dành cho những bản đi từ con số 0 tự tin có thể học được. </p>
-                    <p class="card-text"></p>Đăng ký khóa học ngay <a href="https://www.youtube.com/watch?v=fntSBgoCsOE&list=RDfntSBgoCsOE&start_radio=1" target="_blank">tại đây</a></p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <?php
+        while ($row = mysqli_fetch_array($result)) {
+        ?>
+    <div class="card mb-3 border-secondary bg-light">
+        
+            <div class="row no-gutters">
+
+                <div class="col-md-4" style="max-width: 180px">
+                    <img src="<?php echo $row['LinkAnh'] ?>" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $row['Intro'] ?></h5>
+                        <p class="card-text"></p><?php echo $row['description'] ?></p>
+                        <p class="card-text"></p>Đăng ký khóa học ngay <a href="<?php echo $row['LinkREF'] ?>" target="_blank">tại đây</a></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
-    <div class="card mb-3 border-secondary bg-light" >
+
+    <div class="container">
+        <ul class="pagination justify-content-end">
+        <?php
+        }
+        for ($page = 1; $page <= $number_of_pages; $page++) {
+            echo '<li class="page-item"><a class="page-link" href="../Lab/document.php?subject=' . $monhoc . '&page=' . $page . '">' . $page . '</a> ';
+        }
+        ?>
+        </ul>
+    </div>
+
+
+
+</body>
+
+</html>
+<!--  <div class="card mb-3 border-secondary bg-light" >
         <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px">
                 <img src="https://blog.vandersonguidi.com.br/wp-content/uploads/2016/11/js3.png" class="card-img" alt="..." style="height:170px; width:auto; margin:5px 0px 5px 2px; ">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo 'KHÓA HỌC '.$monhoc . ' LEVEL TRUNG BÌNH 1'; ?></h5>
+                    <h5 class="card-title"><?php echo 'KHÓA HỌC ' . $monhoc . ' LEVEL TRUNG BÌNH 1'; ?></h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <p class="card-text"></p>Đăng ký khóa học ngay <a href="https://www.youtube.com/watch?v=fntSBgoCsOE&list=RDfntSBgoCsOE&start_radio=1">tại đây</a></p>
                     <p class="card-text"><small class="text-muted">Last updated 47 mins ago</small></p>
@@ -393,7 +423,7 @@ $result4 = $conn->query($sql)->fetch_assoc();
             </div>
             <div class="col-md-8" style="max-width: 800px">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo 'KHÓA HỌC '.$monhoc . ' LEVEL TRUNG BÌNH 2'; ?></h5>
+                    <h5 class="card-title"><?php echo 'KHÓA HỌC ' . $monhoc . ' LEVEL TRUNG BÌNH 2'; ?></h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <p class="card-text"></p>Đăng ký khóa học ngay <a href="https://www.youtube.com/watch?v=fntSBgoCsOE&list=RDfntSBgoCsOE&start_radio=1">tại đây</a></p>
                     <p class="card-text"><small class="text-muted">Last updated 2 years ago</small></p>
@@ -408,503 +438,11 @@ $result4 = $conn->query($sql)->fetch_assoc();
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo 'KHÓA HỌC '.$monhoc . ' LEVEL NÂNG CAO'; ?></h5>
+                    <h5 class="card-title"><?php echo 'KHÓA HỌC ' . $monhoc . ' LEVEL NÂNG CAO'; ?></h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <p class="card-text"></p>Đăng ký khóa học ngay <a href="https://www.youtube.com/watch?v=fntSBgoCsOE&list=RDfntSBgoCsOE&start_radio=1">tại đây</a></p>
                     <p class="card-text"><small class="text-muted">Last updated 3 years ago</small></p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container" >
-        <ul class="pagination justify-content-end">
-            <li class="page-item"><a class="page-link" href="#">Trước</a></li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">5</a></li>
-            <li class="page-item"><a class="page-link" href="#">Sau</a></li>
-        </ul>
-    </div>
-    <!-- EndCode by HoaiBao -->
-    <!-- <br id="move1">
-    <div>
-        <div class="sectionegg">
-            <br>
-            <div class="sectitle">
-                <?php
-                echo $monhoc . ' Cơ Bản';
-                $level = 'cb';
-                ?>
-            </div>
-            <div class="row1" style="margin-top: 20px">
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn2" style="color: black;" value="phan1">
-                        <p class="rowitemcon">Phần 1</p>
-
-                    </button>
-                    <div class="modal-bg2">
-                        <div class="modal2" id="1cbphan">
-                            <?php echo "$result[phan1]" ?>
-                            <div id="close2">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn3" style="color: black;">
-                        <p class="rowitemcon">Phần 2 </p>
-                    </button>
-                    <div class="modal-bg3">
-                        <div class="modal3"><?php echo "$result[Phan2]" ?>
-                            <div id="close3">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-            </div>
-
-            <div class="row1" style="margin-top: 20px">
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn4" style="color: black;">
-                        <p class="rowitemcon">Phần 3 </p>
-                    </button>
-                    <div class="modal-bg4">
-                        <div class="modal4"><?php echo "$result[Phan3]" ?>
-                            <div id="close4">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn5" style="color: black;">
-                        <p class="rowitemcon">Phần 4 </p>
-                    </button>
-                    <div class="modal-bg5">
-                        <div class="modal5"><?php echo "$result[Phan4]" ?>
-                            <div id="close5">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-            </div>
-            <a href="#" style="text-decoration: none;" class="backbutton">
-                <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
-            </a>
-
-
-            <div class="test">
-                <P style="margin-right: 60px;z-index:0">Confident ? Let's have a little test shall we! </P>
-                <button id="modal-btn" class="button" style="z-index: 0;">
-                    TEST
-                </button>
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <div class="modal-bg">
-        <div class="modal">
-            <h2>test</h2>
-            <p>
-                Tuy nhiên, mới đây, theo tiết lộ từ nhật báo Tây Ban Nha Mundo Deportivo (thân Barca ở xứ Catalunya), trước khi để mắt đến Lautaro Martinez, Barca đã rất quyết tâm muốn chiêu mộ Harry Kane (Tottenham Hotspur) trong kỳ chuyển nhượng mùa Hè 2019. Lúc ấy,
-                trung phong nổi tiếng của ĐT Anh cũng đang được MU và Real Madrid rất quan tâm. Chủ tịch Barca - ông Josep Maria Bartomeu thậm chí đã liên hệ với người đồng cấp bên phía Tottenham - ông Daniel Levy để thương thảo về phi vụ này. Tuy nhiên,
-                Levy đã từ chối bán Kane do xác định ngôi sao này là "quân bài quan trọng số 1" giúp Spurs cạnh tranh vị trí cao ở giải Ngoại hạng Anh với những đối thủ lớn trong nhóm "Big 6".
-            </p>
-            <div id="close"><a>+</a></div>
-
-        </div>
-
-    </div>
-
-
-
-
-    <br id="move2">
-
-
-    <div style="z-index: 0;">
-        <div class="sectionegg">
-            <br>
-            <div class="sectitle">
-                <?php
-                echo $monhoc . ' Trung Bình 1 ';
-                ?>
-            </div>
-            <div class="row1" style="margin-top: 20px">
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn6" style="color: black;">
-                        <p class="rowitemcon">Phần 1</p>
-
-                    </button>
-                    <div class="modal-bg6">
-                        <div class="modal6"> <?php echo "$result2[Phan1]" ?>
-                            <div id="close6">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn7" style="color: black;">
-                        <p class="rowitemcon">Phần 2 </p>
-                    </button>
-                    <div class="modal-bg7">
-                        <div class="modal7"><?php echo "$result2[Phan2]" ?>
-                            <div id="close7">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-            </div>
-
-            <div class="row1" style="margin-top: 20px">
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn8" style="color: black;">
-                        <p class="rowitemcon">Phần 3 </p>
-                    </button>
-                    <div class="modal-bg8">
-                        <div class="modal8"><?php echo "$result2[Phan3]" ?>
-                            <div id="close8">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn9" style="color: black;">
-                        <p class="rowitemcon">Phần 4 </p>
-                    </button>
-                    <div class="modal-bg9">
-                        <div class="modal9"><?php echo "$result2[Phan4]" ?>
-                            <div id="close9">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-            </div>
-            <a href="#" style="text-decoration: none;" class="backbutton">
-                <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
-            </a>
-            <div class="test">
-                <P style="margin-right: 60px;z-index:0">Confident ? Let's have a little test shall we! </P>
-                <button id="modal-btn10" class="button" style="z-index: 0;">
-                    TEST
-                </button>
-            </div>
-        </div>
-
-    </div>
-
-
-
-
-    <div class="modal-bg10">
-        <div class="modal10">
-            <h2>test</h2>
-            <p>
-                Tuy nhiên, mới đây, theo tiết lộ từ nhật báo Tây Ban Nha Mundo Deportivo (thân Barca ở xứ Catalunya), trước khi để mắt đến Lautaro Martinez, Barca đã rất quyết tâm muốn chiêu mộ Harry Kane (Tottenham Hotspur) trong kỳ chuyển nhượng mùa Hè 2019. Lúc ấy,
-                trung phong nổi tiếng của ĐT Anh cũng đang được MU và Real Madrid rất quan tâm. Chủ tịch Barca - ông Josep Maria Bartomeu thậm chí đã liên hệ với người đồng cấp bên phía Tottenham - ông Daniel Levy để thương thảo về phi vụ này. Tuy nhiên,
-                Levy đã từ chối bán Kane do xác định ngôi sao này là "quân bài quan trọng số 1" giúp Spurs cạnh tranh vị trí cao ở giải Ngoại hạng Anh với những đối thủ lớn trong nhóm "Big 6".
-            </p>
-            <div id="close10"><a>+</a></div>
-
-        </div>
-
-
-
-
-
-    </div>
-
-
-    <br id="move3">
-
-
-    <div style="z-index: 0;">
-        <div class="sectionegg">
-            <br>
-            <div class="sectitle">
-                <?php
-                echo $monhoc . ' Trung Bình 2 ';
-                ?>
-            </div>
-            <div class="row1" style="margin-top: 20px">
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn11" style="color: black;">
-                        <p class="rowitemcon">Phần 1</p>
-
-                    </button>
-                    <div class="modal-bg11">
-                        <div class="modal11"> <?php echo "$result3[Phan1]" ?>
-                            <div id="close11">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn12" style="color: black;">
-                        <p class="rowitemcon">Phần 2 </p>
-                    </button>
-                    <div class="modal-bg12">
-                        <div class="modal12"><?php echo "$result3[Phan2]" ?>
-                            <div id="close12">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-            </div>
-
-            <div class="row1" style="margin-top: 20px">
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn13" style="color: black;">
-                        <p class="rowitemcon">Phần 3 </p>
-                    </button>
-                    <div class="modal-bg13">
-                        <div class="modal13"><?php echo "$result3[Phan3]" ?>
-                            <div id="close13">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn14" style="color: black;">
-                        <p class="rowitemcon">Phần 4 </p>
-                    </button>
-                    <div class="modal-bg14">
-                        <div class="modal14"><?php echo "$result3[Phan4]" ?>
-                            <div id="close14">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-            </div>
-            <a href="#" style="text-decoration: none;" class="backbutton">
-                <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
-            </a>
-            <div class="test">
-                <P style="margin-right: 60px;z-index:0">Confident ? Let's have a little test shall we! </P>
-                <button id="modal-btn15" class="button" style="z-index: 0;">
-                    TEST
-                </button>
-            </div>
-        </div>
-
-    </div>
-
-
-
-
-    <div class="modal-bg15">
-        <div class="modal15">
-            <h2>test</h2>
-            <p>
-                Tuy nhiên, mới đây, theo tiết lộ từ nhật báo Tây Ban Nha Mundo Deportivo (thân Barca ở xứ Catalunya), trước khi để mắt đến Lautaro Martinez, Barca đã rất quyết tâm muốn chiêu mộ Harry Kane (Tottenham Hotspur) trong kỳ chuyển nhượng mùa Hè 2019. Lúc ấy,
-                trung phong nổi tiếng của ĐT Anh cũng đang được MU và Real Madrid rất quan tâm. Chủ tịch Barca - ông Josep Maria Bartomeu thậm chí đã liên hệ với người đồng cấp bên phía Tottenham - ông Daniel Levy để thương thảo về phi vụ này. Tuy nhiên,
-                Levy đã từ chối bán Kane do xác định ngôi sao này là "quân bài quan trọng số 1" giúp Spurs cạnh tranh vị trí cao ở giải Ngoại hạng Anh với những đối thủ lớn trong nhóm "Big 6".
-            </p>
-            <div id="close15"><a>+</a></div>
-
-        </div>
-
-
-
-
-    </div>
-
-
-
-
-    <br id="move4">
-
-
-    <div style="z-index: 0;">
-        <div class="sectionegg">
-            <br>
-            <div class="sectitle">
-                <?php
-                echo $monhoc . ' Nâng Cao ';
-                ?>
-            </div>
-            <div class="row1" style="margin-top: 20px">
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn16" style="color: black;">
-                        <p class="rowitemcon">Phần 1</p>
-
-                    </button>
-                    <div class="modal-bg16">
-                        <div class="modal16"> <?php echo "$result4[Phan1]" ?>
-                            <div id="close16">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn17" style="color: black;">
-                        <p class="rowitemcon">Phần 2 </p>
-                    </button>
-                    <div class="modal-bg17">
-                        <div class="modal17"><?php echo "$result4[Phan2]" ?>
-                            <div id="close17">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-            </div>
-
-            <div class="row1" style="margin-top: 20px">
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn18" style="color: black;">
-                        <p class="rowitemcon">Phần 3 </p>
-                    </button>
-                    <div class="modal-bg18">
-                        <div class="modal18"><?php echo "$result4[Phan3]" ?>
-                            <div id="close18">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-                <div class="rowsec">
-                    <button class="rowitem" id="modal-btn19" style="color: black;">
-                        <p class="rowitemcon">Phần 4 </p>
-                    </button>
-                    <div class="modal-bg19">
-                        <div class="modal19"><?php echo "$result4[Phan4]" ?>
-                            <div id="close19">
-                                <a style="text-decoration: none;"></a>+</div>
-                        </div>
-
-                    </div>
-                    <br>
-
-                </div>
-            </div>
-            <a href="#" style="text-decoration: none;" class="backbutton">
-                <button onclick="top()" style="margin-top: 4px;background-color:transparent;border:none;color:black;">Back to the top</button>
-            </a>
-            <div class="test">
-                <P style="margin-right: 60px;z-index:0">Confident ? Let's have a little test shall we! </P>
-                <button id="modal-btn20" class="button" style="z-index: 0;">
-                    TEST
-                </button>
-            </div>
-        </div>
-
-    </div>
-
-
-
-
-    <div class="modal-bg20">
-        <div class="modal20">
-            <h2>test</h2>
-            <p>
-                Tuy nhiên, mới đây, theo tiết lộ từ nhật báo Tây Ban Nha Mundo Deportivo (thân Barca ở xứ Catalunya), trước khi để mắt đến Lautaro Martinez, Barca đã rất quyết tâm muốn chiêu mộ Harry Kane (Tottenham Hotspur) trong kỳ chuyển nhượng mùa Hè 2019. Lúc ấy,
-                trung phong nổi tiếng của ĐT Anh cũng đang được MU và Real Madrid rất quan tâm. Chủ tịch Barca - ông Josep Maria Bartomeu thậm chí đã liên hệ với người đồng cấp bên phía Tottenham - ông Daniel Levy để thương thảo về phi vụ này. Tuy nhiên,
-                Levy đã từ chối bán Kane do xác định ngôi sao này là "quân bài quan trọng số 1" giúp Spurs cạnh tranh vị trí cao ở giải Ngoại hạng Anh với những đối thủ lớn trong nhóm "Big 6".
-            </p>
-            <div id="close20"><a>+</a></div>
-
-        </div>
-
-
-    </div> -->
-    <script src="../Lab/js/modal.js"></script>
-
-
-
-
-
-</body>
-
-</html>
-<script src="./js/home.js"></script>
-<script>
-    function egg1() {
-        var egg = document.getElementById("move1");
-        egg.scrollIntoView();
-    }
-
-    function egg2() {
-        var egg = document.getElementById("move2");
-        egg.scrollIntoView();
-    }
-
-    function egg3() {
-        var egg = document.getElementById("move3");
-        egg.scrollIntoView();
-    }
-
-    function egg4() {
-        var egg = document.getElementById("move4");
-        egg.scrollIntoView();
-    }
-
-    function top() {
-        var tothetop = document.getElementById("top");
-        tothetop.scrollIntoView();
-    }
-
-    function levelmonhoc(monhoc, level) {
-        $.ajax({
-            url: "/Lab/subject.php",
-            type: "post",
-            dataType: "text",
-            data: {
-                code: monhoc,
-                level: level,
-                part: $('button').val()
-            },
-            success: function(data) {
-                $('#1cbphan').html(data);
-            }
-
-        })
-    }
-</script>
+    </div>-->
