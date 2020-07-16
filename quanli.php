@@ -220,10 +220,10 @@ session_start();
                 <tr>
                     <th scope="col">Mã Môn Học</th>
                     <th scope="col">Tên Môn Học</th>
-                    <th scope="col">Phần 1</th>
-                    <th scope="col">Phần 2</th>
-                    <th scope="col">Phần 3</th>
-                    <th scope="col">Phần 4</th>
+                    <th scope="col">Tiêu Đề</th>
+                    <th scope="col">Nội Dung</th>
+                    <th scope="col">Link Ảnh</th>
+                    <th scope="col">Link REF</th>
                     <th scope="col">Thao Tác</th>
                 </tr>
             </thead>
@@ -239,10 +239,10 @@ session_start();
                         <tr>
                             <td><?php echo $row["MaMH"]; ?></td>
                             <td contenteditable="false"><?php echo $row["TenMH"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["Phan1"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["Phan2"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["Phan3"]; ?></td>
-                            <td contenteditable="false"><?php echo $row["Phan4"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["TieuDe"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["NoiDung"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["LinkAnh"]; ?></td>
+                            <td contenteditable="false"><?php echo $row["LinkREF"]; ?></td>
                             <td><button class="update btn btn-primary" style="margin : 2px" class="btn btn-primary">Sửa</button>
                                 <button class="delete btn btn-primary" style="margin : 2px" class="btn btn-primary">Xóa</button>
                             </td>

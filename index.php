@@ -3,7 +3,7 @@
     <div class="home-main" data-aos="fade-down">
         <div class="home-main--text">
             <h1 class="home-main--heading"><span>KienThuc</span>
-                <div>WebEdu</div>
+                <div>EDU</div>
             </h1>
             <h4 class="home-main--content">Chúng ta cùng nhau chia sẽ kiến thức để có thể giúp nhau cùng tiến bộ và sẽ tạo thành một cộng đồng vững mạnh </h4> 
             <ul class="home-main--list">
@@ -23,7 +23,7 @@
                     Chúng Tôi
                 </h1>
                 <p class="container-about--heading-content">
-                    Chúng tôi xây dựng một nền tảng chia sẽ nhiều kiến thức ở nhiều lĩnh vực khác nhau nhằm tạo nên một cộng đồng <br> giúp nhau cùng phát triển và cùng nhau thành công .
+                    Chúng tôi xây dựng mang đến những nguồn học đáng tin cậy và chất lượng nhất, ngoài ra chúng tôi còn xây dựng cộng đồng <br> giúp nhau cùng phát triển và cùng nhau thành công .
                 </p>
             </div>
         </div>
@@ -33,10 +33,10 @@
                     Chào mừng đến với KienThucEdu.
                 </h1>
                 <p class="container-about--main-content">
-                    Chúng tôi mang lại cho bạn những kiến thức bổ ích ở nhiều lĩnh vực khác nhau.
+                    Chúng tôi mang lại cho bạn những trang web bổ ích, đáng tin cậy ở nhiều lĩnh vực khác nhau.
                 </p>
                 <p class="container-about--main-content">
-                    Xây dựng 1 hệ thống kiến thức nền tảng từ cơ bản đến nâng cao. Kèm theo đó là lượng bài tập rộng lớn giúp bạn luyện tập sau khi học Lí Thuyết.
+                    Xây dựng một hệ thống với các nguồn thông tin và kiến thức là mới nhất và được cập nhập theo thời đại.
                 </p>
                 <center><a href="./document.php" class="container-about--main-link">Xem</a></center>
                 <img src="https://www.greatschools.org/gk/wp-content/uploads/2014/03/The-school-visit-what-to-look-for-what-to-ask-1.jpg" alt="" class="container-about--main-img">
@@ -51,7 +51,7 @@
                         Các thành viên trong cộng đồng cùng nhau trao đổi kiến thức và giúp đỡ nhau cùng phát triển.
                     </p>
                     <p class="container-about--main-content">
-                        Chúng tôi sẽ phát triển kênh giao tiếp cho các thành viên của cộng đồng trong thời gian tới, khi mà số lượng thành viên đã đạt chỉ tiêu. 
+                        Chúng tôi phát triển kênh giao tiếp cho các thành viên của cộng đồng để mọi người có thể trao đổi ,học hỏi và giúp đỡ lẫn nhau. 
                     </p>
                     <center><a href="register.php" class="container-about--main-link">Đăng Kí Ngay</a></center>
                 </div>
@@ -295,12 +295,12 @@
                 <h1 class="footer-about--header">Information Link</h1>
                 <ul class="footer-about--list" style="font-size: 1.6rem;">
                     <li class="footer-about--item">
-                        <a href="" class="footer-about--link">Về trang chủ</a>
+                        <a href="" class="footer-about--link">Trang Chủ</a>
                     </li>
                     <li class="footer-about--item">
-                        <a href="./AboutUs.php" class="footer-about--link">About</a>
+                        <a href="./AboutUs.php" class="footer-about--link">Thông Tin</a>
                     </li>
-                    <li class="footer-about--item"><a href="./gopy-lienhe" class="footer-about--link">Contact</a>
+                    <li class="footer-about--item"><a href="./gopy-lienhe" class="footer-about--link">Liên Hệ</a>
                     </li>
                 </ul>
             </div>
