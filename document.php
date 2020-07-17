@@ -4,8 +4,8 @@ $conn = mysqli_connect("localhost", "root", "", "web");
 mysqli_set_charset($conn, "utf8");
 
 $results_per_page = 4;
+$monhoc = !empty($_GET["subject"])?$_GET["subject"]:"FRONT-END";
 
-$monhoc = !empty($_GET["subject"])?$_GET["subject"]:"JAVASCRIPT";
 // if (isset($_GET['subject'])) {
 //     $monhoc = $_GET['subject'];
 // }
@@ -269,12 +269,6 @@ $result = mysqli_query($conn, $sql);
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-<<<<<<< HEAD
-                        <h5 class="card-title"><?php echo $row['TieuDe'] ?></h5>
-                        <p class="card-text"></p><?php echo $row['NoiDung'] ?></p>
-                        <p class="card-text"></p>Đăng ký khóa học ngay <a href="<?php echo $row['LinkREF'] ?>" target="_blank">tại đây</a></p>
-                        <p class="card-text"><small class="text-muted">Last updated <?php echo rand(1,59) ?> mins ago</small></p>
-=======
                         <h5 class="card-title" style="margin-top:-15px"><?php echo $row['TieuDe'] ?></h5>
                         <h6 class="card-text" style="margin-bottom:-15px;">  Giới thiệu khóa học </h6>  
                         <p class="card-text"></p>
@@ -282,7 +276,6 @@ $result = mysqli_query($conn, $sql);
                         </p>
                         <p class="card-text" style="margin-bottom:-15px;"></p>Đăng ký khóa học ngay <a href="<?php echo $row['LinkREF'] ?>" target="_blank">tại đây</a></p>
                         <p class="card-text" style="margin-top:-20px;margin-bottom:-15px;"><small class="text-muted">Last updated <?php echo rand(1,59) ?> mins ago</small></p>
->>>>>>> 82f073c5cdc6dfa3417f8bd172a0c5310fd775a9
                     </div>
                 </div>
             </div>
